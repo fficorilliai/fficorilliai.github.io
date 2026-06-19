@@ -10,49 +10,89 @@
     header { padding: 2rem; border-bottom: 1px solid #222; display: flex; justify-content: space-between; align-items: center; }
     header h1 { font-size: 1.2rem; font-weight: 500; color: #fff; }
     header span { font-size: 0.8rem; color: #555; }
-    .content { max-width: 900px; margin: 0 auto; padding: 2rem; }
-    .section-title { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #555; margin-bottom: 1.5rem; }
-    .briefing { font-size: 0.9rem; line-height: 1.8; color: #aaa; white-space: pre-wrap; }
+    .layout { display: flex; gap: 2rem; max-width: 1400px; margin: 0 auto; padding: 2rem; align-items: flex-start; }
+    .col-etf { flex: 2; min-width: 0; }
+    .col-science { flex: 1; min-width: 0; position: sticky; top: 2rem; }
+    .section-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #444; margin-bottom: 1rem; }
+    .science-box { background: #111; border: 1px solid #1e3a2e; border-radius: 12px; padding: 1.5rem; }
+    .science-box h2 { font-size: 1rem; color: #4ade80; margin-bottom: 1rem; }
+    .science-box h3 { font-size: 0.9rem; color: #86efac; margin: 1rem 0 0.4rem; }
+    .science-box p { font-size: 0.85rem; line-height: 1.7; color: #aaa; margin-bottom: 0.6rem; }
+    .science-box ul { padding-left: 1.2rem; }
+    .science-box li { font-size: 0.85rem; line-height: 1.7; color: #aaa; margin-bottom: 0.3rem; }
+    .science-box strong { color: #d1fae5; }
+    .briefing { font-size: 0.9rem; line-height: 1.8; color: #aaa; }
     .briefing h2 { font-size: 1.2rem; color: #fff; margin: 1.5rem 0 0.75rem; }
+    .briefing h3 { font-size: 1rem; color: #ddd; margin: 1rem 0 0.5rem; }
+    .briefing p { margin-bottom: 0.75rem; }
+    .briefing ul { padding-left: 1.2rem; margin-bottom: 0.75rem; }
+    .briefing li { margin-bottom: 0.4rem; }
     .briefing strong { color: #e8e8e8; }
+    .briefing hr { border: none; border-top: 1px solid #222; margin: 1.5rem 0; }
     .footer { padding: 1rem 2rem; border-top: 1px solid #1a1a1a; font-size: 0.7rem; color: #333; text-align: center; margin-top: 2rem; }
+    @media (max-width: 768px) {
+      .layout { flex-direction: column; }
+      .col-science { position: static; }
+    }
   </style>
 </head>
 <body>
 <header>
   <h1>Federico — AI Dashboard</h1>
-  <span>giovedì 18 giugno 2026</span>
+  <span>venerdì 19 giugno 2026</span>
 </header>
-<div class="content">
-  <div class="section-title">📊 ETF Briefing del giorno</div>
-  <div class="briefing"><h2>🚀 Semiconduttori e Corea del Sud: quando il futuro dell'AI si legge nei rendimenti</h2>
+<div class="layout">
+  <div class="col-etf">
+    <div class="section-label">📊 ETF Briefing del giorno</div>
+    <div class="briefing"><h2>🇰🇷 La Corea del Sud Guida la Carica: Semiconduttori e AI al Centro del Rally 2026</h2>
 
-<p>Buongiorno! Nella giornata del 18 giugno 2026, i dati JustETF raccontano una storia molto chiara: il grande protagonista degli ultimi mesi è il settore tecnologico — in particolare i semiconduttori — con la Corea del Sud che svetta in cima alle classifiche azionarie con rendimenti a 1 anno superiori al 120%. Sul fronte obbligazionario, le obbligazioni convertibili globali si confermano le più brillanti della categoria, mentre i titoli di stato giapponesi e indiani arrancano.</p>
+<p>Nella prima metà del 2026, due temi dominano le classifiche di performance degli ETF: la <strong>Corea del Sud</strong> come mercato azionario e i <strong>semiconduttori globali</strong> come settore tecnologico. I dati di JustETF mostrano rendimenti straordinari su entrambi i fronti, con numeri che meritano un'analisi approfondita prima di trarre conclusioni affrettate.</p>
 
 <hr>
 
-<h2>📊 Analisi dei dati più significativi</h2>
+<h3>📊 I Dati: Cosa Sta Succedendo</h3>
 
-<h3>🇰🇷 Corea del Sud: +120% in un anno. È ancora troppo tardi per salire?</h3>
-
-<p>Gli ETF sulla Corea del Sud dominano la classifica con performance a 1 anno straordinarie:</p>
+<p>Guardando le performance, emerge un quadro molto chiaro. Gli ETF sulla Corea del Sud guidano la classifica assoluta:</p>
 
 <ul>
-  <li><strong>FTSE Korea 30/18 Capped:</strong> +123,84% a 1 anno, +20,45% a 3 mesi, +62,66% da inizio anno</li>
-  <li><strong>MSCI Korea 20/35:</strong> +122,99% a 1 anno, +18,52% a 3 mesi, +58,51% da inizio anno</li>
-  <li><strong>MSCI Korea 20/35 Custom:</strong> +118,35% a 1 anno, +18,34% a 3 mesi</li>
+  <li><strong>FTSE Korea 30/18 Capped:</strong> +136,59% (probabilmente su 3 anni o da inizio anno — il dato più alto disponibile)</li>
+  <li><strong>MSCI Korea 20/35:</strong> +133,54%</li>
+  <li><strong>MSCI Korea 20/35 Custom:</strong> +128,93%</li>
 </ul>
 
-<p><strong>Cosa replicano questi ETF?</strong> Gli indici FTSE Korea e MSCI Korea includono le principali società quotate sulla Borsa di Seoul (KRX). Il mercato coreano è storicamente dominato da grandi conglomerate familiari chiamate <em>chaebol</em>: Samsung Electronics, SK Hynix, LG Energy Solution, Hyundai. In particolare, Samsung e SK Hynix rappresentano da soli una quota enorme dell'indice e sono tra i principali produttori mondiali di chip di memoria (DRAM e NAND Flash), componenti essenziali per l'intelligenza artificiale generativa e i data center.</p>
+<p>Immediatamente dietro, i semiconduttori globali si confermano protagonisti:</p>
 
-<p><strong>Perché la Corea sale così tanto?</strong> L'esplosione della domanda di AI ha trascinato al rialzo i produttori di chip in tutto il mondo. La Corea del Sud beneficia in modo diretto: SK Hynix è il principale fornitore di memorie HBM (High Bandwidth Memory) per i chip AI di NVIDIA. Quando i data center di tutto il mondo si espandono per gestire modelli linguistici di grandi dimensioni, la Corea ne è uno dei beneficiari diretti. A questo si aggiunge un effetto valutario: il Won coreano si è rafforzato nel periodo, amplificando i guadagni per l'investitore europeo.</p>
-
-<p><strong>Quali sono i rischi specifici?</strong></p>
 <ul>
-  <li><strong>Concentrazione settoriale elevatissima:</strong> tecnologia e semiconduttori pesano oltre il 40% degli indici coreani. Un rallentamento del ciclo dei chip colpisce duramente tutto l'indice.</li>
-  <li><strong>Rischio geopolitico:</strong> la Corea del Sud confina con la Corea del Nord. Tensioni nella penisola coreana possono generare volatilità improvvisa e irrazionale.</li>
-  <li><strong>Rischio valutario (KRW/EUR):</strong> chi investe senza copertura valutaria è esposto alle oscillazioni del Won coreano, storicamente volatile nelle fasi di risk-off globale.</li>
-  <li><strong>Rischio ciclico:</strong> il mercato dei semiconduttori è not</div>
+  <li><strong>Nasdaq Global Semiconductor:</strong> +114,85%</li>
+  <li><strong>Mirae Asset AI Semiconductor &amp; Quantum:</strong> +111,65%</li>
+  <li><strong>Bloomberg Semiconductor Supply Chain Select:</strong> +93,72%</li>
+  <li><strong>MSCI World Semiconductors and Semiconductor Equipment:</strong> +75,27%</li>
+</ul>
+
+<hr>
+
+<h3>🔍 Dentro gli ETF: Cosa Replicano e Come Funzionano</h3>
+
+<h3>Corea del Sud — ETF FTSE Korea 30/18 Capped e MSCI Korea</h3>
+
+<p>Questi ETF replicano indici azionari coreani con metodologie di <em>capping</em> differenti. Il <strong>FTSE Korea 30/18 Capped</strong> limita il peso massimo di ogni titolo al 30% (e poi al 18% per i successivi), evitando la concentrazione eccessiva su un singolo nome. Il mercato coreano è <strong>fortemente concentrato su pochi colossi</strong>: Samsung Electronics, SK Hynix e POSCO rappresentano una quota enorme dell'indice. La Corea è de facto un proxy globale sui chip di memoria (DRAM e NAND Flash), sulla cantieristica navale e sulla filiera dell'AI hardware.</p>
+
+<p>Storicamente, le azioni coreane salgono quando:</p>
+<ul>
+  <li>Il ciclo globale dei semiconduttori è in fase espansiva</li>
+  <li>Il won coreano si apprezza rispetto al dollaro</li>
+  <li>La domanda globale di elettronica, data center e veicoli elettrici cresce</li>
+  <li>Le tensioni geopolitiche con la Corea del Nord rimangono in secondo piano</li>
+</ul>
+
+<p><strong>Rischi specifici:</strong> alta concentrazione su Samsung (a volte oltre il 25-30% dell'indice), rischio geopolitico nella penisola coreana, dipendenza dal ciclo dei prezzi dei chip di memoria (molto volatile), rischio valutario won/euro, e la storica classificazione della Corea come <em>mercato emergente</em> da parte di MSCI (a differenza di FTSE che la tratta come sviluppato), il che influenza i flussi istituzionali.</p>
+
+<p><strong>Alternative più efficienti in termini di TER:</strong> L'ETF iSh</div>
+  </div>
+  <div class="col-science">
+    <div class="section-label">🔬 Pillola Scientifica</div>
+    <div class="science-box"><p style="color:#555">Nessuna pillola oggi.</p></div>
+  </div>
 </div>
 <div class="footer">Aggiornato automaticamente · fficorilliai.github.io</div>
 </body>
