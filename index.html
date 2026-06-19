@@ -44,54 +44,116 @@
 <div class="layout">
   <div class="col-etf">
     <div class="section-label">📊 ETF Briefing del giorno</div>
-    <div class="briefing"><h2>🇰🇷 La Corea del Sud Guida la Carica: Semiconduttori e AI al Centro del Rally 2026</h2>
+    <div class="briefing"># Code Review & Analysis
 
-<p>Nella prima metà del 2026, due temi dominano le classifiche di performance degli ETF: la <strong>Corea del Sud</strong> come mercato azionario e i <strong>semiconduttori globali</strong> come settore tecnologico. I dati di JustETF mostrano rendimenti straordinari su entrambi i fronti, con numeri che meritano un'analisi approfondita prima di trarre conclusioni affrettate.</p>
+## What This Code Does
 
-<hr>
+This is an **n8n Code node** that transforms AI-generated briefing content into a styled HTML dashboard.
 
-<h3>📊 I Dati: Cosa Sta Succedendo</h3>
+---
 
-<p>Guardando le performance, emerge un quadro molto chiaro. Gli ETF sulla Corea del Sud guidano la classifica assoluta:</p>
+## Flow Breakdown
 
-<ul>
-  <li><strong>FTSE Korea 30/18 Capped:</strong> +136,59% (probabilmente su 3 anni o da inizio anno — il dato più alto disponibile)</li>
-  <li><strong>MSCI Korea 20/35:</strong> +133,54%</li>
-  <li><strong>MSCI Korea 20/35 Custom:</strong> +128,93%</li>
-</ul>
+```
+AI Message Output
+      ↓
+Extract Text Content
+      ↓
+Split into Two Sections (ETF + Science)
+      ↓
+Build HTML Dashboard
+      ↓
+Return { json: { html } }
+```
 
-<p>Immediatamente dietro, i semiconduttori globali si confermano protagonisti:</p>
+---
 
-<ul>
-  <li><strong>Nasdaq Global Semiconductor:</strong> +114,85%</li>
-  <li><strong>Mirae Asset AI Semiconductor &amp; Quantum:</strong> +111,65%</li>
-  <li><strong>Bloomberg Semiconductor Supply Chain Select:</strong> +93,72%</li>
-  <li><strong>MSCI World Semiconductors and Semiconductor Equipment:</strong> +75,27%</li>
-</ul>
+## Section Splitting Logic (3-tier fallback)
 
-<hr>
-
-<h3>🔍 Dentro gli ETF: Cosa Replicano e Come Funzionano</h3>
-
-<h3>Corea del Sud — ETF FTSE Korea 30/18 Capped e MSCI Korea</h3>
-
-<p>Questi ETF replicano indici azionari coreani con metodologie di <em>capping</em> differenti. Il <strong>FTSE Korea 30/18 Capped</strong> limita il peso massimo di ogni titolo al 30% (e poi al 18% per i successivi), evitando la concentrazione eccessiva su un singolo nome. Il mercato coreano è <strong>fortemente concentrato su pochi colossi</strong>: Samsung Electronics, SK Hynix e POSCO rappresentano una quota enorme dell'indice. La Corea è de facto un proxy globale sui chip di memoria (DRAM e NAND Flash), sulla cantieristica navale e sulla filiera dell'AI hardware.</p>
-
-<p>Storicamente, le azioni coreane salgono quando:</p>
-<ul>
-  <li>Il ciclo globale dei semiconduttori è in fase espansiva</li>
-  <li>Il won coreano si apprezza rispetto al dollaro</li>
-  <li>La domanda globale di elettronica, data center e veicoli elettrici cresce</li>
-  <li>Le tensioni geopolitiche con la Corea del Nord rimangono in secondo piano</li>
-</ul>
-
-<p><strong>Rischi specifici:</strong> alta concentrazione su Samsung (a volte oltre il 25-30% dell'indice), rischio geopolitico nella penisola coreana, dipendenza dal ciclo dei prezzi dei chip di memoria (molto volatile), rischio valutario won/euro, e la storica classificazione della Corea come <em>mercato emergente</em> da parte di MSCI (a differenza di FTSE che la tratta come sviluppato), il che influenza i flussi istituzionali.</p>
-
-<p><strong>Alternative più efficienti in termini di TER:</strong> L'ETF iSh</div>
+```javascript
+// Tier 1: Exact tag match - fastest, most precise
+splitIndex = briefingText.indexOf('</div>
   </div>
   <div class="col-science">
     <div class="section-label">🔬 Pillola Scientifica</div>
-    <div class="science-box"><p style="color:#555">Nessuna pillola oggi.</p></div>
+    <div class="science-box"><h2>🔬');
+
+// Tier 2: Find "Pillola Scientifica" text, backtrack to its <h2>
+if (splitIndex === -1) {
+  const pillIdx = briefingText.indexOf('Pillola Scientifica');
+  if (pillIdx !== -1) {
+    splitIndex = briefingText.lastIndexOf('<h2', pillIdx);
+  }
+}
+
+// Tier 3: Last <hr> → next <h2> after it
+if (splitIndex === -1) {
+  const hrIdx = briefingText.lastIndexOf('<hr');
+  // ...
+}
+```
+
+**Robustness rating: ✅ Good** — handles emoji rendering issues, text variations, and structural fallbacks.
+
+---
+
+## Potential Issues & Fixes
+
+### 🔴 Issue 1: Input path may break silently
+```javascript
+// Current - will throw if structure changes
+const briefingText = $('Message a model').item.json.content[0].text;
+
+// Safer version
+const briefingText = $('Message a model').item?.json?.content?.[0]?.text ?? '';
+if (!briefingText) throw new Error('No content received from AI node');
+```
+
+### 🟡 Issue 2: XSS Risk
+```javascript
+// AI-generated content injected directly into HTML
+// If the AI ever outputs <script> tags, they'll execute
+
+// Quick mitigation for untrusted content:
+const sanitize = (str) => str.replace(/<script[\s\S]*?<\/script>/gi, '');
+etfContent = sanitize(etfContent);
+scienceContent = sanitize(scienceContent);
+```
+
+### 🟡 Issue 3: `lastIndexOf('<hr')` edge case
+```javascript
+// If <hr> appears AFTER the science section,
+// splitIndex could point to wrong location
+
+// More precise:
+const hrIdx = briefingText.indexOf('<hr'); // first <hr>, not last
+```
+
+---
+
+## Suggested Enhancement: Add Timestamp Watermark
+
+```javascript
+const footer = `
+  <div class="footer">
+    Aggiornato automaticamente · fficorilliai.github.io
+    · ${new Date().toISOString()}          // ← adds exact update time
+  </div>`;
+```
+
+---
+
+## Overall Assessment
+
+| Aspect | Rating |
+|--------|--------|
+| Readability | ✅ Clean |
+| Fallback logic | ✅ Solid |
+| Error handling | ⚠️ Minimal |
+| Security | ⚠️ Basic |
+| Mobile support | ✅ Responsive |
+
+**It works well for a personal automation pipeline** where the AI output format is controlled. For production, add the input validation and sanitization above.</div>
   </div>
 </div>
 <div class="footer">Aggiornato automaticamente · fficorilliai.github.io</div>
