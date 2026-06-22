@@ -39,121 +39,38 @@
 <body>
 <header>
   <h1>Federico — AI Dashboard</h1>
-  <span>venerdì 19 giugno 2026</span>
+  <span>lunedì 22 giugno 2026</span>
 </header>
 <div class="layout">
   <div class="col-etf">
     <div class="section-label">📊 ETF Briefing del giorno</div>
-    <div class="briefing"># Code Review & Analysis
-
-## What This Code Does
-
-This is an **n8n Code node** that transforms AI-generated briefing content into a styled HTML dashboard.
-
----
-
-## Flow Breakdown
-
-```
-AI Message Output
-      ↓
-Extract Text Content
-      ↓
-Split into Two Sections (ETF + Science)
-      ↓
-Build HTML Dashboard
-      ↓
-Return { json: { html } }
-```
-
----
-
-## Section Splitting Logic (3-tier fallback)
-
-```javascript
-// Tier 1: Exact tag match - fastest, most precise
-splitIndex = briefingText.indexOf('</div>
+    <div class="briefing"></div>
   </div>
   <div class="col-science">
     <div class="section-label">🔬 Pillola Scientifica</div>
-    <div class="science-box"><h2>🔬');
+    <div class="science-box"><h2>🔬 Il Grande Ciclo dei Semiconduttori: Chi Guida la Corsa all'IA nel 2026?</h2>
 
-// Tier 2: Find "Pillola Scientifica" text, backtrack to its <h2>
-if (splitIndex === -1) {
-  const pillIdx = briefingText.indexOf('Pillola Scientifica');
-  if (pillIdx !== -1) {
-    splitIndex = briefingText.lastIndexOf('<h2', pillIdx);
-  }
-}
+<p>I dati di oggi da JustETF raccontano una storia chiara: i semiconduttori continuano a dominare la classifica dei migliori performer, trascinati dalla domanda strutturale legata all'intelligenza artificiale, al calcolo quantistico e all'elettronica avanzata. Allo stesso tempo, alcune aree tech mostrano crepe significative, con perdite che meritano attenzione.</p>
 
-// Tier 3: Last <hr> → next <h2> after it
-if (splitIndex === -1) {
-  const hrIdx = briefingText.lastIndexOf('<hr');
-  // ...
-}
-```
+<h3>📈 I Migliori Performer: Semiconduttori su Tutti i Fronti</h3>
 
-**Robustness rating: ✅ Good** — handles emoji rendering issues, text variations, and structural fallbacks.
+<p>In cima alla classifica troviamo tre ETF che replicano il mondo dei chip con ritorni a 1 anno superiori al 110%:</p>
 
----
+<ul>
+  <li><strong>Nasdaq Global Semiconductor ETF (+115,26% a 1 anno)</strong>: replica un indice di aziende globali produttrici di semiconduttori, includendo giganti come NVIDIA, TSMC, ASML e Broadcom. Il settore sale quando la domanda di chip accelera — come accade in ogni ciclo di adozione tecnologica di massa. Oggi il driver principale è l'infrastruttura per l'IA generativa. Il rischio principale è la ciclicità: il settore ha storicamente subito crolli brutali nei momenti di eccesso di scorte (inventory glut). Alternativa più efficiente per costi: <strong>iShares MSCI World Semiconductors (TER ~0,35%)</strong> rispetto ad alcune versioni Nasdaq che arrivano a 0,50-0,60%.</li>
 
-## Potential Issues & Fixes
+  <li><strong>Mirae Asset AI Semiconductor &amp; Quantum ETF (+112,95% a 1 anno, +87,10% a 3 anni)</strong>: è un ETF più tematico e concentrato, che include aziende esposte non solo ai chip tradizionali ma anche al calcolo quantistico. Il settore del quantum computing è ancora in fase pre-commerciale per molte applicazioni, il che lo rende ad alto beta: sale molto quando c'è entusiasmo, ma può correggere violentemente. Rischio specifico: l'indice Mirae è meno liquido e più concentrato rispetto agli indici MSCI o Nasdaq equivalenti. Costi spesso superiori alla media (verificare il TER aggiornato).</li>
 
-### 🔴 Issue 1: Input path may break silently
-```javascript
-// Current - will throw if structure changes
-const briefingText = $('Message a model').item.json.content[0].text;
+  <li><strong>Bloomberg Semiconductor Supply Chain Select (+92,80%)</strong>: replica l'intera catena del valore del settore — non solo i chip designer, ma anche i produttori di macchinari (come ASML), i fornitori di materiali (gas ultra-puri, wafer) e i packaging specialist. Questo approccio riduce la concentrazione su singoli titoli come NVIDIA, ma include esposizione a settori più maturi e meno speculativi. Storicamente utile in fasi di normalizzazione del ciclo.</li>
+</ul>
 
-// Safer version
-const briefingText = $('Message a model').item?.json?.content?.[0]?.text ?? '';
-if (!briefingText) throw new Error('No content received from AI node');
-```
+<h3>🌏 Sorpresa dalla Corea del Sud</h3>
 
-### 🟡 Issue 2: XSS Risk
-```javascript
-// AI-generated content injected directly into HTML
-// If the AI ever outputs <script> tags, they'll execute
+<p>I tre ETF sulla Corea del Sud guidano la classifica assoluta dei rendimenti annui: <strong>+131,54%, +128,57%, +124,43%</strong>. Non è un caso: la Corea è dominata da <strong>Samsung Electronics</strong> e <strong>SK Hynix</strong>, leader mondiali nella produzione di memorie DRAM e NAND Flash — componenti essenziali per i server IA. Dopo anni di sottoperformance rispetto agli USA, il mercato coreano ha beneficiato di una rivalutazione del won e di una forte domanda di HBM (High Bandwidth Memory). Rischio principale: alta concentrazione settoriale e geopolitica (vicinanza alla penisola nordcoreana, dipendenza dal ciclo globale dei chip di memoria).</p>
 
-// Quick mitigation for untrusted content:
-const sanitize = (str) => str.replace(/<script[\s\S]*?<\/script>/gi, '');
-etfContent = sanitize(etfContent);
-scienceContent = sanitize(scienceContent);
-```
+<h3>📉 Chi Perde: Segnali da Non Ignorare</h3>
 
-### 🟡 Issue 3: `lastIndexOf('<hr')` edge case
-```javascript
-// If <hr> appears AFTER the science section,
-// splitIndex could point to wrong location
-
-// More precise:
-const hrIdx = briefingText.indexOf('<hr'); // first <hr>, not last
-```
-
----
-
-## Suggested Enhancement: Add Timestamp Watermark
-
-```javascript
-const footer = `
-  <div class="footer">
-    Aggiornato automaticamente · fficorilliai.github.io
-    · ${new Date().toISOString()}          // ← adds exact update time
-  </div>`;
-```
-
----
-
-## Overall Assessment
-
-| Aspect | Rating |
-|--------|--------|
-| Readability | ✅ Clean |
-| Fallback logic | ✅ Solid |
-| Error handling | ⚠️ Minimal |
-| Security | ⚠️ Basic |
-| Mobile support | ✅ Responsive |
-
-**It works well for a personal automation pipeline** where the AI output format is controlled. For production, add the input validation and sanitization above.</div>
+<ul></div>
   </div>
 </div>
 <div class="footer">Aggiornato automaticamente · fficorilliai.github.io</div>
