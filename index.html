@@ -34,7 +34,9 @@
     .cases-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; }
     .case-box { background: #fff; border: 0.5px solid #e8e2d9; border-radius: 12px; padding: 1.5rem; }
     .case-title { font-size: 1rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid #f0ece4; }
-    .case-body { font-size: 0.85rem; line-height: 1.7; color: #555; }
+    .case-body { font-size: 0.85rem; line-height: 1.7; color: #555; white-space: pre-line; }
+    .tag-group { margin-bottom: 2rem; }
+    .tag-label { display: inline-block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #7a6a4f; background: #f0ece4; padding: 4px 12px; border-radius: 20px; margin-bottom: 1rem; }
     .footer { padding: 1rem 2rem; border-top: 1px solid #e8e2d9; font-size: 0.7rem; color: #bbb; text-align: center; }
     @media (max-width: 768px) {
       .layout { flex-direction: column; }
@@ -46,10 +48,11 @@
 <header>
   <h1>Federico — AI Dashboard</h1>
   <div class="right">
-    <span class="data">giovedì 25 giugno 2026</span>
+    <span class="data">giovedì 2 luglio 2026</span>
     <div class="nav">
       <div class="nav-btn active" onclick="showSection('briefing', this)">Briefing</div>
       <div class="nav-btn" onclick="showSection('criminal', this)">Criminal</div>
+      <div class="nav-btn" onclick="showSection('lezioni', this)">Lezioni</div>
     </div>
   </div>
 </header>
@@ -58,93 +61,88 @@
   <div class="layout">
     <div class="col-etf">
       <div class="section-label">📊 ETF Briefing del giorno</div>
-      <div class="briefing"><h2>🔄 Convertibili in volo e chip coreani alle stelle: il mercato obbligazionario e azionario a confronto</h2>
+      <div class="briefing"><h2>🔄 Convertibili in Volo e Semiconduttori alle Stelle: il Mercato si Divide in Due</h2>
 
-<p>Oggi il focus è su due mondi apparentemente distanti ma entrambi protagonisti delle classifiche di rendimento: le <strong>obbligazioni convertibili globali</strong> e il settore dei <strong>semiconduttori con focus sulla Corea del Sud</strong>. I dati di oggi raccontano una storia di divergenza estrema, con rendimenti che vanno dal -3% al +115% nell'ultimo anno.</p>
-
-<hr>
-
-<h2>📊 Analisi dei Dati: I Migliori e i Peggiori</h2>
-
-<h3>🏆 Top Performer: Obbligazioni Convertibili Globali</h3>
-
-<p>Il segmento delle obbligazioni convertibili globali guida la classifica obbligazionaria con rendimenti notevolmente superiori alla media:</p>
-
-<ul>
-  <li><strong>FTSE Qualified Global Convertible (non hedged):</strong> +20,35% nell'ultimo anno, +3,53% nell'ultimo mese, +12,95% da inizio anno.</li>
-  <li><strong>FTSE Qualified Global Convertible EUR Hedged:</strong> +16,36% nell'ultimo anno, con un costo della copertura valutaria che ha eroso circa 4 punti percentuali di rendimento rispetto alla versione non coperta.</li>
-</ul>
-
-<p><strong>Cosa replica questo ETF e come funzionano le convertibili?</strong> Le obbligazioni convertibili sono strumenti ibridi: sono obbligazioni societarie che possono essere convertite in azioni della società emittente a determinate condizioni. Questo significa che offrono una cedola (solitamente più bassa delle obbligazioni tradizionali) ma partecipano parzialmente al rialzo azionario se l'azione sottostante sale. In gergo si parla di "convexity positiva": si guadagna se le azioni salgono, si perde meno se scendono, grazie al "pavimento obbligazionario".</p>
-
-<p><strong>Perché stanno salendo?</strong> Il rally delle convertibili negli ultimi 12 mesi è strettamente correlato all'euforia sui mercati azionari — specialmente nel comparto tecnologico e AI — che ha aumentato il valore dell'opzione di conversione incorporata. Storicamente, le convertibili performano molto bene nelle fasi di mercato azionario rialzista con tassi stabili o in discesa.</p>
-
-<p><strong>Rischi specifici da considerare:</strong></p>
-<ul>
-  <li>Elevata concentrazione nel settore tecnologico USA (spesso oltre il 40% degli indici convertibili globali).</li>
-  <li>Bassa liquidità rispetto alle obbligazioni governative: in caso di stress di mercato, gli spread possono allargarsi rapidamente.</li>
-  <li>Rischio di credito: le emittenti sono spesso società growth con rating medio-basso (BB/B).</li>
-  <li>Per la versione hedged: il costo della copertura EUR/USD può variare significativamente nel tempo.</li>
-</ul>
-
-<p><strong>ETF disponibili e confronto costi:</strong> Tra gli strumenti più accessibili in Europa troviamo il <strong>SPDR Refinitiv Global Convertible Bond UCITS ETF</strong> (TER ~0,50%) e il <strong>Invesco Global Convertible Bond UCITS ETF</strong>. Il TER medio del settore si aggira intorno allo 0,45-0,55%, significativamente più alto delle obbligazioni governative ma giustificato dalla complessità dello strumento.</p>
+<p>Nella seduta del 2 luglio 2026, il mercato obbligazionario mostra una netta biforcazione: le obbligazioni convertibili globali guidano la classifica dei bond con performance a un anno superiori al 20%, mentre i governativi giapponesi continuano a soffrire. Sul fronte azionario, il tema AI e semiconduttori resta inarrestabile, con ritorni a un anno che sfiorano o superano il 100%.</p>
 
 <hr>
 
-<h3>📉 Fanalini di coda: Obbligazioni Giapponesi</h3>
+<h2>📊 Analisi dei Dati: Obbligazioni</h2>
 
-<p>Sul fronte opposto, i titoli di stato giapponesi in JPY registrano le peggiori performance obbligazionarie:</p>
+<h3>🏆 I Migliori: Obbligazioni Convertibili Globali</h3>
+
+<p>Il grande protagonista della classifica obbligazionaria è l'ETF che replica il <strong>FTSE Qualified Global Convertible Index</strong>, con un rendimento a un anno del <strong>+20,27%</strong> e una performance mensile positiva di +1,33%.</p>
 
 <ul>
-  <li><strong>FTSE Japanese Government Bond (JPY):</strong> -3,41% nell'ultimo anno, con perdite confermate anche nelle versioni EUR hedged (-2,85%).</li>
+  <li><strong>Cosa replica:</strong> Le obbligazioni convertibili sono strumenti ibridi — emesse da aziende come normali bond, ma con la facoltà di essere convertite in azioni dell'emittente a determinate condizioni. L'indice FTSE Qualified seleziona emissioni di qualità su scala globale, con un minimo di liquidità e dimensione.</li>
+  <li><strong>Perché sale:</strong> Quando i mercati azionari sono forti (come lo sono stati grazie all'AI e ai semiconduttori), le convertibili si apprezzano perché la componente "opzione sull'azione" aumenta di valore. Allo stesso tempo, la componente obbligazionaria offre un pavimento di protezione in caso di volatilità.</li>
+  <li><strong>Rischi specifici:</strong> Le convertibili sono tipicamente emesse da aziende growth con rating medio-basso. Se i mercati azionari correggono bruscamente, perdono sia sul fronte bond (spread in allargamento) sia sull'opzione implicita. Sono anche strumenti meno liquidi dei bond governativi.</li>
+  <li><strong>Versione EUR Hedged:</strong> La versione coperta dal rischio valutario (EUR Hedged) mostra +16,60% annuo — circa 4 punti percentuali in meno, un costo tipico dell'hedging in un contesto di tassi USA ancora elevati rispetto a quelli europei.</li>
+  <li><strong>ETF simili e costi:</strong> Il principale ETF su questo segmento quotato in Europa è il <strong>SPDR Refinitiv Global Convertible Bond UCITS ETF</strong> (ticker: GCVB) con TER intorno allo 0,50%. Esiste anche il <strong>iShares Global High Yield Corp Bond UCITS ETF</strong> come alternativa parziale, ma non è direttamente comparabile. Per chi vuole esposizione convertibili con copertura euro, il TER aggiuntivo dell'hedging può portare il costo totale effettivo vicino all'1% annuo.</li>
 </ul>
 
-<p>Il motivo è strutturale: la <strong>Bank of Japan ha progressivamente abbandonato la sua politica di "yield curve control"</strong>, lasciando salire i rendimenti dei JGB (Japanese Government Bonds). Quando i rendimenti salgono, i prezzi delle obbligazioni scendono. Per un investitore europeo non hedgiato, il rischio è duplice: perdite sul prezzo dei bond e possibile deprezzamento dello JPY. La versione hedged limita il secondo rischio ma non il primo.</p>
+<h3>🇨🇳 Obbligazioni Governative Cinesi: Rendimento Solido e Silenzioso</h3>
+
+<p>I bond governativi cinesi in CNY mostrano performance a un anno tra <strong>+7,54% e +8,75%</strong>, con rendimenti mensili positivi tra +1,76% e +2,59%. Un risultato che passa spesso inosservato, ma che merita attenzione.</p>
+
+<ul>
+  <li><strong>Cosa replicano:</strong> Questi ETF investono in titoli di Stato emessi dalla Repubblica Popolare Cinese e dalle banche politiche (come China Development Bank) denominati in yuan cinese (CNY). Alcuni seguono indici Bloomberg, altri JP Morgan o FTSE.</li>
+  <li><strong>Perché stanno performando:</strong> La Banca Popolare Cinese ha mantenuto una politica monetaria accomodante nel 2025-2026, tagliando i tassi per stimolare l'economia. I prezzi dei bond salgono quando i tassi scendono. Inoltre, la stabilizzazione dello yuan ha ridotto il rischio valutario percepito.</li>
+  <li><strong>Rischi specifici:</strong> Il rischio principale è la valuta: il CNY può deprezzarsi rispetto all'euro, erodendo i rendimenti. C'è poi il rischio geopolitico (tensioni USA-Cina, Taiwan) e il rischio di liquidità per l'investitore retail europeo. L'accesso diretto al mercato onshore cinese è relativamente recente.</li>
+  <li><strong>ETF disponibili:</strong> Tra i più noti in Europa troviamo il <strong>iShares China CNY Bond UCITS ETF</strong> (TER: 0,35%) e il <strong>CSOP FTSE Chinese Government Bond Index ETF</strong>. I TER sono generalmente contenuti, ma occorre considerare i costi di cambio valuta impliciti.</li>
+</ul>
+
+<h3>📉 I Peggiori: Governativi Giapponesi sotto Pressione</h3>
+
+<p>I bond governativi giapponesi (JGB) registrano le peggiori performance del segmento obbligazionario, con -4,72% annuo per la versione in JPY e -3,36% per quella EUR Hedged.</p>
+
+<ul>
+  <li><strong>Cosa sta succedendo:</strong> La Bank of Japan ha gradualmente abbandonato la sua storica politica di Yield Curve Control (YCC), lasciando salire i rendimenti dei titoli di Stato. Quando i rendimenti salgono, i prezzi dei bond scendono — e dopo decenni di tassi negativi/zero, il riaggiustamento è stato significativo.</li>
+  <li><strong>Rischi residui:</strong> Il Giappone ha uno dei debiti pubblici più alti al mondo (oltre il 250% del PIL). Un ulteriore rialzo dei tassi potrebbe pesare ulteriormente sui prezzi. La versione hedged protegge dal rischio yen ma ha costi impliciti.</li>
+</ul>
 
 <hr>
 
-<h3>🚀 Azioni: La Corea del Sud e i Semiconduttori dominano</h3>
+<h2>🚀 Analisi dei Dati: Azionario — Semiconduttori e AI Dominano</h2>
 
-<p>I numeri sono sorprendenti e meritano una riflessione approfondita:</p>
+<h3>💻 ETF Semiconduttori Globali: +107% in un Anno</h3>
+
+<p>Il segmento <strong>Azioni Globale Informatica — Nasdaq Global Semiconductor</strong> segna un rendimento annuo del <strong>+107,55%</strong>, con una performance mensile del +9,13%.</p>
 
 <ul>
-  <li><strong>FTSE Korea 30/18 Capped:</strong> +115,06% nell'ultimo anno, +10,63% mensile, +59,84% da inizio anno.</li>
-  <li><strong>MSCI Korea 20/35:</strong> +112,48% nell'ultimo anno.</li>
-  <li><strong>Nasdaq Global Semiconductor:</strong> +104,88% nell'ultimo anno, +14,65% mensile.</li>
-  <li><strong>Mirae Asset AI Semiconductor & Quantum:</strong> +101,65% nell'ultimo anno.</li>
-  <li><strong>MSCI World Semiconductors and Semiconductor Equipment:</strong> +89,10% nell'ultimo anno, con un +18,22% solo nell'ultimo mese — il dato mensile più alto in assoluto tra tutti gli strumenti analizzati oggi.</li>
+  <li><strong>Cosa replica:</strong> Questi ETF seguono un indice che raccoglie le principali aziende produttrici di semiconduttori a livello mondiale: chip designer (come NVIDIA, AMD, Qualcomm), produttori (come TSMC, Samsung) e fornitori di attrezzature (come ASML). Il Nasdaq Global Semiconductor Index è uno degli indici tematici più seguiti nel settore tech.</li>
+  <li><strong>Perché sale così tanto:</strong> La domanda di chip per intelligenza artificiale — in particolare GPU e processori neurali — è esplosa con l'adozione di massa dei Large Language Models e dei data center AI. NVIDIA in particolare ha guidato rialzi eccezionali. A questo si aggiunge il ciclo di ripresa della domanda di chip per auto elettriche e IoT.</li>
+  <li><strong>Rischi specifici:</strong> Il settore è estremamente ciclico — le fasi di boom si alternano a brusche correzioni (come nel 2022, -50%). La concentrazione geografica su Taiwan (TSMC) introduce un rischio geopolitico significativo. Il multiplo di valutazione è storicamente molto elevato in questa fase.</li>
+  <li><strong>ETF simili e costi:</strong> Il più diffuso in Europa è il <strong>iShares MSCI Global Semiconductors UCITS ETF</strong> (TER: 0,35%). Esiste anche il <strong>VanEck Semiconductor UCITS ETF</strong> (ticker: SMH, TER: 0,35%) e il <strong>Invesco PHLX Semiconductor UCITS ETF</strong>. L'ETF Mirae Asset AI Semiconductor & Quantum citato nei dati è una versione più concentrata sul tema AI+quantistico, con TER tipicamente più alto (intorno allo 0,75%).</li>
 </ul>
 
-<p><strong>Cosa replicano questi ETF e perché la Corea del Sud?</strong> La Corea del Sud è di fatto un proxy globale sui semiconduttori: <strong>Samsung Electronics</strong> e <strong>SK Hynix</strong> rappresentano spesso oltre il 50-60% degli indici Korea. SK Hynix in particolare è il principale produttore mondiale di chip HBM (High Bandwidth Memory), la tipologia di memoria ad alta velocità indispensabile per i chip AI come i processori NVIDIA H100/H200. Il boom dell'intelligenza artificiale generativa ha creato una domanda senza precedenti per questo tipo di componenti.</p>
+<h3>🇰🇷 Corea del Sud: +100% ma con Volatilità Elevata</h3>
 
-<p><strong>Il ciclo storico dei semiconduttori:</strong> È uno dei settori più ciclici in assoluto. Storicamente attraversa fasi di boom (quando la domanda supera l'offerta) e bust (quando le scorte si accumulano e i prezzi crollano). Il ciclo dura mediamente 3-5 anni. Siamo attualmente in una fase di forte upswing guidata dall'AI, ma è importante ricordare che cicli simili si sono visti in passato (es. fine anni '90, 2000-2002 poi crollo) con correzioni anche del 70-80%.</p>
+<p>Gli ETF sulla <strong>Corea del Sud</strong> mostrano performance annue tra +99% e +106%, ma con dati mensili negativi (-7,13% / -8,62%), segnale di una recente correzione dopo un anno di corsa.</p>
 
-<p><strong>Rischi specifici da non sottovalutare:</strong></p>
 <ul>
-  <li><strong>Concentrazione geopolitica:</strong> La penisola coreana rimane una zona di tensione con la Corea del Nord. Un eventuale escalation avrebbe impatto immediato sui mercati.</li>
-  <li><strong>Dipendenza da TSMC e catena di fornitura taiwanese:</strong> Molti chip disegnati in USA e assemblati a Taiwan. Le tensioni nello Stretto di Taiwan rappresentano un rischio sistemico.</li>
-  <li><strong>Valuta:</strong> Il KRW (Won coreano) ha una forte correlazione con il sentiment risk-on/risk-off globale e può deprezzarsi rapidamente in fasi di stress.</li>
-  <li><strong>Valutazioni elevate:</strong> Dopo rialzi del 100%+, il rapporto rischio/rendimento prospettico è molto diverso da 12 mesi fa.</li>
-  <li><strong>Rischio regolatorio:</strong> USA e Cina stanno entrambi cercando di sviluppare semiconduttori domestici, riducendo potenzialmente la domanda per i produttori coreani nel lungo termine.</li>
+  <li><strong>Cosa replicano:</strong> Indici come MSCI Korea e FTSE Korea raccolgono le principali aziende coreane quotate: Samsung Electronics, SK Hynix, LG, Hyundai, POSCO. La Corea è un mercato classificato "emergente" da MSCI (nonostante il PIL pro-capite da paese sviluppato), il che genera flussi particolari.</li>
+  <li><strong>Perché è salita:</strong> SK Hynix e Samsung sono tra i principali produttori mondiali di memoria HBM (High Bandwidth Memory) utilizzata nelle GPU per AI. Il rally dei semiconduttori ha trascinato l'intero mercato coreano.</li>
+  <li><strong>Rischi:</strong> Rischio valutario won coreano, forte dipendenza da pochi grandi conglomerati (chaebol), esposizione geopolitica con la Corea del Nord, e ciclicità estrema del settore memoria. La correzione mensile recente è un avvertimento.</li>
+  <li><strong>ETF disponibili:</strong> <strong>iShares MSCI Korea UCITS ETF</strong> (TER: 0,74%), <strong>Amundi MSCI Korea UCITS ETF</strong> (TER: 0,20% — uno dei più economici sul mercato coreano).</li>
 </ul>
-
-<p><strong>ETF simili e confronto TER:</strong> Per esposizione ai semiconduttori globali, tra le opzioni più efficienti in Europa troviamo il <strong>iShares MSCI World Semiconductors UCITS ETF</strong> (TER ~0,35%) e il <strong>VanEck Semiconductor UCITS ETF</strong> che replica il MVIS US Listed Semiconductor (TER ~0,35%). Per la Corea specificatamente, il <strong>Xtrackers MSCI Korea UCITS ETF</strong> ha un TER di circa 0,65%. Attenzione: ETF tematici come il Mirae Asset AI Semiconductor tendono ad avere TER più elevati (0,75-0,95%) a fronte di portafogli più concentrati.</p>
 
 <hr>
 
-<h2>💡 Due Spunti di Riflessione per l'Investitore a Lungo Termine</h2>
+<h2>💡 2 Spunti di Riflessione per l'Investitore a Lungo Termine</h2>
 
-<h3>1. Il pericolo dell'inseguimento dei rendimenti passati</h3>
-<p>+115% in un anno è un numero che cattura l'attenzione e accende l'entusiasmo. Ma è esattamente il momento in cui l'investitore razionale dovrebbe fermarsi a riflettere: chi ha guadagnato quel 115% era già posizionato 12 mesi fa. Chi entra oggi parte da una base di valutazione completamente diversa. I semiconduttori e la Corea del Sud possono continuare a crescere — e forse lo faranno — ma il rapporto rischio/rendimento atteso non è più quello di un anno fa. La disciplina del ribilanciamento periodico esiste proprio per questo: ridurre automaticamente le posizioni che si sono molto apprezzate, senza dover "prevedere" quando il mercato girerà.</p>
-
-<h3>2. Le obbligazioni convertibili come "terza via" nel portafoglio</h3>
-<p>I dati di oggi mostrano che le convertibili globali hanno reso +20% in 12 mesi: molto più di qualsiasi obbligazione tradizionale, ma con una volatilità inferiore al puro azionario. Per un investitore italiano abituato a pensare il portafoglio in termini di "azioni vs BTP", le convertibili rappresentano una categoria spesso ignorata che merita attenzione. Non come sostituto delle obbligazioni core del portafoglio, ma come componente satellite per chi vuole partecipare parzialmente alla crescita azionaria mantenendo un "pavimento" obbligazionario. Il compromesso, come sempre, è la complessità e costi leggermente superiori.</p>
+<ul>
+  <li><strong>1. Attenzione al "recency bias" nei semiconduttori:</strong> Un rendimento del +107% in un anno è straordinario, ma storicamente il settore chip ha vissuto correzioni del 40-60% nel giro di pochi trimestri. Chi entra oggi dopo un rally di queste dimensioni dovrebbe chiedersi: sto comprando valore o sto inseguendo performance? Una posizione satellite contenuta (5-10% del portafoglio) con PAC mensile potrebbe essere più prudente che un ingresso in unica soluzione.</li>
+  <li><strong>2. Le convertibili come "terza via" nel portafoglio:</strong> In una fase in cui i bond governativi tradizionali soffrono (vedi Giappone) e le azioni sono care, le obbligazioni convertibili offrono un profilo asimmetrico interessante: partecipano ai rialzi azionari ma con una protezione parziale al ribasso. Storicamente hanno senso in portafogli bilanciati come alternativa a parte della quota obbligazionaria, specialmente in fasi di mercato rialzista ma incerto.</li>
+</ul>
 
 <hr>
 
-<h2>📌 In Chiusura</h2>
+<h2>✏️ Chiusura</h2>
 
-<p>La giornata di oggi mette in luce una divergenza netta: il mondo obbligazionario tradizionale fatica (specialmente in Giappone), mentre gli strumenti ibridi come le convertibili e il comparto dei chip mostrano forza straordinaria. Come sempre, i numeri più brillanti meritano la maggiore cautela analitica — non perché il trend sia destinato a finire domani, ma perché un portafoglio solido si costruisce con consapevolezza, non con l'inseguimento del grafico più ripido. Buona giornata e buona analisi.</p>
+<p>La seduta di oggi racconta un mercato a due velocità: da un lato asset ibridi e tematici AI che continuano a stupire, dall'altro bond tradizionali che faticano in un mondo dove i tassi reali sono tornati positivi. La diversificazione non è mai stata così importante — e così poco scontata. Buona giornata e buon investimento consapevole.</p>
+
+<p><em>Ricorda: questa newsletter ha scopo puramente informativo e non costituisce consulenza finanziaria personalizzata. Ogni decisione di investimento va ponderata in base al proprio profilo di rischio e ai propri obiettivi.</em></p>
 
 <hr>
 
@@ -156,17 +154,17 @@
 
 <h2>🔬 Pillola Scientifica del Giorno</h2>
 
-<h3>La memoria che dimentica per ricordare meglio: il paradosso dell'oblio nelle neuroscienze</h3>
+<h3>La Materia Oscura: il 27% dell'Universo che Non Riusciamo a Vedere</h3>
 
-<p>Immaginate un archivio che, per funzionare meglio, cancella deliberatamente alcune cartelle. Sembra controintuitivo, eppure è esattamente quello che fa il vostro cervello ogni notte mentre dormite. Le neuroscienze moderne hanno ribaltato una convinzione radicata: <strong>dimenticare non è un fallimento della memoria, ma una sua funzione attiva e indispensabile</strong>. Il processo prende il nome di "pruning sinaptico" — potatura sinaptica — e consiste nell'indebolimento selettivo delle connessioni neuronali meno utilizzate, per rafforzare quelle più rilevanti.</p>
+<p>Quando gli astronomi osservano le galassie ruotare attorno al proprio centro, trovano qualcosa di profondamente strano: le stelle nei bordi esterni delle galassie si muovono troppo velocemente. Secondo la fisica newtoniana e la relatività generale, più ci si allontana dal centro galattico — dove si concentra la massa visibile — più la velocità orbitale dovrebbe diminuire, esattamente come i pianeti esterni del Sistema Solare orbitano più lentamente di quelli interni. Invece, le curve di rotazione galattica rimangono piatte. Qualcosa di invisibile deve fornire massa aggiuntiva. Quella "qualcosa" l'abbiamo chiamata <strong>materia oscura</strong>.</p>
 
-<p>Durante la fase di sonno REM, l'ippocampo — la struttura cerebrale fondamentale per la formazione dei ricordi — "riproduce" in accelerazione gli eventi della giornata, consolidando le informazioni importanti nella corteccia cerebrale per la memoria a lungo termine. Contemporaneamente, un sistema glinfatico (scoperto solo nel 2013 dal team della neuroscienziata Maiken Nedergaard) lava letteralmente il cervello con liquido cerebrospinale, eliminando i sottoprodotti metabolici accumulati durante la veglia — tra cui la proteina beta-amiloide, associata all'Alzheimer. Dormire male non è solo una questione di stanchezza: è una questione di igiene neuronale.</p>
+<p>La materia oscura non emette, non assorbe e non riflette luce elettromagnetica di alcun tipo — per questo è "oscura". Non interagisce con la forza elettromagnetica. Tuttavia, interagisce con la gravità, e questa è l'unica firma che ci lascia. Le stime cosmologiche più precise (basate sui dati del satellite Planck) ci dicono che la materia oscura costituisce circa il <strong>27% del contenuto energetico totale dell'Universo</strong>, contro il 5% della materia ordinaria (atomi, stelle, pianeti, noi) e il 68% di energia oscura. In altre parole, tutto ciò che possiamo vedere e toccare è solo una piccola schiuma sulla superficie di una realtà molto più vasta.</p>
 
-<p>Ancora più affascinante è il concetto di <strong>"oblio attivo"</strong> studiato da ricercatori come Paul Frankland e Sheena Josselyn all'Università di Toronto. I loro esperimenti sui topi hanno dimostrato che la neurogenesi nell'ippocampo — la nascita di nuovi neuroni nell'età adulta — paradossalmente contribuisce a cancellare i ricordi vecchi, "sovrascrivendoli" con nuove connessioni. I topi adulti con alta neurogenesi ricordavano meno i dettagli di esperienze passate, ma erano molto più flessibili nell'adattarsi a nuove situazioni. La memoria perfetta, come quella del leggendario Funes di Borges, potrebbe essere una maledizione piuttosto che un dono: senza oblio, ogni nuovo apprendimento verrebbe contaminato da ogni esperienza precedente.</p>
+<p>I candidati più studiati per spiegare cos'è la materia oscura includono le <strong>WIMP</strong> (Weakly Interacting Massive Particles) — particelle massive che interagiscono solo tramite la forza nucleare debole e la gravità — e gli <strong>assioni</strong>, particelle ipotizzate originariamente per risolvere un problema della fisica delle particelle (la violazione CP nella cromodinamica quantistica). Enormi esperimenti sotterranei, come XENON-nT nei Laboratori del Gran Sasso in Italia, cercano da anni segnali diretti di WIMP, finora senza una conferma definitiva. Nel 2025-2026 i limiti di rilevazione si sono fatti sempre più stringenti, restringendo lo spazio dei parametri possibili per molti modelli teorici.</p>
 
-<p>Questo spiega anche perché lo stress cronico danneggia la memoria: il cortisolo in eccesso inibisce la neurogenesi ippocampale e disturba il sonno REM, colpendo contemporaneamente sia il meccanismo di consolidamento che quello di "pulizia". Le implicazioni pratiche sono notevoli: tecniche di mindfulness, esercizio fisico aerobico e — banalmente — dormire le proprie 7-8 ore non sono lussi, ma manutenzione ordinaria del sistema operativo più complesso dell'universo conosciuto.</p>
+<p>C'è anche chi propone soluzioni alternative: teorie come la <strong>MOND</strong> (Modified Newtonian Dynamics) suggeriscono che non manchino particelle, ma che la nostra comprensione della gravità alle basse accelerazioni sia incompleta. Tuttavia, la MOND fatica a spiegare fenomeni come il <strong>Bullet Cluster</strong> — due galassie che si sono attraversate, dove la massa gravitazionale (rilevata tramite lensing gravitazionale) si è separata dalla massa barionica visibile, come se qualcosa di invisibile si fosse "sganciato" durante la collisione. La materia oscura rimane uno dei misteri più affascinanti e aperti della fisica moderna.</p>
 
-<p><strong>💭 Domanda del giorno:</strong> Se fosse tecnologicamente possibile scegliere quali ricordi conservare e quali eliminare con precisione chirurgica, sareste disposti a cancellare un'esperienza negativa traumatica — sapendo che quell'esperienza ha probabilmente contribuito a formare chi siete oggi?</p></div>
+<p><strong>💭 Domanda del giorno:</strong> Se la materia oscura esiste davvero ma non interagisce con la luce né con la materia ordinaria, come potremmo mai sperare di "vederla" o utilizzarla? E se invece la soluzione fosse che la nostra teoria della gravità è semplicemente sbagliata a certe scale — cosa cambierebbe nella nostra visione dell'Universo?</p></div>
     </div>
   </div>
 </div>
@@ -174,9 +172,38 @@
 <div id="section-criminal" class="section" style="display:none;">
   <div class="section-label">🔍 Casi Criminali</div>
   <div class="cases-grid"><div class="case-box">
-    <div class="case-title">Caso Carretta – Omicidio della famiglia (Parma, 1989)</div>
-    <div class="case-body">Nel 1989 la famiglia Carretta scomparve durante una vacanza in camper per l'Europa; per anni l'opinione pubblica e la polizia credettero a un allontanamento volontario, alimentato dalla notizia che il padre avesse prelevato ingenti somme dall'azienda. Il caso si riaprì quando la polizia londinese fermò Ferdinando Carretta per un'infrazione stradale, e questi, dopo aver inizialmente confermato la tesi della fuga, confessò l'omicidio della propria famiglia durante un'intervista a una rete locale italiana. Ferdinando fu condannato a 5 anni in ospedale psichiatrico per incapacità di intendere e di volere al momento dei fatti, circostanza ritenuta contraddittoria dall'autore degli appunti, che sottolinea come Ferdinando fosse invece apparentemente capace di occultare i cadaveri, depistare le indagini e costruirsi una nuova vita in Inghilterra.</div>
+    <div class="case-title">Caso Carretta – Omicidio familiare a Parma (1989)</div>
+    <div class="case-body">Nell'estate del 1989 la famiglia Carretta di Parma scomparve durante una vacanza in camper per l'Europa. Per anni l'opinione pubblica e la polizia di Parma ritennero probabile un allontanamento volontario, rafforzato dalla scoperta che il padre Giuseppe aveva prelevato una grossa somma dalla cassaforte aziendale (circa 10 miliardi di lire, ritenuti fondi neri). Il ritrovamento del camper a Milano spostò le indagini alla Procura milanese, ma senza nuovi elementi il caso rimase irrisolto per molti anni, anche a causa di false segnalazioni di avvistamenti in giro per il mondo.
+
+Il caso si riaprì quando la polizia londinese fermò per un'infrazione stradale Ferdinando Carretta, figlio della famiglia scomparsa. Interrogato, confermò inizialmente la tesi della fuga volontaria, dichiarando di non vedere i familiari dal 1989 e di aver coperto la loro partenza ai Caraibi. In assenza di prove, fu rilasciato. Successivamente, durante un'intervista a una rete locale italiana, Ferdinando confessò l'omicidio della propria famiglia. Fu condannato ma ritenuto incapace di intendere e di volere al momento dei fatti, con una pena di 5 anni in ospedale psichiatrico.
+
+L'autore degli appunti sottolinea una contraddizione che trova difficile da accettare: Ferdinando è stato giudicato incapace di intendere e di volere al momento dell'omicidio, ma risulta aver compiuto successivamente azioni pianificate e lucide come occultare i cadaveri, abbandonare il furgone a Milano e ricominciare una vita lavorativa in Inghilterra.</div>
   </div></div>
+</div>
+
+<div id="section-lezioni" class="section" style="display:none;">
+  <div class="section-label">💡 Lezioni imparate</div>
+  <div class="tag-group">
+    <div class="tag-label">Investimenti</div>
+    <div class="cases-grid"><div class="case-box">
+    <div class="case-title">Vendita impulsiva e rientro "a caldo" su Bending Spoons</div>
+    <div class="case-body">Acquistate 72 azioni BSP a un carico medio di 31,20 USD (totale ~2.246 USD). Il target di uscita al +15% è scattato a 35,77 USD, rivelatosi poi il minimo locale: il titolo è salito fino a 44 USD. La sera stessa, per paura di perdere il rialzo (FOMO), sono state ricomprate 30 azioni a 42,04 USD, sopra il prezzo di vendita.
+
+**Cosa ha funzionato:** fissare e rispettare il target di uscita in anticipo, eliminando l'emotività dalla decisione. Il rimpianto per il rialzo mancato non segnala che la regola fosse sbagliata: è il costo naturale di avere una regola.
+
+**L'errore:** non l'uscita, ma il rientro impulsivo, eseguito senza aver definito in anticipo un livello di rientro valido.
+
+**Regola del breakeven:** se si rientra con meno azioni di quelle vendute, il breakeven reale è calcolato come *cash disponibile / azioni mancanti per tornare alla posizione originale*, non il prezzo di vendita. Rientrare a un prezzo superiore a quello di vendita equivale quasi sempre a perdere rispetto al non aver mai venduto.
+
+**Contrappeso:** rientrare anche a prezzo più alto può avere senso se la tesi rialzista regge; restare bloccati dal rimpianto del prezzo perso può portare all'errore opposto — non rientrare mai in un titolo in cui si crede.
+
+**Lezioni principali:**
+1. Fissare in anticipo sia il prezzo di uscita che quello di rientro, con lo stesso rigore.
+2. Non rientrare mai sopra il prezzo di vendita per non perdere il treno.
+3. Se si rientra con capitale parziale, calcolare il breakeven specifico prima di eseguire l'ordine.
+4. Un'uscita sfortunata non invalida la regola: solo il rientro impulsivo è stato l'errore.</div>
+  </div></div>
+  </div>
 </div>
 
 <div class="footer">Aggiornato automaticamente · fficorilliai.github.io</div>
