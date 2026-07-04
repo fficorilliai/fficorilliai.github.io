@@ -27,10 +27,13 @@
     .briefing li { margin-bottom: 0.4rem; }
     .briefing strong { color: #1a1a1a; }
     .briefing hr { border: none; border-top: 1px solid #e8e2d9; margin: 1.5rem 0; }
-    .science-box { background: #f0ece4; border-radius: 12px; padding: 1.5rem; font-size: 0.9rem; line-height: 1.8; color: #444; }
-    .science-box h2 { font-size: 1.2rem; color: #2d6a4f; margin: 0 0 0.75rem; }
-    .science-box p { margin-bottom: 0.75rem; }
-    .science-box strong { color: #1b4332; }
+    .pillola-box { background: #f0ece4; border-radius: 12px; padding: 1.5rem; }
+    .pillola-title { font-size: 1.1rem; font-weight: 600; color: #2d6a4f; margin-bottom: 0.75rem; }
+    .pillola-text { font-size: 0.9rem; line-height: 1.8; color: #444; margin-bottom: 1.25rem; }
+    .pillola-alt-label { font-size: 0.75rem; color: #999; margin-bottom: 0.6rem; }
+    .pillola-alt-buttons { display: flex; flex-direction: column; gap: 0.5rem; }
+    .pillola-alt-btn { cursor: pointer; text-align: left; font-size: 0.8rem; padding: 8px 12px; border-radius: 8px; background: #fff; border: 0.5px solid #dcd4c5; color: #444; }
+    .pillola-alt-btn:disabled { opacity: 0.5; cursor: default; }
     .cases-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 1.5rem; }
     .case-box { background: #fff; border: 0.5px solid #e8e2d9; border-radius: 12px; padding: 1.5rem; }
     .case-title { font-size: 1rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid #f0ece4; }
@@ -57,10 +60,10 @@
 <header>
   <h1>Federico — AI Dashboard</h1>
   <div class="right">
-    <span class="data">venerdì 3 luglio 2026</span>
+    <span class="data">sabato 4 luglio 2026</span>
     <div class="nav">
       <div class="nav-btn active" onclick="showSection('briefing', this)">Briefing</div>
-      <div class="nav-btn" onclick="showSection('criminal', this)">Criminal</div>
+      <div class="nav-btn" onclick="showSection('interessi', this)">Interessi</div>
       <div class="nav-btn" onclick="showSection('lezioni', this)">Lezioni</div>
     </div>
   </div>
@@ -72,133 +75,132 @@
       <div class="qa-box">
     <div class="qa-label">❓ La tua domanda di ieri</div>
     <div class="qa-question">Mi potresti dare una situazione, dimmi a quando aggiornata, geopolitica della Corea del Sud?</div>
-    <div class="qa-answer">La situazione geopolitica della Corea del Sud è complessa e ti fornisco un quadro aggiornato alla mia data limite di conoscenza (inizio 2025). Sul fronte interno, la Corea del Sud ha attraversato una grave crisi politica a fine 2024, con il presidente Yoon Suk-yeol che ha dichiarato brevemente la legge marziale a dicembre 2024, salvo ritirarla poche ore dopo sotto la pressione del Parlamento, e successivamente è stato messo sotto impeachment. Sul fronte della sicurezza regionale, la minaccia nordcoreana rimane costante, con Pyongyang che continua il suo programma nucleare e missilistico, e si sono registrate preoccupanti cooperazioni militari tra Corea del Nord e Russia nel contesto del conflitto ucraino. Dal punto di vista delle alleanze, Seoul mantiene un solido legame con gli Stati Uniti, con una presenza militare americana significativa sul territorio, pur dovendo bilanciare i rapporti commerciali con la Cina, suo principale partner economico. Il briefing di ieri evidenzia inoltre come le tensioni geopolitiche regionali stiano influenzando negativamente gli ETF sulla Corea del Sud, contribuendo alle forti correzioni recenti (-11% / -12,75%) nonostante le ottime performance annuali.</div>
+    <div class="qa-answer"></div>
   </div>
       <div class="qa-box">
     <div class="qa-label">💬 Fai una domanda</div>
-    <p class="qa-hint">Su qualcosa che hai letto oggi — ETF, pillola scientifica, lezioni, casi criminali. Risposta al prossimo aggiornamento del sito.</p>
+    <p class="qa-hint">Su qualcosa che hai letto oggi — ETF, pillola, lezioni, casi criminali. Risposta al prossimo aggiornamento del sito.</p>
     <textarea id="qa-input" class="qa-textarea" placeholder="Scrivi la tua domanda..."></textarea>
     <button id="qa-submit" class="qa-button" onclick="inviaDomanda()">Invia domanda</button>
     <p id="qa-status" class="qa-status"></p>
   </div>
       <div class="section-label">📊 ETF Briefing del giorno</div>
-      <div class="briefing"><h2>🔬 I Semiconduttori Dominano Ancora — Ma Seul Arranca: Analisi ETF del 3 Luglio 2026</h2>
+      <div class="briefing"><h2>🇰🇷 Corea del Sud e Semiconduttori: Il Grande Rally che Sfida la Gravità</h2>
 
-<p>Buongiorno! Oggi i dati di JustETF raccontano una storia molto chiara: il settore dei <strong>semiconduttori</strong> continua a macinare performance straordinarie sul lungo periodo, mentre la Corea del Sud — cuore produttivo globale dei chip — sta attraversando un momento di forte pressione nel breve termine. Un contrasto che merita attenzione.</p>
+<p>Oggi il focus è tutto sull'Asia tecnologica e sui semiconduttori: i dati di JustETF raccontano una storia straordinaria, con ETF sulla Corea del Sud che hanno praticamente <strong>raddoppiato il proprio valore</strong> nell'arco dell'ultimo anno. Ma come sempre nei mercati finanziari, dietro a numeri così eclatanti si nascondono dinamiche complesse che vale la pena esplorare con attenzione.</p>
 
 <hr>
 
-<h2>📊 Analisi dei Dati</h2>
+<h2>📊 Analisi dei Dati: Chi Brilla e Chi Arranca</h2>
 
-<h3>🏆 I Grandi Vincitori: Semiconduttori da Record</h3>
+<h3>🏆 I Grandi Protagonisti: ETF Corea del Sud</h3>
 
-<p>Il dato più eclatante di oggi proviene dagli ETF legati ai semiconduttori globali, che mostrano performance a lungo termine semplicemente straordinarie:</p>
+<p>I tre ETF sulla Corea del Sud dominano la classifica dei migliori performer con ritorni superiori al <strong>100% su base annua</strong>. Un dato che non si vede spesso e che merita un approfondimento serio.</p>
 
 <ul>
-  <li><strong>ETF Nasdaq Global Semiconductor</strong>: +94,71% nel periodo analizzato, con una performance a 3 anni di +69,53%. La variazione recente è quasi piatta (-0,92%), segno di una fase di consolidamento dopo una corsa importante.</li>
-  <li><strong>ETF Mirae Asset AI Semiconductor &amp; Quantum</strong>: +89,93% complessivo e +73,00% a 3 anni — la performance migliore della categoria sul triennio. Il calo recente più marcato (-7,04%) suggerisce maggiore volatilità, tipica degli indici tematici più concentrati.</li>
-  <li><strong>ETF Bloomberg Semiconductor Supply Chain Select</strong>: +79,76% con una variazione recente positiva (+1,80%), l'unico del gruppo a mostrare momentum positivo nel breve. Il rendimento a 3 anni si attesta a +51,46%.</li>
-  <li><strong>ETF MSCI World Semiconductors and Semiconductor Equipment</strong>: +76,86% con +3,30% recente e +62,78% a 3 anni. Approccio più diversificato geograficamente rispetto ai precedenti.</li>
+  <li><strong>FTSE Korea 30/18 Capped – +108,52% (1 anno)</strong>: Questo ETF replica un indice concentrato sulle 30 maggiori aziende quotate in Corea del Sud, con un meccanismo di "capping" che limita il peso massimo di ogni titolo al 18% per evitare eccessiva concentrazione. Il paniere è dominato da colossi come <strong>Samsung Electronics, SK Hynix e Hyundai</strong>. La Corea del Sud è di fatto una delle economie più esposte al ciclo dei semiconduttori al mondo: Samsung e SK Hynix insieme controllano oltre il 60% della produzione mondiale di chip di memoria DRAM e NAND. Quando il ciclo dei semiconduttori gira al rialzo — come sta accadendo trainato dall'esplosione dell'IA — la Corea esplode verso l'alto. Il rischio specifico? Altissima concentrazione settoriale, esposizione al rischio geopolitico con la Corea del Nord, e forte dipendenza dal ciclo tecnologico globale. Da notare: la performance settimanale è negativa (-6,18%), segnale di possibile presa di profitto dopo il grande rally.</li>
+
+  <li><strong>MSCI Korea 20/35 – +106,02% (1 anno)</strong>: Replica un indice più ampio basato sulla metodologia MSCI, con un capping al 20% per i singoli titoli e al 35% per i gruppi. Rispetto al precedente offre una diversificazione leggermente superiore ma la composizione rimane sostanzialmente simile. La performance annuale praticamente identica conferma che la dominanza di Samsung e SK Hynix è tale da rendere quasi irrilevante la differenza metodologica tra i due indici. Chi cerca un'alternativa potrebbe valutare ETF su indici MSCI Korea più ampi e meno concentrati, spesso con TER comparabili intorno allo <strong>0,50-0,65%</strong>.</li>
+
+  <li><strong>MSCI Korea 20/35 Custom – +101,87% (1 anno)</strong>: Variante "custom" che applica filtri aggiuntivi rispetto alla versione standard, spesso legati a criteri ESG o di esclusione settoriale. Rende leggermente meno del benchmark puro, il che è coerente con il fatto che i filtri custom tendono a ridurre l'esposizione ai titoli più "estremi" del ciclo. Utile per chi vuole mantenere un profilo etico senza rinunciare completamente all'esposizione coreana.</li>
 </ul>
 
-<h3>💡 Come Funziona il Settore dei Semiconduttori</h3>
-
-<p>I semiconduttori sono i componenti fondamentali di qualsiasi dispositivo elettronico: smartphone, server, automobili, elettrodomestici. La catena del valore si divide in tre grandi blocchi: i <strong>designer</strong> (come NVIDIA e AMD, che progettano i chip), i <strong>foundry</strong> (come TSMC, che li producono fisicamente) e i <strong>produttori di attrezzature</strong> (come ASML, che costruiscono le macchine per fabbricarli). Gli ETF del settore combinano tipicamente tutte e tre le categorie, con pesi variabili.</p>
-
-<p>Storicamente, i semiconduttori seguono un ciclo ben noto chiamato <em>"ciclo del silicio"</em>: fasi di forte domanda e sovrapproduzione si alternano in modo abbastanza prevedibile. Le grandi ondate rialziste degli ultimi anni sono state alimentate prima dall'esplosione del cloud computing, poi dalla carenza globale di chip post-Covid, e infine — dal 2023 in poi — dall'esplosione della domanda legata all'intelligenza artificiale generativa.</p>
-
-<h3>⚠️ Rischi Specifici del Settore</h3>
+<h3>💡 Semiconduttori Globali: Rally Confermato</h3>
 
 <ul>
-  <li><strong>Concentrazione geografica</strong>: gran parte della produzione mondiale di chip avanzati si concentra a Taiwan (TSMC). Le tensioni geopolitiche nello Stretto di Taiwan rappresentano un rischio sistemico non trascurabile.</li>
-  <li><strong>Ciclicità</strong>: il settore è notoriamente ciclico. Dopo anni di boom, una recessione o un eccesso di scorte può portare a correzioni molto violente.</li>
-  <li><strong>Concentrazione su pochi titoli</strong>: molti ETF del settore hanno pesi molto elevati su NVIDIA, TSMC o ASML. La performance dipende in modo sproporzionato da questi giganti.</li>
-  <li><strong>Regolamentazione export</strong>: le restrizioni USA sull'export di chip avanzati verso la Cina continuano a creare incertezza per molte aziende del comparto.</li>
+  <li><strong>Nasdaq Global Semiconductor – +101,31% (1 anno)</strong>: Questo ETF replica l'indice Nasdaq Global Semiconductor, che raccoglie le principali aziende produttrici di chip a livello mondiale: NVIDIA, TSMC, ASML, Broadcom, AMD. È uno degli ETF tematici più "puri" sul settore dei semiconduttori disponibili in Europa. Il settore sale quando c'è un boom nella domanda di chip (IA, data center, automotive, 5G) e scende quando il ciclo si inverte o quando emergono tensioni nelle catene di fornitura. Il TER tipico si aggira intorno allo <strong>0,35%</strong>, competitivo per un ETF tematico. La performance settimanale è leggermente positiva (+0,45%), segno di maggiore stabilità rispetto agli ETF coreani puri.</li>
+
+  <li><strong>Mirae Asset AI Semiconductor &amp; Quantum – +95,54% (1 anno)</strong>: ETF più recente e innovativo che combina esposizione ai semiconduttori per l'intelligenza artificiale con aziende legate al <strong>quantum computing</strong>. È un prodotto più "di frontiera": le aziende di quantum computing sono ancora in fase pre-reddituale per la maggior parte, il che aggiunge un layer di rischio speculativo significativo. La settimana negativa (-4,97%) potrebbe riflettere volatilità sui titoli quantum più piccoli. TER tendenzialmente più elevato, intorno allo <strong>0,75%</strong>, giustificato parzialmente dalla gestione di un paniere più complesso.</li>
+
+  <li><strong>Bloomberg Semiconductor Supply Chain Select – +83,10% (1 anno)</strong>: Un approccio interessante e spesso sottovalutato: anziché replicare solo i produttori di chip, questo ETF include l'intera <strong>catena di fornitura</strong> — produttori di macchinari (ASML), fornitori di materiali, aziende di packaging e testing. Questo lo rende meno volatile dei puri-play semiconductor e più resistente in caso di correzioni settoriali. Performance settimanale positiva (+1,72%), la migliore tra i semiconductor, confermando la maggiore stabilità della supply chain rispetto ai produttori diretti.</li>
 </ul>
 
-<h3>💰 Confronto Costi (TER) — Vale la Pena Sapere</h3>
-
-<p>Se stai valutando un'esposizione ai semiconduttori, tieni d'occhio il <strong>TER (Total Expense Ratio)</strong>. Gli ETF tematici molto specializzati (come il Mirae Asset AI Semiconductor &amp; Quantum) tendono ad avere TER più elevati, spesso tra 0,55% e 0,75%. ETF più ampi come <strong>iShares MSCI World Semiconductors and Semiconductor Equipment UCITS ETF</strong> o il <strong>VanEck Semiconductor UCITS ETF</strong> (che replica il MVIS US Listed Semiconductor 25) offrono esposizioni simili con TER competitivi intorno allo 0,35%. Per un investitore di lungo periodo, questo differenziale si accumula nel tempo in modo significativo.</p>
-
-<hr>
-
-<h3>📉 La Corea del Sud: Talento Riconosciuto, Dolori Recenti</h3>
-
-<p>Il quadro si fa più complesso guardando agli ETF dedicati alla <strong>Corea del Sud</strong>. Pur avendo performance di lungo periodo ancora positive, il quadro recente è decisamente negativo:</p>
+<h3>📉 La Sorpresa Negativa: Banche Italiane con Leva Inversa</h3>
 
 <ul>
-  <li><strong>ETF FTSE Korea 30/18 Capped</strong>: +96,53% sul lungo periodo, ma <strong>-11,31%</strong> recente e +57,87% a 3 anni.</li>
-  <li><strong>ETF MSCI Korea 20/35</strong>: +93,55% ma <strong>-12,75%</strong> recente — la correzione più severa del gruppo.</li>
-  <li><strong>ETF MSCI Korea 20/35 Custom</strong>: dati analoghi con -12,51% recente.</li>
+  <li><strong>FTSE MIB Banks 15% Capped – -97,60% (1 anno)</strong>: Questo dato apparentemente catastrofico va letto con attenzione: si tratta quasi certamente di un <strong>ETF con leva inversa</strong> sulle banche italiane (short), che scommette sul calo del settore bancario del FTSE MIB. Le banche italiane hanno vissuto un periodo di forte rivalutazione grazie agli alti tassi di interesse e al miglioramento dei fondamentali, quindi uno strumento short su questo paniere ha naturalmente perso in modo speculare. Questi prodotti sono adatti esclusivamente a operatori esperti per coperture di breve periodo: <strong>non sono mai strumenti da detenere a lungo termine</strong> per via del cosiddetto "decadimento da leva". La performance settimanale positiva (+13,68%) suggerisce una correzione recente delle banche italiane.</li>
 </ul>
 
-<p>La Corea del Sud è il paese dei <strong>chaebol</strong> — i grandi conglomerati industriali come Samsung Electronics, SK Hynix, Hyundai e LG. Il mercato azionario coreano è dominato dai semiconduttori (Samsung e SK Hynix insieme rappresentano una fetta enorme dell'indice KOSPI) e dall'industria pesante. Le correzioni recenti riflettono probabilmente la pressione sui margini dei produttori di memoria DRAM e NAND in un ciclo non favorevole, unita alle tensioni valutarie sul Won coreano.</p>
-
-<p>Un elemento strutturale da conoscere: il mercato coreano soffre del cosiddetto <strong>"Korea Discount"</strong> — una storica sottovalutazione rispetto ai peer globali, legata alla governance dei chaebol, alla struttura azionaria complessa e alla limitata trasparenza verso gli investitori stranieri. Le autorità coreane stanno cercando di affrontarlo con riforme specifiche, ma il processo è lento.</p>
-
-<hr>
-
-<h3>📉 La Zona Rossa: Crypto e Banche Italiane</h3>
-
-<p>I peggiori performer della giornata meritano una menzione rapida. Le <strong>criptovalute</strong> dominano la classifica dei ribassi: Bitcoin Cash (-63,27%), Tezos (-56,68%), Cardano (-53,85%), Polkadot (-52,08%) mostrano perdite devastanti. Questi sono strumenti ad altissima volatilità e correlazione bassa con i mercati tradizionali, adatti solo a chi comprende pienamente il rischio di perdita totale del capitale investito.</p>
-
-<p>Colpisce anche l'ETF <strong>Azioni Italia Finanza FTSE MIB Banks 15% Capped</strong> con un dato di -97,64% che, nel contesto, sembra riferirsi a una metrica di flusso o di periodo molto specifico, piuttosto che a una perdita reale del valore del fondo — dato che le banche italiane hanno avuto performance brillanti nel biennio 2024-2026 grazie ai tassi elevati. Vale la pena verificare la metrica esatta su JustETF prima di trarre conclusioni.</p>
-
-<hr>
-
-<h2>🧭 2 Spunti per l'Investitore di Lungo Termine</h2>
+<h3>⚠️ I Peggiori: Internet Cinese e Mercati Emergenti Tech</h3>
 
 <ul>
-  <li>
-    <strong>1. La differenza tra "settore vincente" e "momento giusto":</strong> I semiconduttori hanno prodotto rendimenti eccezionali negli ultimi anni, ma chi è entrato nei momenti sbagliati (es. fine 2021) ha vissuto anni difficili prima di vedere recuperi. La domanda non è solo "questo settore ha futuro?" ma anche "a che valutazione sto comprando oggi?". Considerare un ingresso graduale tramite PAC (Piano di Accumulo del Capitale) riduce il rischio di timing.
-  </li>
-  <li>
-    <strong>2. Diversificazione vs. concentrazione tematica:</strong> Un ETF come il Mirae Asset AI Semiconductor &amp; Quantum offre un'esposizione molto concentrata su un tema specifico e relativamente nuovo. Per un portafoglio equilibrato, vale la pena chiedersi: questa posizione è un'integrazione a un core diversificato, o sta diventando essa stessa il cuore del portafoglio? La storia insegna che anche i settori più promettenti possono attraversare decenni di sottoperformance.
-  </li>
+  <li><strong>CSI Overseas China Internet – -24,68% (1 anno)</strong>: Replica le grandi aziende internet cinesi quotate fuori dalla Cina (Alibaba, Tencent, JD.com, Meituan). Il settore soffre per la persistente incertezza regolatoria del governo cinese, la debolezza dei consumi interni e le tensioni geopolitiche con l'Occidente. La settimana è anch'essa negativa (-7,17%), accentuando le preoccupazioni.</li>
+  <li><strong>Hang Seng TECH – -16,77% (1 anno)</strong>: Indice tecnologico di Hong Kong, con dinamiche simili all'internet cinese. La doppia negatività settimanale (-9,90%) è la peggiore in assoluto tra tutti gli ETF analizzati oggi: potrebbe indicare un evento specifico negativo sulla piazza di Hong Kong nella settimana appena conclusa.</li>
 </ul>
 
 <hr>
 
-<h2>✉️ Chiusura</h2>
+<h2>🧭 2 Spunti di Riflessione per l'Investitore di Lungo Termine</h2>
 
-<p>I dati di oggi confermano che il tema dei semiconduttori rimane il grande protagonista dei mercati azionari globali nell'era dell'intelligenza artificiale. La Corea del Sud, pur essendo un attore fondamentale di questa filiera, sta scontando pressioni cicliche e strutturali che la rendono un'opportunità da seguire con attenzione ma anche con pazienza. Come sempre, la comprensione profonda di ciò in cui si investe è il miglior punto di partenza.</p>
+<ul>
+  <li><strong>Il momentum è reale, ma il timing è difficilissimo.</strong> Un ETF che ha guadagnato il 108% in un anno attira naturalmente l'attenzione. Ma chi entra oggi deve chiedersi: sto comprando la crescita futura o sto pagando la crescita passata? Il ciclo dei semiconduttori è storicamente molto volatile — dopo grandi rally sono seguite correzioni del 40-60%. Una posizione moderata nell'ambito di un portafoglio diversificato è molto diversa da un'allocazione concentrata inseguendo le performance recenti.</li>
 
-<p><em>Buona giornata e buoni investimenti — con consapevolezza.</em></p>
+  <li><strong>La diversificazione geografica ha un costo nascosto: la concentrazione tematica.</strong> Avere sia un ETF Corea del Sud che un ETF Semiconductor globale potrebbe sembrare diversificazione, ma in realtà significa amplificare l'esposizione agli stessi titoli (Samsung, SK Hynix, TSMC). Prima di accumulare più ETF tematici correlati, vale la pena fare una verifica delle sovrapposizioni effettive tra i panieri.</li>
+</ul>
+
+<hr>
+
+<h2>✍️ Chiusura</h2>
+
+<p>Oggi i mercati ci mostrano due velocità molto diverse: l'Asia dei semiconduttori vola sulle ali dell'intelligenza artificiale, mentre l'internet cinese continua a fare i conti con un contesto regolatorio e geopolitico sfidante. Come sempre, i numeri più grandi meritano le domande più grandi. Buon sabato e buona riflessione.</p>
+
+<p><em>Ricorda: questa newsletter ha scopo puramente informativo e non costituisce consulenza finanziaria. Ogni decisione di investimento deve essere valutata in base al proprio profilo di rischio.</em></p>
 
 <hr>
 
 </div>
     </div>
     <div class="col-science">
-      <div class="section-label">🔬 Pillola Scientifica</div>
-      <div class="science-box">
-
-<h2>🔬 Pillola Scientifica del Giorno</h2>
-
-<h3>🧠 Neuroscienze: Come il Tuo Cervello "Cancella" i Ricordi per Farti Pensare Meglio</h3>
-
-<p>Tendiamo a pensare alla memoria come a un archivio: più ricordi conserviamo, meglio funzioniamo. La realtà, però, è sorprendentemente controintuitiva. I neurologi hanno scoperto che il cervello è un <strong>maestro nell'arte della dimenticanza</strong>, e che questo processo non è un difetto evolutivo ma un meccanismo di ottimizzazione sofisticatissimo. Un cervello che ricorda tutto con perfezione assoluta — come nel caso della condizione nota come <em>iperthimesia</em> — non è un super-cervello: è spesso un cervello in difficoltà, incapace di generalizzare e prendere decisioni rapide.</p>
-
-<p>Il meccanismo alla base di tutto questo coinvolge un processo chiamato <strong>pruning sinaptico</strong>, ovvero la "potatura" delle connessioni neurali. Durante l'infanzia e l'adolescenza, il cervello produce un numero enorme di sinapsi — le connessioni tra neuroni — e poi, nel tempo, elimina quelle usate meno frequentemente. È esattamente l'opposto di ciò che ci aspetteremmo: invece di costruire sempre di più, il cervello <em>toglie</em> per migliorare. Studi recenti pubblicati su <em>Nature Neuroscience</em> suggeriscono che anche nel cervello adulto esistono meccanismi analoghi, regolati da cellule chiamate <strong>astrociti</strong> e microglia, che continuano a modulare il paesaggio sinaptico in risposta all'esperienza.</p>
-
-<p>Ma perché dimenticare aiuta a pensare? La risposta sta nella <strong>generalizzazione</strong>. Se ricordassimo ogni singolo cane che abbiamo mai visto con tutti i suoi dettagli precisi, faremmo fatica a riconoscere immediatamente un cane nuovo come "cane". Il cervello invece estrae i pattern comuni — le caratteristiche essenziali — e scarta il rumore di fondo. Questo processo, chiamato <em>abstraction</em>, è anche il principio su cui si basano le reti neurali artificiali dell'intelligenza artificiale moderna: non a caso, i modelli di deep learning "dimenticano" intenzionalmente parte dei dati durante il training attraverso tecniche come il <em>dropout</em>, proprio per evitare di memorizzare i singoli esempi e imparare invece le regole generali.</p>
-
-<p>Infine, il sonno gioca un ruolo fondamentale in tutto questo. Durante la fase REM e il sonno profondo a onde lente, il cervello non si "spegne" semplicemente: attivamente <strong>riorganizza i ricordi</strong>, potenziando quelli emotivamente rilevanti e indebolendo quelli irrilevanti. La privazione cronica del sonno non solo stanca — compromette letteralmente la capacità del cervello di selezionare cosa vale la pena ricordare, rendendo tutto ugualmente sfocato. Dormire bene, in questo senso, è forse il miglior "nootropico" disponibile gratuitamente.</p>
-
-<p><strong>💭 Domanda del giorno:</strong> Se potessi scegliere di ricordare tutto con perfezione assoluta — ogni conversazione, ogni volto, ogni errore — lo vorresti davvero? O la capacità di dimenticare è parte essenziale di ciò che ci rende umani?</p></div>
+      <div class="pillola-box">
+    <div class="section-label">💡 Pillola del giorno</div>
+    <div class="pillola-title">La materia oscura</div>
+    <p class="pillola-text">Quando gli astronomi osservano le galassie ruotare, trovano qualcosa di strano: le stelle nei bordi esterni si muovono troppo velocemente rispetto a quanto previsto dalla sola massa visibile. Qualcosa di invisibile deve fornire massa aggiuntiva - la chiamiamo materia oscura, e costituisce circa il 27% del contenuto energetico dell'universo.</p>
+    <div class="pillola-alt-label">Vuoi cambiarla? Scegli un tema per domani:</div>
+    <div class="pillola-alt-buttons">
+      <button class="pillola-alt-btn" onclick="sceglipillola('Come funziona il decadimento radioattivo', this)">Come funziona il decadimento radioattivo</button><button class="pillola-alt-btn" onclick="sceglipillola('Perché i muscoli fanno male dopo', this)">Perché i muscoli fanno male dopo</button><button class="pillola-alt-btn" onclick="sceglipillola('Chi era Nikola Tesla', this)">Chi era Nikola Tesla</button>
+    </div>
+    <p id="pillola-status" class="qa-status"></p>
+  </div>
     </div>
   </div>
 </div>
 
-<div id="section-criminal" class="section" style="display:none;">
-  <div class="section-label">🔍 Casi Criminali</div>
-  <div class="cases-grid"><div class="case-box">
-    <div class="case-title">Caso Carretta – Omicidio familiare mascherato da fuga volontaria</div>
-    <div class="case-body">Nell'estate del 1989 la famiglia Carretta di Parma partì in camper per una vacanza in Europa senza comunicare la destinazione, e non tornò a settembre come previsto. L'opinione pubblica e la polizia di Parma propesero per la tesi dell'allontanamento volontario, rafforzata dal fatto che il padre Giuseppe avesse prelevato una grossa somma dalla cassaforte aziendale (circa 10 miliardi di lire, ritenuti fondi neri). Il caso passò alla Procura di Milano dopo il ritrovamento del camper in città, ma rimase irrisolto per anni, anche a causa di numerose false segnalazioni di avvistamenti della famiglia nel mondo. La svolta arrivò quando la polizia londinese fermò per un'infrazione stradale Ferdinando Carretta, il figlio ritenuto scomparso. Ferdinando inizialmente confermò la tesi della fuga volontaria, dichiarando di non vedere la famiglia dal 1989 e di averne coperto la fuga ai Caraibi. Fu rilasciato per mancanza di prove, ma in seguito, durante un'intervista a una rete locale italiana, confessò l'omicidio della propria famiglia. Al processo fu ritenuto colpevole ma incapace di intendere e di volere al momento dei fatti, e condannato a 5 anni in ospedale psichiatrico. L'autore degli appunti trova contraddittoria tale sentenza, osservando che Ferdinando dimostrò invece piena capacità di agire razionalmente nelle fasi successive: occultamento dei cadaveri, abbandono del furgone a Milano e fuga all'estero con una vita regolare in Inghilterra.</div>
+<div id="section-interessi" class="section" style="display:none;">
+  <div class="section-label">🔍 Interessi</div>
+  <div class="tag-group">
+    <div class="tag-label">Scienza</div>
+    <div class="cases-grid"><div class="case-box">
+    <div class="case-title">Datazione dei minerali con gli zirconi</div>
+    <div class="case-body">Gli zirconi sono minerali che, al momento della loro formazione, intrappolano uranio ma quasi nessun piombo. Poiché l'uranio decade in piombo a velocità nota e costante, misurando il rapporto tra i due elementi nel cristallo è possibile risalire con precisione all'età del minerale.</div>
   </div><div class="case-box">
-    <div class="case-title">Caso Logli – Scomparsa di Roberta Ragusa e condanna del marito</div>
-    <div class="case-body">Nel gennaio 2011 Roberta Ragusa scomparve di notte dalla sua abitazione a San Giuliano Terme. Il marito Antonio Logli riferì di essersi svegliato senza trovarla, ipotizzando che fosse uscita in pigiama, dato che tutti i suoi effetti personali erano ancora in casa. Le ricerche con unità cinofile non diedero risultati. Le indagini si concentrarono su Antonio, dal quale emerse una relazione extraconiugale con una donna di nome Sara, che lavorava anche in casa loro, e che Antonio aveva inizialmente negato. In assenza di corpo e testimoni diretti, il caso rimase bloccato per circa otto mesi, finché un uomo dichiarò di aver visto quella sera qualcuno spingere una donna dentro un'automobile. Questo elemento, unito alle menzogne sulla relazione e alle incongruenze nel racconto di Antonio, portò al processo. Il percorso giudiziario fu complesso: assoluzione in primo grado, condanna in appello a circa 20 anni, confermata in via definitiva dalla Cassazione. Si trattò di un processo interamente indiziario: il corpo di Roberta non è mai stato ritrovato e la testimonianza sull'auto rimase incerta. I figli di Antonio hanno sempre sostenuto la sua innocenza.</div>
+    <div class="case-title">Thomas Midgley Jr., l'inventore dal pesante impatto ambientale</div>
+    <div class="case-body">Ingegnere chimico responsabile di due invenzioni molto dannose per l'ambiente. Nel 1923 scoprì che aggiungere piombo alla benzina migliorava le prestazioni dei motori, nonostante la tossicità del piombo fosse già nota; finanziò test per rassicurare l'opinione pubblica. Le benzine senza piombo arrivarono solo decenni dopo. Inventò anche i CFC, usati come refrigeranti e poi collegati al buco nell'ozono. Morì intrappolato in un meccanismo a corde e carrucole che aveva costruito lui stesso.</div>
+  </div><div class="case-box">
+    <div class="case-title">Clair Patterson e la contaminazione da piombo</div>
+    <div class="case-body">Geologo che, nel tentativo di calcolare l'età della Terra, scoprì l'estensione della contaminazione ambientale da piombo. Le rocce terrestri mostravano livelli di piombo anomali; usando meteoriti non contaminati riuscì a datare la Terra con il metodo uranio-piombo. Individuò nelle benzine al piombo la causa principale della contaminazione, scontrandosi con le lobby petrolifere che finanziarono studi contrari. Le sue prove, ricavate anche dai ghiacci polari, prevalsero alla fine.</div>
+  </div><div class="case-box">
+    <div class="case-title">La tettonica delle placche</div>
+    <div class="case-body">Teoria elaborata da Alfred Wegener secondo cui il calore interno della Terra genera moti che muovono le placche tettoniche della crosta terrestre. Esistono tre tipi di margine tra placche: convergente (le placche si scontrano, generando fenomeni come la subduzione), divergente (le placche si allontanano) e trascorrente (le placche scorrono lateralmente l'una rispetto all'altra).</div>
+  </div><div class="case-box">
+    <div class="case-title">L'entanglement quantistico</div>
+    <div class="case-body">Fenomeno per cui due particelle diventano collegate in un unico sistema: misurare lo stato di una determina istantaneamente lo stato dell'altra, anche a grande distanza. Non può essere usato per trasmettere informazioni più velocemente della luce, perché il risultato della misura su ciascuna particella resta casuale; solo confrontando i risultati a posteriori si può verificare la correlazione. Un output deterministico permetterebbe messaggi istantanei, violando la relatività.</div>
+  </div><div class="case-box">
+    <div class="case-title">Entropia e la freccia del tempo</div>
+    <div class="case-body">L'entropia misura il numero di configurazioni microscopiche compatibili con lo stato macroscopico di un sistema. Il secondo principio della termodinamica afferma che l'entropia di un sistema isolato tende ad aumentare, perché gli stati più disordinati sono statisticamente molto più numerosi di quelli ordinati. Questo aumento costante dà una direzione al tempo, facendo evolvere l'universo verso stati sempre più probabili e disordinati.</div>
+  </div><div class="case-box">
+    <div class="case-title">Il paradosso di Jevons: più efficienza può aumentare i consumi</div>
+    <div class="case-body">Quando una tecnologia diventa più efficiente nell'uso di una risorsa, ci si aspetterebbe una riduzione dei consumi. In pratica accade spesso il contrario: l'efficienza rende l'uso della risorsa più economico, aumentandone la domanda complessiva. Esempi tipici sono motori più efficienti che rendono l'auto più conveniente da usare, o LED che, costando meno</div>
   </div></div>
+  </div><div class="tag-group">
+    <div class="tag-label">Criminal</div>
+    <div class="cases-grid"><div class="case-box">
+    <div class="case-title">Caso Carretta – Omicidio familiare e scomparsa simulata (Parma, 1989)</div>
+    <div class="case-body">Nel 1989 la famiglia Carretta di Parma scomparve durante una vacanza estiva in camper. Per anni l'ipotesi più accreditata – sia dall'opinione pubblica che dalla polizia – fu quella di un allontanamento volontario, rafforzata dalla scoperta che il padre Giuseppe aveva prelevato ingenti somme dalla cassaforte aziendale prima di partire. Il ritrovamento del camper a Milano trasferì il caso alla Procura milanese, che nutrì dubbi sulla tesi dell'allontanamento ma non trovò prove alternative. Il caso rimase irrisolto finché la polizia londinese fermò per un'infrazione stradale Ferdinando Carretta, figlio della famiglia, ritenuto anch'egli scomparso. Interrogato, Ferdinando confermò inizialmente la versione della fuga volontaria ai Caraibi, ma in seguito, durante un'intervista a una rete locale italiana, confessò l'omicidio dell'intera famiglia. Fu condannato a 5 anni in ospedale psichiatrico, in quanto ritenuto incapace di intendere e di volere al momento dei fatti. L'autore degli appunti sottolinea la contraddizione di tale verdetto: Ferdinando sarebbe stato incapace di intendere e volere al momento dell'omicidio, ma capace di occultare i cadaveri, abbandonare il furgone a Milano e ricostruirsi una vita in Inghilterra.</div>
+  </div><div class="case-box">
+    <div class="case-title">Caso Logli – Scomparsa di Roberta Ragusa (San Giuliano Terme, 2012)</div>
+    <div class="case-body">Nel gennaio 2011 Roberta Ragusa scomparve dalla propria abitazione a San Giuliano Terme. Il marito Antonio Logli riferì di essersi svegliato senza trovarla, notando che tutti gli effetti personali erano ancora in casa. Le ricerche con unità cinofile non diedero risultati. Le indagini si concentrarono su Antonio, dal quale emerse una relazione extraconiugale con una donna, Sara, che lavorava anche nella loro casa. In assenza di corpo e testimoni diretti, il caso rimase bloccato per circa otto mesi, fino alla testimonianza di un uomo che disse di aver visto quella sera qualcuno spingere una donna in un'auto. Tale testimonianza, unita alle menzogne di Antonio sulla relazione e alle incongruenze nel suo racconto, portò al processo. Il percorso giudiziario fu travagliato: assolto in primo grado, Antonio fu condannato in appello a circa 20 anni di carcere, pena poi confermata in via definitiva dalla Cassazione. Il processo fu interamente indiziario: il corpo di Roberta non è mai stato ritrovato e il testimone non poté confermare con certezza l'identità dell'uomo visto quella sera. I figli di Antonio hanno sempre sostenuto la sua innocenza.</div>
+  </div></div>
+  </div>
 </div>
 
 <div id="section-lezioni" class="section" style="display:none;">
@@ -207,13 +209,13 @@
     <div class="tag-label">Investimenti</div>
     <div class="cases-grid"><div class="case-box">
     <div class="case-title">Vendita impulsiva e rientro "a caldo" su Bending Spoons</div>
-    <div class="case-body">L'autore investe circa 2.246 USD in 72 azioni di BSP con un piano preciso: vendita al +15% e stop a un prezzo definito. La vendita scatta a 35,77 USD (minimo locale), ma il titolo risale fino a 44 USD. La sera stessa, spinto dalla FOMO, riacquista 30 azioni a 42,04 USD, sopra il prezzo di vendita.
+    <div class="case-body">L'autore investe 2.246 USD in BSP (72 azioni a 31,20 USD di media) e rispetta il target di uscita prefissato al +15% (35,77 USD). Il titolo risale poi fino a 44 USD e, la stessa sera, per paura di perdere il rialzo, l'autore riacquista 30 azioni a 42,04 USD — sopra il prezzo di vendita — commettendo un errore di FOMO.
 
-Il bilancio è netto: l'uscita pianificata era corretta, il rientro impulsivo è stato l'errore. Il rimpianto per il rialzo mancato non segnala una regola sbagliata, ma è il costo fisiologico di avere una disciplina. Viene introdotta una regola del breakeven: se si rientra con meno azioni di quelle vendute, il punto di pareggio reale non è il prezzo di vendita, ma il rapporto tra il cash disponibile e le azioni mancanti per ripristinare la posizione originale.
+L'analisi distingue nettamente i due momenti: l'uscita è valutata positivamente (regola rispettata, emotività esclusa), mentre il rientro è identificato come l'unico errore, proprio perché non era stato pianificato in anticipo. Viene introdotta una regola del breakeven: quando si rientra con meno azioni di quelle vendute, il punto di pareggio rispetto al "non aver mai venduto" si calcola come cash disponibile diviso azioni mancanti — non coincide con il prezzo di vendita. Rientrare sopra il prezzo di vendita è quasi sempre perdente rispetto all'inazione.
 
-Si riconosce però un contrappeso: rientrare anche a prezzo più alto può avere senso se la tesi di fondo regge, e restare bloccati dal confronto col prezzo passato può portare all'errore opposto — non rientrare mai in un titolo in cui si crede.
+Si riconosce però un contrappeso: rientrare a un prezzo più alto può avere senso se la tesi rialzista regge, e restare bloccati dal rimpianto del prezzo perso può portare all'errore opposto (non rientrare mai in un titolo in cui si crede).
 
-Le conclusioni operative sono cinque: fissare in anticipo sia il prezzo di uscita sia quello di rientro; non rientrare mai sopra il prezzo di vendita per inseguire il movimento; calcolare il breakeven specifico prima di eseguire l'ordine; riconoscere che solo il rientro impulsivo, non l'uscita, è stato l'errore.</div>
+Le conclusioni operative sono: fissare in anticipo sia il prezzo di uscita che quello di rientro, non rientrare mai sopra il prezzo di vendita per inseguire il mercato, calcolare il breakeven specifico prima di eseguire l'ordine, e non invalidare una buona regola solo perché l'esito è stato sfortunato.</div>
   </div></div>
   </div>
 </div>
@@ -248,6 +250,23 @@ async function inviaDomanda() {
     status.textContent = 'Errore nell\'invio, riprova.';
   }
   btn.disabled = false;
+}
+
+async function sceglipillola(argomento, btn) {
+  document.querySelectorAll('.pillola-alt-btn').forEach(b => b.disabled = true);
+  const status = document.getElementById('pillola-status');
+  status.textContent = 'Scelta inviata...';
+  try {
+    await fetch('https://fedex98567.app.n8n.cloud/webhook/pillola-scelta', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ argomento })
+    });
+    status.textContent = 'Scelto! Sar\'a pronta al prossimo aggiornamento.';
+  } catch (e) {
+    status.textContent = 'Errore, riprova.';
+    document.querySelectorAll('.pillola-alt-btn').forEach(b => b.disabled = false);
+  }
 }
 </script>
 </body>
