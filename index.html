@@ -56,29 +56,6 @@
     .spotify-play-btn { flex: 1; text-align: center; background: #1DB954; color: #fff; font-size: 0.8rem; font-weight: 500; padding: 8px 12px; border-radius: 20px; text-decoration: none; }
     .spotify-change-btn { cursor: pointer; background: #faf8f4; color: #555; font-size: 0.8rem; padding: 8px 14px; border-radius: 20px; border: 0.5px solid #e8e2d9; }
     .spotify-change-btn:disabled { opacity: 0.5; cursor: default; }
-    .cap-periodo { font-size: 0.75rem; color: #999; margin-bottom: 1.25rem; }
-    .cap-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 1rem; }
-    .cap-card { background: #fff; border: 0.5px solid #e8e2d9; border-radius: 12px; padding: 1.25rem; margin-bottom: 0.75rem; }
-    .cap-card-label { font-size: 0.8rem; color: #666; margin-bottom: 4px; }
-    .cap-card-sublabel { font-size: 0.7rem; color: #999; margin-bottom: 0.9rem; }
-    .cap-card-sub { font-size: 0.75rem; color: #999; margin-top: 4px; }
-    .cap-big-number { font-size: 1.4rem; font-weight: 500; color: #1a1a1a; }
-    .cap-bar-row { margin-bottom: 0.9rem; }
-    .cap-bar-label { display: flex; justify-content: space-between; font-size: 0.8rem; margin-bottom: 4px; }
-    .cap-bar-value { color: #999; }
-    .cap-bar-note { font-size: 0.7rem; color: #bbb; }
-    .cap-bar-track { height: 8px; border-radius: 4px; background: #f0ece4; overflow: hidden; }
-    .cap-bar-fill { height: 100%; border-radius: 4px; }
-    .cap-subblock { border-top: 0.5px solid #e8e2d9; margin-top: 0.75rem; padding-top: 0.9rem; }
-    .cap-subblock-label { font-size: 0.75rem; color: #999; margin-bottom: 0.7rem; }
-    .cap-subblock .cap-bar-row { margin-bottom: 0.7rem; }
-    .cap-subblock .cap-bar-track { height: 6px; }
-    .cap-alert-title { font-size: 0.9rem; font-weight: 600; color: #A32D2D; }
-    .cap-alert-desc { font-size: 0.7rem; color: #999; margin-top: 4px; }
-    .cap-status-ok { font-size: 0.9rem; font-weight: 500; color: #0F6E56; }
-    @media (max-width: 768px) {
-      .cap-grid { grid-template-columns: 1fr; }
-    }
     .footer { padding: 1rem 2rem; border-top: 1px solid #e8e2d9; font-size: 0.7rem; color: #bbb; text-align: center; }
     @media (max-width: 768px) {
       .layout { flex-direction: column; }
@@ -90,12 +67,10 @@
 <header>
   <h1>Federico — AI Dashboard</h1>
   <div class="right">
-    <span class="data">mercoledì 8 luglio 2026</span>
+    <span class="data">venerdì 10 luglio 2026</span>
     <div class="nav">
       <div class="nav-btn active" onclick="showSection('briefing', this)">Briefing</div>
       <div class="nav-btn" onclick="showSection('interessi', this)">Interessi</div>
-      <div class="nav-btn" onclick="showSection('lezioni', this)">Lezioni</div>
-      <div class="nav-btn" onclick="showSection('capitale', this)">Capitale</div>
     </div>
   </div>
 </header>
@@ -106,68 +81,80 @@
       <div class="qa-box">
     <div class="qa-label">❓ La tua domanda di ieri</div>
     <div class="qa-question">Mi puoi dire chi era Hemingway?</div>
-    <div class="qa-answer">Ernest Hemingway (1899–1961) è stato uno dei più grandi scrittori americani del Novecento. È noto per il suo stile letterario essenziale e diretto, caratterizzato da frasi brevi e dialoghi asciutti, una tecnica spesso descritta come "teoria dell'iceberg": ciò che non viene detto è tanto importante quanto ciò che viene scritto. Tra le sue opere più celebri ci sono Il vecchio e il mare, Addio alle armi, Per chi suona la campana e Fiesta. Fu anche giornalista e corrispondente di guerra, partecipando attivamente alla Prima Guerra Mondiale, alla Guerra Civile Spagnola e alla Seconda Guerra Mondiale, esperienze che influenzarono profondamente la sua narrativa. Nel 1954 ricevette il Premio Nobel per la Letteratura. Morì suicida nel 1961 a Ketchum, Idaho, dopo anni di problemi di salute fisica e mentale.</div>
+    <div class="qa-answer">Ernest Hemingway è stato uno dei più grandi scrittori americani del Novecento, nato il 21 luglio 1899 a Oak Park, Illinois, e morto il 2 luglio 1961 a Ketchum, Idaho. È considerato uno dei padri del romanzo moderno americano, celebre per il suo stile asciutto, diretto e privo di fronzoli, che ha influenzato generazioni di scrittori. Tra le sue opere più famose si ricordano "Il vecchio e il mare", "Addio alle armi", "Per chi suona la campana" e "Fiesta". Nel 1954 vinse il Premio Nobel per la Letteratura. Hemingway visse una vita avventurosa e intensa: partecipò come volontario alla Prima Guerra Mondiale, fu corrispondente di guerra durante la Guerra Civile Spagnola e il Secondo conflitto mondiale, e viaggiò moltissimo tra Europa, Cuba e Africa. Soffrì a lungo di depressione e problemi di salute, e si tolse la vita nel 1961, lasciando un'eredità letteraria straordinaria.</div>
   </div>
       <div class="qa-box">
     <div class="qa-label">💬 Fai una domanda</div>
-    <p class="qa-hint">Su qualcosa che hai letto oggi — ETF, pillola, lezioni, casi criminali. Risposta al prossimo aggiornamento del sito.</p>
+    <p class="qa-hint">Su qualcosa che hai letto oggi — ETF, pillola, interessi. Risposta al prossimo aggiornamento del sito.</p>
     <textarea id="qa-input" class="qa-textarea" placeholder="Scrivi la tua domanda..."></textarea>
     <button id="qa-submit" class="qa-button" onclick="inviaDomanda()">Invia domanda</button>
     <p id="qa-status" class="qa-status"></p>
   </div>
       <div class="section-label">📊 ETF Briefing del giorno</div>
-      <div class="briefing"><h2>🇰🇷 Corea del Sud & Semiconduttori: Il Rimbalzo del Dragone Asiatico</h2>
+      <div class="briefing"><h2>🔬 I Semiconduttori Dominano le Classifiche: L'Era del Silicio Continua</h2>
 
-<p>Oggi i dati di JustETF raccontano una storia precisa: il mercato azionario sudcoreano domina la classifica dei migliori performer con volumi di flusso impressionanti, affiancato dal comparto globale dei semiconduttori. Una combinazione tutt'altro che casuale, considerando che Samsung e SK Hynix pesano enormemente sugli indici coreani.</p>
-
-<hr>
-
-<h2>📊 Analisi del Giorno</h2>
-
-<h3>🏆 I Migliori Flussi: Corea del Sud in Pole Position</h3>
-
-<p>Gli ETF sulla Corea del Sud guidano la classifica dei flussi in entrata con percentuali che oscillano tra l'86% e il 93%. Questo dato segnala un interesse massiccio degli investitori verso quest'area, nonostante le performance recenti siano in territorio leggermente negativo (-4,19% e -6,42% nel periodo breve).</p>
-
-<ul>
-  <li><strong>FTSE Korea 30/18 Capped (flussi: +92,88%)</strong> — Replica le principali società quotate in Corea del Sud con un meccanismo di "capping" che limita il peso massimo di ogni singolo titolo al 18% e del gruppo al 30%. Questo serve a evitare che Samsung da sola distorca l'intero indice. Il settore è storicamente ciclico: sale quando la domanda globale di chip, display e automotive è forte, scende quando i cicli di inventario tecnologico si normalizzano. Il rischio principale è la concentrazione geografica, la dipendenza dall'export verso Cina e USA, e l'elevata sensibilità al ciclo dei semiconduttori.</li>
-  <li><strong>MSCI Korea 20/35 e variante Custom (flussi: +90,12% / +86,34%)</strong> — Funzionano in modo analogo ma con soglie di capping diverse (20% per singolo titolo, 35% per il gruppo). La variante "Custom" può escludere alcuni titoli o applicare filtri ESG leggeri. Storicamente questi indici hanno mostrato una correlazione elevata con il ciclo tecnologico globale e con il Won coreano, che aggiunge un ulteriore strato di rischio valutario per l'investitore europeo.</li>
-</ul>
-
-<p><strong>⚠️ Attenzione ai costi:</strong> Molti ETF sulla Corea del Sud disponibili su piattaforme europee hanno TER compresi tra 0,40% e 0,65%. Vale la pena confrontare con ETF più ampi sull'Asia emergente (es. iShares MSCI EM Asia) che includono Corea con TER intorno allo 0,20-0,25%, anche se diluiscono l'esposizione specifica.</p>
-
-<h3>💡 Semiconduttori Globali: Flussi Robusti e Performance Positiva</h3>
-
-<ul>
-  <li><strong>Nasdaq Global Semiconductor (flussi: +84,49%, performance: +2,75%)</strong> — Replica un paniere di società produttrici di semiconduttori a livello mondiale: NVIDIA, ASML, TSMC, Qualcomm e naturalmente le coreane. È uno dei comparti con la maggiore volatilità intrinseca nel segmento azionario. Storicamente esplode al rialzo nei momenti di adozione tecnologica massiva (AI, 5G, auto elettrica) e crolla violentemente quando i cicli di inventario si invertono, come accaduto nel 2022.</li>
-  <li><strong>Mirae Asset AI Semiconductor & Quantum (flussi: +83,81%, performance: +1,35%)</strong> — Più tematico e concentrato: punta su società legate all'intelligenza artificiale, ai chip neuromorfi e al computing quantistico. Trattandosi di un ETF tematico di nicchia, il TER tende ad essere più elevato (spesso 0,75% o più) e la liquidità può essere inferiore. Esiste un rischio specifico di "hype tecnologico": il mercato potrebbe aver già prezzato scenari di crescita molto ottimistici.</li>
-</ul>
-
-<p><strong>Alternative più efficienti:</strong> Per chi vuole esposizione ai semiconduttori con costi inferiori, l'iShares MSCI Global Semiconductors UCITS ETF offre un profilo simile con TER più competitivo. Anche VanEck Semiconductor UCITS ETF è una valida alternativa da valutare.</p>
-
-<h3>🔻 Le Peggiori: Criptovalute e un'Anomalia Italiana</h3>
-
-<p>La coda negativa è dominata dalle criptovalute (Bitcoin Cash -59,21%, Polkadot -52,08%, Cardano -49,08%) che continuano a mostrare una volatilità estrema e asimmetrica. Degno di nota è il dato anomalo sugli <strong>ETF Azioni Italia Finanza FTSE MIB Banks 15% Capped</strong> con un flusso di -97,56%: potrebbe trattarsi di una chiusura parziale di posizioni significative o di un dato tecnico da verificare, dato che la performance settimanale è comunque positiva (+16,86%).</p>
-
-<h3>📦 Il Dato Misterioso</h3>
-
-<p>Nei dati compaiono due righe anonime con soli valori numerici (<em>"88,48% / 2,35% / 59,34% / 153,27%"</em> e <em>"79,57% / 5,14% / 55,42% / 134,78%"</em>) prive di nome dell'ETF. Potrebbe trattarsi di prodotti in fase di aggiornamento nel database o di ETP su materie prime. Il dato più interessante è la performance a lungo termine del 153,27%: un prodotto chiaramente in trend pluriennale forte.</p>
+<p>Venerdì 10 luglio 2026: i dati di oggi da JustETF raccontano una storia molto chiara. Il settore dei semiconduttori si conferma il grande protagonista delle performance annuali, trascinando verso l'alto le classifiche dei migliori ETF. Sul fronte opposto, le criptovalute alternative e — sorprendentemente — le banche italiane guidano la lista dei peggiori.</p>
 
 <hr>
 
-<h2>🧭 Due Spunti per l'Investitore di Lungo Periodo</h2>
+<h2>📊 Analisi del Giorno: Semiconduttori vs. Cripto e Banche</h2>
+
+<h3>🏆 I Migliori: Il Dominio del Silicio</h3>
+
+<p>I dati mostrano con forza che gli ETF legati ai semiconduttori occupano stabilmente le prime posizioni sia per performance annuale che pluriennale. Ecco i più significativi:</p>
 
 <ul>
-  <li><strong>1. I flussi non sono performance.</strong> Il fatto che gli ETF sulla Corea del Sud raccolgano quasi il 90% dei flussi positivi non significa automaticamente che siano destinati a salire. Spesso i flussi massicci arrivano in ritardo rispetto al movimento di prezzo. Chiedersi sempre: "Sto inseguendo un trend già maturo o sto anticipando un ciclo?"</li>
-  <li><strong>2. Settori ciclici e pazienza.</strong> I semiconduttori e i mercati emergenti asiatici sono tra i comparti più volatili in assoluto. Chi ha un orizzonte di 10+ anni può beneficiare enormemente di questi cicli, ma deve essere mentalmente preparato a drawdown del 40-50% senza vendere. La diversificazione geografica rimane lo strumento più semplice per dormire tranquilli.</li>
+  <li>
+    <strong>ETF Nasdaq Global Semiconductor — +99,70% annuo, +57,88% YTD</strong><br>
+    Replica l'indice Nasdaq Global Semiconductor, che include i principali produttori e designer di chip a livello mondiale: NVIDIA, TSMC, ASML, Broadcom, AMD. Il settore sale quando esplode la domanda di calcolo (AI, data center, automotive elettrico) e scende tipicamente nei cicli di oversupply o in caso di restrizioni al commercio con la Cina. <em>Rischi specifici:</em> alta concentrazione geografica su Taiwan (TSMC), ciclicità estrema, esposizione alle tensioni geopolitiche USA-Cina. Un ETF alternativo da considerare per chi guarda al costo è il <strong>iShares MSCI Global Semiconductors UCITS ETF</strong> con TER spesso inferiore.
+  </li>
+  <li>
+    <strong>Mirae Asset AI Semiconductor &amp; Quantum — +97,55% annuo, +65,72% YTD</strong><br>
+    Un ETF più tematico e concentrato, che punta specificamente sull'intersezione tra intelligenza artificiale, chip specializzati per AI e computing quantistico. Funziona bene in fasi di entusiasmo tecnologico elevato, ma è più volatile e meno diversificato dei precedenti. <em>Rischi specifici:</em> TER tendenzialmente più alto rispetto agli ETF broad, liquidità inferiore, esposizione speculativa al quantum computing ancora in fase embrionale commerciale.
+  </li>
+  <li>
+    <strong>Bloomberg Semiconductor Supply Chain Select — +81,07% annuo</strong><br>
+    Meno conosciuto ma interessante: replica l'intera catena del valore dei semiconduttori, includendo non solo i designer ma anche i produttori di macchinari (ASML, Applied Materials), i fornitori di materiali e i tester. Questo approccio riduce la concentrazione su singoli player ma mantiene l'esposizione tematica. Storicamente meno volatile del puro semiconductor index.
+  </li>
+  <li>
+    <strong>ETF Azioni Corea del Sud (FTSE Korea 30/18 Capped e MSCI Korea) — +97,31% / +94,18% annuo</strong><br>
+    La presenza massiccia della Corea del Sud nella top list non è casuale: Samsung Electronics e SK Hynix dominano questi indici, e sono tra i principali produttori mondiali di memoria DRAM e NAND Flash — componenti essenziali per server AI e data center. <em>Rischi specifici:</em> forte dipendenza da due grandi conglomerati, rischio geopolitico con la Corea del Nord, valuta (Won coreano) non hedgiata nella maggior parte delle versioni UCITS.
+  </li>
+</ul>
+
+<h3>📉 I Peggiori: Banche Italiane e Cripto Altcoin</h3>
+
+<ul>
+  <li>
+    <strong>ETF FTSE MIB Banks 15% Capped — -97,61% (dato anomalo da verificare)</strong><br>
+    Questo dato è molto probabilmente un artefatto di ribilanciamento, corporate action o un errore nel feed dati — una performance annua del -97% per un ETF sulle banche italiane (che nel 2025-2026 hanno mostrato utili record) sarebbe straordinariamente atipica. <strong>Attenzione:</strong> prima di trarre conclusioni, è sempre consigliabile verificare direttamente su JustETF o Borsa Italiana. L'ETF replica le principali banche quotate sul MIB: Intesa Sanpaolo, UniCredit, Mediobanca, BPER. Il settore bancario italiano è sensibile ai tassi BCE, alla qualità del credito sovrano italiano e alle fusioni/acquisizioni.
+  </li>
+  <li>
+    <strong>Criptovalute (Bitcoin Cash, Polkadot, Cardano, Tezos, Sui, AVAX) — da -43% a -59%</strong><br>
+    Gli ETP sulle altcoin continuano a soffrire. A differenza di Bitcoin ed Ethereum, questi asset hanno perso progressivamente quota di mercato e narrativa. <em>Rischi specifici:</em> liquidità ridotta, spread denaro-lettera elevati, custodia complessa, regolamentazione europea in evoluzione con MiCA. Da notare che <strong>Uniswap</strong> è l'unica eccezione con un +35,17% mensile — probabilmente legato a un rilancio del protocollo DeFi.
+  </li>
 </ul>
 
 <hr>
 
-<h3>✍️ Chiusura</h3>
+<h2>💡 2 Spunti per l'Investitore di Lungo Termine</h2>
 
-<p>La giornata di oggi ci ricorda che i capitali si muovono spesso dove si intravede un rimbalzo dopo una correzione. La Corea del Sud e i semiconduttori sono aree storicamente premianti sul lungo periodo, ma richiedono stomaco forte e orizzonte temporale adeguato. Come sempre, nessuna di queste informazioni costituisce un consiglio di investimento: ogni decisione deve essere valutata in base al proprio profilo di rischio.</p>
+<ul>
+  <li>
+    <strong>Il momentum dei semiconduttori è reale, ma la ciclicità anche.</strong> Chi guarda a un orizzonte di 5-10 anni dovrebbe chiedersi: siamo nel pieno di un superciclo AI o vicino a un picco di valutazioni? La storia del settore insegna che dopo fasi di euforia (fine anni '90, 2021) arrivano correzioni severe. Un approccio graduale tramite PAC (Piano di Accumulo) riduce il rischio di entrare sul massimo.
+  </li>
+  <li>
+    <strong>La diversificazione geografica conta, anche all'interno dei temi.</strong> Un ETF broad sui semiconduttori offre esposizione a USA, Taiwan, Corea, Olanda e Giappone simultaneamente. Puntare tutto su un singolo paese (es. Corea del Sud) per cavalcare il chip rally concentra il rischio in modo significativo — specialmente in un contesto geopolitico asiatico incerto.
+  </li>
+</ul>
 
-<p><em>Buona giornata e buoni investimenti. 📈</em></p>
+<hr>
+
+<h2>✉️ Chiusura</h2>
+
+<p>La sessione di oggi conferma un tema che dura ormai da oltre due anni: il silicio è il nuovo petrolio, e i mercati lo prezzano con convinzione crescente. Come sempre, i dati sono uno strumento di analisi, non una raccomandazione operativa. Buona giornata e buoni investimenti — con la testa sempre fredda.</p>
+
+<p><em>📌 Nota: questo contenuto è puramente informativo e non costituisce consulenza finanziaria personalizzata.</em></p>
 
 <hr>
 
@@ -176,17 +163,17 @@
     <div class="col-science">
       <div class="pillola-box">
     <div class="section-label">💡 Pillola del giorno</div>
-    <div class="pillola-title">Chi era Nikola Tesla</div>
-    <p class="pillola-text">Nikola Tesla è forse il più famoso tra gli scienziati "dimenticati" dalla storia, almeno per un lungo periodo. Nato nel 1856 nell'attuale Serbia, arrivò negli Stati Uniti con in tasca quasi nulla e una lettera di presentazione per Thomas Edison. Quell'incontro avrebbe dato il via a una delle rivalità scientifiche più accese del XIX secolo.
+    <div class="pillola-title">Come si datano i minerali con gli zirconi</div>
+    <p class="pillola-text">Quando si parla di datare rocce antichissime, uno degli strumenti più affidabili in mano ai geologi sono i zirconi, piccoli cristalli che si formano quando le rocce magmatiche solidificano. Apparentemente comuni, questi minerali nascondono una proprietà straordinaria: nel momento in cui si formano, intrappolano al loro interno piccole quantità di uranio, ma rifiutano quasi completamente il piombo. Questo dettaglio, apparentemente tecnico, è la chiave di tutto.
 
-Il cuore del conflitto era tecnico ma anche commerciale: Edison spingeva per la corrente continua, su cui aveva costruito il suo impero industriale, mentre Tesla era convinto che il futuro appartenesse alla corrente alternata, molto più adatta al trasporto dell'elettricità su lunghe distanze. Aveva ragione lui. Grazie alla collaborazione con George Westinghouse, il sistema a corrente alternata di Tesla si impose, e ancora oggi è quello che alimenta le nostre case.
+L'uranio è un elemento radioattivo instabile: nel corso del tempo decade lentamente e si trasforma in piombo. La velocità di questo processo è costante e nota con grande precisione. Significa che ogni cristallo di zircone funziona come un orologio azzerato al momento della sua nascita: all'inizio c'è solo uranio, niente piombo. Con il passare del tempo, il piombo si accumula progressivamente all'interno del cristallo mentre l'uranio si riduce.
 
-Tesla fu anche un visionario fuori dal comune. Brevettò i principi alla base del motore elettrico a induzione, sviluppò le prime idee sul controllo remoto e sulla trasmissione wireless dell'energia, e costruì la celebre torre di Wardenclyffe con il sogno di trasmettere elettricità gratuitamente in tutto il mondo senza fili. Il progetto fu abbandonato quando i finanziatori, a cominciare da J.P. Morgan, capirono che un sistema del genere avrebbe reso impossibile far pagare gli utenti.
+Misurando oggi il rapporto tra la quantità di uranio rimasta e il piombo accumulato, i geologi possono calcolare con precisione quanti anni fa si è formato quel cristallo. È un po' come trovare una clessidra sigillata: sai quanto materiale c'era all'inizio, sai quanto ne è rimasto, conosci la velocità di caduta e puoi risalire al momento esatto in cui è stata girata.
 
-Tesla morì nel 1943, solo e quasi in povertà, in una stanza d'albergo a New York. La sua rivalità con Edison, il mito del genio incompreso e le sue idee più audaci lo hanno trasformato nel tempo in una figura quasi leggendaria, celebrata tanto dalla scienza quanto dalla cultura popolare.</p>
+Grazie a questa tecnica sono stati datati alcuni dei minerali più antichi mai trovati sulla Terra, con età superiori ai quattro miliardi di anni, offrendo una finestra diretta sulle primissime fasi della storia del nostro pianeta.</p>
     <div class="pillola-alt-label">Vuoi cambiarla? Scegli un tema per domani:</div>
     <div class="pillola-alt-buttons">
-      <button class="pillola-alt-btn" onclick="sceglipillola('Come funziona il decadimento radioattivo', this)">Come funziona il decadimento radioattivo</button><button class="pillola-alt-btn" onclick="sceglipillola('Perché sbadigliamo per contagio', this)">Perché sbadigliamo per contagio</button><button class="pillola-alt-btn" onclick="sceglipillola('Chi era Rasputin', this)">Chi era Rasputin</button>
+      <button class="pillola-alt-btn" onclick="sceglipillola('Come funziona il buco nell&#39;ozono', this)">Come funziona il buco nell'ozono</button><button class="pillola-alt-btn" onclick="sceglipillola('Chi era Rasputin', this)">Chi era Rasputin</button><button class="pillola-alt-btn" onclick="sceglipillola('Perché sbadigliamo per contagio', this)">Perché sbadigliamo per contagio</button>
     </div>
     <p id="pillola-status" class="qa-status"></p>
   </div>
@@ -209,62 +196,68 @@ Tesla morì nel 1943, solo e quasi in povertà, in una stanza d'albergo a New Yo
   <div class="tag-group">
     <div class="tag-label">Scienza</div>
     <div class="cases-grid"><div class="case-box">
-    <div class="case-title">Come si datano i minerali con gli zirconi</div>
+    <div class="case-title">Datazione dei minerali con gli zirconi</div>
     <div class="case-body">Gli zirconi sono minerali che al momento della loro formazione intrappolano uranio ma quasi nessun piombo. Poiché il decadimento radioattivo dell'uranio in piombo avviene a velocità nota e costante, misurando il rapporto tra i due elementi nel cristallo è possibile risalire con precisione all'età del minerale.</div>
   </div><div class="case-box">
-    <div class="case-title">Chi era Thomas Midgley Jr.</div>
-    <div class="case-body">Ingegnere chimico responsabile di due invenzioni dal pesante impatto ambientale: l'aggiunta di piombo alla benzina (1923) per migliorare le prestazioni dei motori, nonostante la tossicità del piombo fosse già nota, e l'invenzione dei CFC, poi collegati al buco nell'ozono. Finanziò test per rassicurare l'opinione pubblica sulla benzina al piombo; le versioni senza piombo arrivarono solo decenni dopo. Morì intrappolato in un meccanismo a corde e carrucole che aveva costruito lui stesso.</div>
+    <div class="case-title">Thomas Midgley Jr. e le sue invenzioni dannose</div>
+    <div class="case-body">Ingegnere chimico responsabile di due invenzioni ad alto impatto ambientale: l'aggiunta di piombo alla benzina (1923) per migliorarne le prestazioni, nonostante la tossicità già nota, e l'invenzione dei CFC, poi collegati al buco nell'ozono. Finanziò test per rassicurare l'opinione pubblica sul piombo; le benzine senza piombo arrivarono solo decenni dopo. Morì intrappolato in un meccanismo a corde e carrucole da lui stesso costruito.</div>
   </div><div class="case-box">
-    <div class="case-title">Chi era Clair Patterson</div>
-    <div class="case-body">Geologo che, nel tentativo di calcolare l'età della Terra con il metodo uranio-piombo, scoprì un'estesa contaminazione da piombo nell'ambiente. Le rocce terrestri mostravano livelli di piombo anomalmente alti; usando meteoriti non contaminati riuscì a datare correttamente l'età della Terra. Identificò le benzine al piombo come causa principale della contaminazione, scontrandosi con le lobby petrolifere che finanziarono studi contrari. Le sue prove, supportate anche dall'analisi dei ghiacci polari, prevalsero alla fine.</div>
+    <div class="case-title">Clair Patterson e la contaminazione da piombo</div>
+    <div class="case-body">Geologo che, cercando di calcolare l'età della Terra, scoprì l'estensione della contaminazione ambientale da piombo. Le rocce terrestri mostravano livelli di piombo anomali; usando meteoriti non contaminati riuscì a datare la Terra con il metodo uranio-piombo. Individuò nelle benzine al piombo la causa principale della contaminazione, scontrandosi con le lobby petrolifere che finanziarono studi contrari. Le sue prove, supportate anche dall'analisi dei ghiacci polari, prevalsero alla fine.</div>
   </div><div class="case-box">
     <div class="case-title">La tettonica delle placche</div>
-    <div class="case-body">Teoria elaborata da Alfred Wegener secondo cui il calore interno della Terra genera moti che muovono le placche tettoniche della crosta terrestre. I margini tra placche sono di tre tipi: convergente (le placche si scontrano, con fenomeni come la subduzione), divergente (le placche si allontanano) e trascorrente (le placche scorrono lateralmente l'una rispetto all'altra).</div>
+    <div class="case-body">Teoria elaborata da Alfred Wegener secondo cui il calore interno della Terra genera moti che muovono le placche tettoniche della crosta terrestre. I margini tra placche sono di tre tipi: convergente (scontro, con fenomeni come la subduzione), divergente (allontanamento) e trascorrente (scorrimento laterale).</div>
   </div><div class="case-box">
     <div class="case-title">Entanglement quantistico</div>
-    <div class="case-body">Fenomeno per cui due particelle diventano un unico sistema: misurare lo stato di una determina istantaneamente lo stato dell'altra, anche a grande distanza. Non può però essere usato per trasmettere informazioni più velocemente della luce, perché il risultato di ogni misura resta casuale e la correlazione è verificabile solo confrontando i risultati a posteriori. Un output deterministico violerebbe la relatività.</div>
+    <div class="case-body">Fenomeno per cui due particelle diventano un sistema unico: misurare lo stato di una determina istantaneamente lo stato dell'altra, anche a grande distanza. Non può essere usato per trasmettere informazioni più velocemente della luce perché il risultato di ogni misura resta casuale; la correlazione è verificabile solo confrontando i risultati a posteriori. Un output deterministico permetterebbe messaggi istantanei, violando la relatività.</div>
   </div><div class="case-box">
     <div class="case-title">Entropia e la freccia del tempo</div>
-    <div class="case-body">L'entropia misura il numero di configurazioni microscopiche compatibili con uno stato macroscopico. Il secondo principio della termodinamica afferma che l'entropia di un sistema isolato tende ad aumentare, perché gli stati disordinati sono statisticamente molto più numerosi di quelli ordinati. Questo aumento costante conferisce una direzione al tempo, facendo evolvere l'universo verso stati sempre più probabili e disordinati.</div>
+    <div class="case-body">L'entropia misura il numero di configurazioni microscopiche compatibili con uno stato macroscopico. Il secondo principio della termodinamica afferma che l'entropia di un sistema isolato tende ad aumentare, perché gli stati disordinati sono statisticamente molto più numerosi di quelli ordinati. Questo aumento costante dà una direzione al tempo, facendo evolvere l'universo verso stati sempre più probabili e disordinati.</div>
   </div><div class="case-box">
     <div class="case-title">Il paradosso di Jevons</div>
-    <div class="case-body">Quando una tecnologia diventa più efficiente nell'uso di una risorsa, ci si aspetterebbe una riduzione del consumo complessivo. In pratica accade spesso il contrario: l'efficienza rende l'uso della risorsa più economico, aumentandone la domanda totale. Esempi tipici sono motori più efficienti che incentivano l'uso dell'auto, o LED che, costando meno in bolletta, portano a un'illuminazione più diffusa.</div>
+    <div class="case-body">Quando una tecnologia diventa più efficiente nell'uso di una risorsa, anziché ridurre i consumi li aumenta, perché l'efficienza rende l'uso della risorsa più economico e ne stimola la domanda complessiva. Esempi tipici: motori più efficienti che incentivano l'uso dell'auto, e LED che, costando meno, portano a un'illuminazione più diffusa.</div>
   </div><div class="case-box">
-    <div class="case-title">Fattore di capacità di un impianto fotovoltaico e cos'è l'inverter</div>
-    <div class="case-body">Il fattore di capacità è il rapporto tra l'energia realmente prodotta in un anno e quella che l'impianto avrebbe prodotto funzionando sempre a piena potenza. Un impianto fotovoltaico produce corrente continua, che deve essere convertita in corrente alternata — usata dalla rete elettrica e dagli elettrodomestici — tramite un dispositivo chiamato inverter.</div>
+    <div class="case-title">Fattore di capacità fotovoltaico e inverter</div>
+    <div class="case-body">Il fattore di capacità di un impianto fotovoltaico è il rapporto tra l'energia realmente prodotta in un anno e quella producibile a piena potenza continua. Un impianto fotovoltaico genera corrente continua, che viene convertita in corrente alternata — utilizzata dalla rete e dagli elettrodomestici — tramite un dispositivo chiamato inverter.</div>
   </div><div class="case-box">
     <div class="case-title">Caratteristiche del pianeta Mercurio</div>
-    <div class="case-body">Mercurio è il pianeta più vicino al Sole e il più piccolo del sistema solare. È roccioso, distante circa 1/3 dell'unità astronomica dal Sole, con una massa di circa 1/3 di quella terrestre. L'assenza di un'atmosfera significativa causa forti escursioni termiche, e il suo campo magnetico è molto debole (circa l'1% di quello terrestre).</div>
+    <div class="case-body">Mercurio è il pianeta più vicino al Sole e il più piccolo del sistema solare. È roccioso, distante circa 1/3 dell'unità astronomica dal Sole, con massa pari a circa 1/3 di quella terrestre. L'assenza di un'atmosfera significativa causa forti escursioni termiche; il campo magnetico è molto debole, circa l'1% di quello terrestre.</div>
   </div></div>
   </div><div class="tag-group">
     <div class="tag-label">Salute</div>
     <div class="cases-grid"><div class="case-box">
-    <div class="case-title">Perché camomilla e melatonina aiutano il sonno in modo diverso</div>
-    <div class="case-body">I due rimedi agiscono con meccanismi distinti. La camomilla contiene composti che si legano ai recettori GABA nel cervello, riducendo l'attività neuronale e favorendo il rilassamento. La melatonina è un ormone che si lega ai recettori MT1 e MT2 nell'ipotalamo, sincronizzando il ritmo circadiano e segnalando all'organismo che è il momento di dormire.</div>
+    <div class="case-title">Camomilla e melatonina: meccanismi diversi sul sonno</div>
+    <div class="case-body">I due rimedi agiscono in modo distinto. La camomilla contiene composti che si legano ai recettori GABA nel cervello, riducendo l'attività neuronale e favorendo il rilassamento. La melatonina è un ormone che si lega ai recettori MT1 e MT2 nell'ipotalamo, sincronizzando il ritmo circadiano e segnalando all'organismo che è ora di dormire.</div>
   </div><div class="case-box">
-    <div class="case-title">Picco glicemico e ruolo delle proteine dopo l'allenamento</div>
-    <div class="case-body">I carboidrati semplici vengono trasformati rapidamente in zuccheri nel sangue, causando un picco glicemico a cui il corpo risponde con la produzione di insulina; verdure e fibre rallentano questo processo. Dopo l'allenamento, le proteine servono principalmente a riparare il muscolo danneggiato fornendo gli amminoacidi necessari, e a rallentare l'assorbimento dei carboidrati assunti nello stesso pasto.</div>
+    <div class="case-title">Picco glicemico e proteine dopo l'allenamento</div>
+    <div class="case-body">I carboidrati semplici vengono trasformati rapidamente in zuccheri nel sangue causando un picco glicemico, a cui il corpo risponde con insulina; verdure e fibre rallentano questo processo. Dopo l'allenamento le proteine servono a riparare il muscolo danneggiato fornendo amminoacidi e a rallentare l'assorbimento dei carboidrati assunti nello stesso pasto.</div>
   </div><div class="case-box">
-    <div class="case-title">Perché il gonfiore fa percepire una temperatura diversa</div>
-    <div class="case-body">Un tessuto gonfio modifica lo scambio termico tra i suoi strati e l'aria esterna, facendo disperdere il calore più facilmente rispetto a un tessuto non gonfio. Il gonfiore quindi non isola termicamente, ma altera la velocità di dispersione del calore, causando una percezione di temperatura diversa da quella reale dell'aria.</div>
+    <div class="case-title">Il gonfiore altera la percezione della temperatura</div>
+    <div class="case-body">Un tessuto gonfio modifica lo scambio termico tra i suoi strati e l'aria esterna, disperdendo calore più facilmente rispetto a un tessuto non gonfio. Il gonfiore non isola termicamente, ma cambia la velocità di dispersione del calore, facendo percepire una temperatura diversa da quella reale dell'aria.</div>
   </div><div class="case-box">
     <div class="case-title">Perché viene il singhiozzo</div>
-    <div class="case-body">Il singhiozzo è un riflesso involontario innescato dalla stimolazione del nervo vago o del nervo frenico (ad esempio da stomaco pieno, bevande gassate o pasti troppo veloci). Il segnale arriva al tronco encefalico, che provoca una contrazione improvvisa del diaframma seguita dalla rapida chiusura della glottide, producendo il caratteristico suono. Il motivo per cui il tronco encefalico generi questo riflesso non è ancora del tutto chiarito.</div>
+    <div class="case-body">Il singhiozzo è un riflesso involontario del diaframma causato dalla stimolazione del nervo vago o frenico (ad esempio da stomaco pieno, bevande gassate o alimentazione troppo rapida). Il segnale arriva al tronco encefalico, che provoca una contrazione improvvisa del diaframma seguita dalla rapida chiusura della glottide, generando il caratteristico suono. Il motivo per cui il tronco encefalico generi questo riflesso non è ancora del tutto chiaro.</div>
   </div><div class="case-box">
-    <div class="case-title">Perché l'allenamento fa sentire più vivi</div>
-    <div class="case-body">Durante l'allenamento i muscoli consumano ATP per contrarsi e il sistema nervoso simpatico si attiva rilasciando adrenalina e noradrenalina. Questi ormoni aumentano energia e focus, ed è uno dei motivi per cui l'attività fisica produce una sensazione di maggiore vitalità e lucidità.</div>
+    <div class="case-title">Perché l'allenamento dà senso di vitalità</div>
+    <div class="case-body">Durante l'allenamento i muscoli consumano ATP per contrarsi e il sistema nervoso simpatico si attiva rilasciando adrenalina e noradrenalina. Questi ormoni aumentano energia e focus, spiegando la sensazione di maggiore vitalità e lucidità che segue l'attività fisica.</div>
   </div></div>
   </div><div class="tag-group">
     <div class="tag-label">Storia</div>
     <div class="cases-grid"><div class="case-box">
-    <div class="case-title">Chi era Giovanna d'Arco</div>
-    <div class="case-body">Giovane francese priva di esperienza militare che, sostenendo di essere guidata da voci divine, guidò le truppe francesi ottenendo importanti vittorie e liberando città occupate dagli inglesi durante la Guerra dei Cent'anni. Fu infine catturata e processata per stregoneria ed eresia — anche a causa delle sue affermazioni di parlare direttamente con Dio — e condannata per screditarla.</div>
+    <div class="case-title">Giovanna d'Arco</div>
+    <div class="case-body">Giovane francese senza esperienza militare che guidò le truppe francesi ottenendo vittorie importanti e liberando città occupate dagli inglesi durante la Guerra dei Cent'anni, sostenendo di essere guidata da voci divine. Fu catturata e processata per stregoneria ed eresia — anche a causa delle sue affermazioni di parlare direttamente con Dio — con l'obiettivo di screditarla.</div>
   </div><div class="case-box">
-    <div class="case-title">Breve storia della Repubblica di Ragusa (Dubrovnik)</div>
-    <div class="case-body">Nel Medioevo, sulla costa adriatica tra Venezia e l'Impero Ottomano, si sviluppò la Repubblica di Ragusa (l'odierna Dubrovnik, in Croazia). Per mantenere maggiore indipendenza da Venezia, Ragusa scelse spesso di allearsi o pagare tributo agli Ottomani, pur restando esposta alle pressioni di entrambe le potenze. L'area ha visto nel tempo l'intreccio di influenze tra Croazia, Bosnia e Montenegro.</div>
+    <div class="case-title">La Repubblica di Ragusa (Dubrovnik)</div>
+    <div class="case-body">Nel Medioevo sulla costa adriatica si sviluppò la Repubblica di Ragusa (odierna Dubrovnik, Croazia), stretta tra Venezia e l'Impero Ottomano. Ragusa scelse spesso di allearsi o pagare tributo agli Ottomani per mantenere maggiore indipendenza da Venezia, pur restando esposta alle pressioni di entrambe le potenze. L'area ha visto nel tempo l'intreccio di influenze tra Croazia, Bosnia e Montenegro.</div>
   </div><div class="case-box">
     <div class="case-title">Il caso Clinton-Lewinsky</div>
-    <div class="case-body">Monica Lewinsky ebbe una relazione con il presidente USA Bill Clinton durante il suo mandato, mentre era sposato con Hillary Clinton. Nel tentativo di tenere nascosta la relazione furono coinvolte varie persone, tra cui una collega di Monica che ne raccolse le confidenze e le rese pubbliche. Clinton subì un processo di impeachment non per il tradimento in sé, ma per aver mentito sotto giuramento; rimase comunque in carica fino al termine del mandato e non divorziò da Hillary.</div>
+    <div class="case-body">Monica Lewinsky ebbe una relazione con il presidente USA Bill Clinton durante il suo mandato, mentre era sposato con Hillary Clinton. Nel tentativo di tenere nascosta la relazione furono coinvolte più persone, tra cui una collega di Monica che rese pubbliche le sue confidenze. Clinton subì un processo di impeachment non per il tradimento ma per aver mentito sotto giuramento; rimase in carica fino al termine del mandato e non divorziò.</div>
+  </div></div>
+  </div><div class="tag-group">
+    <div class="tag-label">Investimenti</div>
+    <div class="cases-grid"><div class="case-box">
+    <div class="case-title">Vendita impulsiva e rientro a caldo – caso Bending Spoons</div>
+    <div class="case-body">Il 1 luglio 2026 Federico ha investito 2.246 USD in BSP con target di uscita prefissato al +15%. Lo stop è scattato al minimo locale di giornata (35,77 USD); il titolo è poi salito fino a 44 USD. La sera stessa, per FOMO, ha ricomprato sopra il prezzo di vendita senza un livello di rientro definito in anticipo. Cosa ha funzionato: fissare e rispettare il target di uscita in anticipo elimina l'emotività. Errore commesso: il rientro impulsivo inseguendo il prezzo. Regola del breakeven individuata: con meno azioni della posizione originale, il vero breakeven è cash disponibile diviso azioni mancanti per tornare alla posizione originale, non il prezzo di vendita. Lezioni principali: definire in anticipo sia il prezzo di uscita sia quello di rientro; non rientrare mai sopra il prezzo di vendita per FOMO; calcolare subito il breakeven specifico con capitale parziale; un'uscita sfortunata non invalida la regola, solo il rientro impulsivo è stato l'errore.</div>
   </div></div>
   </div><div class="tag-group">
     <div class="tag-label">Criminal</div>
@@ -276,75 +269,6 @@ Tesla morì nel 1943, solo e quasi in povertà, in una stanza d'albergo a New Yo
     <div class="case-body">Nella notte tra gennaio 2011 e 2012 Roberta Ragusa scomparve dalla propria abitazione a San Giuliano Terme. Il marito Antonio Logli riferì di essersi svegliato senza trovarla, ipotizzando che fosse uscita in pigiama, poiché tutti i suoi effetti personali erano rimasti in casa. Le ricerche con unità cinofile non diedero risultati. Le indagini si concentrarono sul marito, anche a causa di una relazione extraconiugale con una donna di nome Sara, che lavorava anche presso la loro abitazione, relazione che Antonio aveva inizialmente negato. In assenza di corpo e testimoni diretti, le indagini restarono bloccate per circa otto mesi, fino alla testimonianza di un uomo che dichiarò di aver visto quella sera qualcuno spingere una donna in un'automobile. Questo elemento, unito alle menzogne di Antonio e alle incongruenze nel suo racconto, portò al processo. L'iter giudiziario fu lungo: assolto in primo grado, condannato in appello a circa 20 anni, condanna poi confermata in via definitiva dalla Cassazione. Si trattò di un processo interamente indiziario: il corpo di Roberta non è mai stato ritrovato e la testimonianza sull'auto rimase incerta. I figli di Antonio hanno sempre sostenuto la sua innocenza.</div>
   </div></div>
   </div>
-</div>
-
-<div id="section-lezioni" class="section" style="display:none;">
-  <div class="section-label">💡 Lezioni imparate</div>
-  <div class="tag-group">
-    <div class="tag-label">Investimenti</div>
-    <div class="cases-grid"><div class="case-box">
-    <div class="case-title">Vendita disciplinata e rientro impulsivo su Bending Spoons</div>
-    <div class="case-body">Investimento di 2.246 USD in 72 azioni BSP con target di uscita fissato in anticipo al +15%. Lo stop è scattato a 35,77 USD (minimo locale), ma il titolo è poi salito fino a 44 USD. La sera stessa, per FOMO, sono state ricomprate 30 azioni a 42,04 USD, sopra il prezzo di vendita.
-
-L'uscita è considerata corretta: rispettare regole fissate in anticipo è l'unico modo per eliminare l'emotività, e il rimpianto per il rialzo mancato è il costo naturale di avere una regola, non un segnale che la regola fosse sbagliata. L'errore è stato il rientro impulsivo, eseguito senza aver definito in anticipo un livello di rientro.
-
-Viene introdotta una regola del breakeven: quando si rientra con meno azioni di quelle vendute, il breakeven reale si calcola come capitale disponibile diviso le azioni mancanti per tornare alla posizione originale. Rientrare a un prezzo superiore a quello di vendita equivale quasi sempre a perdere rispetto al non aver fatto nulla. Tuttavia, rientrare anche a prezzi più alti può avere senso se la tesi rialzista regge: restare bloccati dal rimpianto del "prezzo perso" è un errore opposto, spesso peggiore.
-
-I principali insegnamenti ricavati sono: fissare in anticipo sia il prezzo di uscita che quello di rientro con lo stesso rigore; non rientrare mai sopra il prezzo di vendita per non perdere il treno; calcolare sempre il breakeven specifico prima di eseguire un rientro parziale; e ricordare che solo il rientro impulsivo è stato l'errore, non la regola di uscita che lo ha preceduto.</div>
-  </div></div>
-  </div>
-</div>
-
-<div id="section-capitale" class="section" style="display:none;">
-  <div class="section-label">💰 Capitale — Mese corrente</div>
-  <p class="cap-periodo">Periodo: 26 giu - 23 lug · giorno 13/28</p>
-<div class="cap-grid">
-  <div class="cap-col-left">
-    <div class="cap-card">
-      <p class="cap-card-label">Spazio rimanente per blocco</p>
-      <p class="cap-card-sublabel">Solo componente variabile dove presente una fissa</p>
-      <div class="cap-bar-row">
-    <div class="cap-bar-label"><span>Uscite fuori <span class="cap-bar-note">(escl. Viaggi)</span></span><span class="cap-bar-value">197€ / 257€</span></div>
-    <div class="cap-bar-track"><div class="cap-bar-fill" style="width:77%; background:#1D9E75;"></div></div>
-  </div><div class="cap-bar-row">
-    <div class="cap-bar-label"><span>Casa <span class="cap-bar-note">(escl. Affitto)</span></span><span class="cap-bar-value">73€ / 300€</span></div>
-    <div class="cap-bar-track"><div class="cap-bar-fill" style="width:24%; background:#1D9E75;"></div></div>
-  </div>
-      <div class="cap-subblock">
-        <p class="cap-subblock-label">Spese personali <span class="cap-bar-note">(escl. Abbonamenti)</span> — dettaglio</p>
-        <div class="cap-bar-row">
-    <div class="cap-bar-label"><span>Acquisti personali</span><span class="cap-bar-value">0€ / 63€</span></div>
-    <div class="cap-bar-track"><div class="cap-bar-fill" style="width:0%; background:#1D9E75;"></div></div>
-  </div><div class="cap-bar-row">
-    <div class="cap-bar-label"><span>Cura sanitaria personale</span><span class="cap-bar-value">40€ / 50€</span></div>
-    <div class="cap-bar-track"><div class="cap-bar-fill" style="width:80%; background:#BA7517;"></div></div>
-  </div><div class="cap-bar-row">
-    <div class="cap-bar-label"><span>Trasporti e Benzina</span><span class="cap-bar-value">7€ / 40€</span></div>
-    <div class="cap-bar-track"><div class="cap-bar-fill" style="width:18%; background:#1D9E75;"></div></div>
-  </div><div class="cap-bar-row">
-    <div class="cap-bar-label"><span>Regali</span><span class="cap-bar-value">10€ / 50€</span></div>
-    <div class="cap-bar-track"><div class="cap-bar-fill" style="width:20%; background:#1D9E75;"></div></div>
-  </div><div class="cap-bar-row">
-    <div class="cap-bar-label"><span>Tabacco</span><span class="cap-bar-value">49€ / 22€</span></div>
-    <div class="cap-bar-track"><div class="cap-bar-fill" style="width:100%; background:#A32D2D;"></div></div>
-  </div><div class="cap-bar-row">
-    <div class="cap-bar-label"><span>Eventi Avversi</span><span class="cap-bar-value">7€ / 30€</span></div>
-    <div class="cap-bar-track"><div class="cap-bar-fill" style="width:24%; background:#1D9E75;"></div></div>
-  </div>
-      </div>
-    </div>
-  </div>
-  <div class="cap-col-right">
-    <div class="cap-card"><p class="cap-card-label">Speso finora</p><p class="cap-big-number">736€</p></div>
-    <div class="cap-card">
-      <p class="cap-card-label">Previsione fine periodo</p>
-      <p class="cap-big-number">36833€</p>
-      <p class="cap-card-sub">fisse 36007€ + variabili proiettate 826€</p>
-      <p class="cap-card-sub" style="color:#A32D2D;">vs budget 36819€ · sforamento 14€</p>
-    </div>
-    <div class="cap-card"><p class="cap-card-label">Attenzione</p><p class="cap-alert-title">Uscite fuori</p><p class="cap-alert-desc">77% del budget usato, ma solo 46% del periodo passato — ritmo troppo alto</p></div>
-  </div>
-</div>
 </div>
 
 <div class="footer">Aggiornato automaticamente · fficorilliai.github.io</div>
