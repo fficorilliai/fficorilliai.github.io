@@ -45,14 +45,17 @@
     .tag-label { display: inline-block; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #7a6a4f; background: #f0ece4; padding: 4px 12px; border-radius: 20px; margin-bottom: 1rem; }
     .qa-box { background: #fff; border: 0.5px solid #e8e2d9; border-radius: 12px; padding: 1.25rem; margin-bottom: 1.5rem; }
     .qa-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #999; margin-bottom: 0.75rem; }
-    .qa-question { font-size: 0.9rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.5rem; }
-    .qa-answer { font-size: 0.85rem; line-height: 1.7; color: #555; }
     .qa-hint { font-size: 0.8rem; color: #999; margin-bottom: 0.75rem; }
     .qa-textarea { width: 100%; min-height: 60px; padding: 0.6rem; border: 0.5px solid #e8e2d9; border-radius: 8px; font-family: inherit; font-size: 0.85rem; resize: vertical; margin-bottom: 0.6rem; }
     .qa-button { cursor: pointer; font-size: 0.8rem; padding: 6px 16px; border-radius: 20px; background: #1a1a1a; color: #fff; border: none; }
     .qa-button:disabled { background: #ccc; cursor: default; }
     .qa-status { font-size: 0.75rem; color: #999; margin-top: 0.5rem; }
-    .spotify-box { background: #fff; border: 0.5px solid #e8e2d9; border-radius: 12px; padding: 1.25rem; margin-top: 1.5rem; }
+    .mini-qa-box { margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed #e8e2d9; }
+    .mini-qa-answer { font-size: 0.8rem; line-height: 1.6; color: #555; background: #faf8f4; border-radius: 8px; padding: 0.6rem 0.75rem; margin-bottom: 0.6rem; }
+    .mini-qa-textarea { width: 100%; min-height: 40px; padding: 0.5rem; border: 0.5px solid #e8e2d9; border-radius: 8px; font-family: inherit; font-size: 0.8rem; resize: vertical; margin-bottom: 0.5rem; }
+    .mini-qa-button { cursor: pointer; font-size: 0.75rem; padding: 5px 12px; border-radius: 16px; background: #1a1a1a; color: #fff; border: none; }
+    .mini-qa-button:disabled { background: #ccc; cursor: default; }
+    .spotify-box { background: #fff; border: 0.5px solid #e8e2d9; border-radius: 12px; padding: 1.25rem; margin-bottom: 1.5rem; }
     .spotify-title { font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 2px; }
     .spotify-artist { font-size: 0.8rem; color: #999; margin-bottom: 12px; }
     .spotify-buttons { display: flex; gap: 8px; }
@@ -81,52 +84,6 @@
 <div id="section-briefing" class="section">
   <div class="layout">
     <div class="col-etf">
-      <div class="qa-box">
-    <div class="qa-label">❓ La tua domanda di ieri</div>
-    <div class="qa-question">Mi puoi dire chi era Hemingway?</div>
-    <div class="qa-answer">Ernest Hemingway (1899–1961) è stato uno dei più grandi scrittori americani del XX secolo, premio Nobel per la letteratura nel 1954.</div>
-  </div>
-      <div class="qa-box">
-    <div class="qa-label">💬 Fai una domanda</div>
-    <p class="qa-hint">Su qualcosa che hai letto oggi — ETF, pillola, interessi. Risposta al prossimo aggiornamento del sito.</p>
-    <textarea id="qa-input" class="qa-textarea" placeholder="Scrivi la tua domanda..."></textarea>
-    <button id="qa-submit" class="qa-button" onclick="inviaDomanda()">Invia domanda</button>
-    <p id="qa-status" class="qa-status"></p>
-  </div>
-      <div class="section-label">📊 ETF Briefing del giorno</div>
-      <div class="briefing"><h2>⚡ Energia e chip dominano il 2026: due rally opposti, una sola lezione</h2>
-
-<p>Il quadro che emerge dalla tabella è dominato da due cluster molto distinti. Il primo è quello delle <strong>materie prime energetiche</strong>, con gli indici Bloomberg su heating oil e benzina senza piombo che guidano la classifica YTD con rendimenti nell'ordine del 90-130%: questi benchmark replicano futures su derivati petroliferi specifici (gasolio da riscaldamento e benzina), non il petrolio greggio in senso lato, il che spiega la divergenza rispetto a un indice energetico generico. Il rally si è concentrato soprattutto nell'ultimo mese (+28-36%), segnalando un'accelerazione recente, non un trend che si esaurisce. Il secondo cluster è quello dei <strong>semiconduttori e della Corea del Sud</strong>: indici come il Nasdaq Global Semiconductor — che replica produttori globali di chip quotati al Nasdaq — e il MSCI Korea mostrano YTD tra 70% e 78%, ma con un mese 1 negativo tra -10% e -22%, chiaro segnale di un raffreddamento dopo una corsa intensa nel trimestre precedente.</p>
-
-<p>Sul fronte opposto, l'anomalia più rilevante è l'indice <strong>FTSE MIB Banks 15% Capped</strong> con un YTD di -97,54%: un dato impossibile per un ETF plain vanilla sulle banche italiane, che nel 2026 sono in realtà tra i settori più solidi d'Europa. Quella cifra indica quasi certamente una struttura <strong>a leva inversa</strong> — ovvero uno strumento che sale quando le banche scendono, e viceversa — il che significa che il comparto bancario italiano ha probabilmente registrato un guadagno molto significativo da inizio anno. Le criptovalute minori (Polkadot, Cardano, Tezos) completano la zona rossa con perdite YTD tra -53% e -80% su 1 anno, confermando una selezione brutale all'interno dell'ecosistema crypto.</p>
-
-<p><strong>Spunto per il lungo termine:</strong> quando un settore come i semiconduttori mostra +70% YTD ma -15% nell'ultimo mese, la domanda giusta non è "è tardi per entrare?" ma "qual è il mio orizzonte e quanto volatilità sono disposto ad assorbire?" — la storia dei 3 anni (+242% per il Nasdaq Global Semiconductor) suggerisce che la direzione strutturale resta intatta, ma i rientri bruschi fanno parte del percorso.</p></div>
-      <div class="gainers-box">
-    <div class="section-label">🚀 Top Gainers USA di oggi</div>
-    <div class="gainers-body"><p>La seduta odierna mostra una netta dominanza del settore <strong>biotech/farmaceutico</strong> negli USA e una maggiore frammentazione settoriale in Europa, con alcuni temi comuni che meritano attenzione.</p>
-
-<p><strong>USA:</strong> Il tema dominante è il biotech (SELLAS, ORKA, DNTH, TRVI, SION, BHVN, MBX, IOVA, PTGX), con rialzi multipli e variazioni a 52 settimane spesso fortemente positive, suggerendo forza reale più che semplice rimbalzo. Spicca anche <strong>Travelers (TRV)</strong>, assicurativo, con +9% su base solida (+40% a 52 settimane). LCID resta un rimbalzo tecnico su trend annuale disastroso (-74%).</p>
-
-<p><strong>Europa/UK:</strong> Nessun tema settoriale unico dominante: energia (ORCA, JOG), industriale (Georg Fischer, TOMRA), litio (CTL), private equity (EQT). Nokian Tyres +17% con variazione annua positiva indica forza reale. Il biotech USA non trova eco europea significativa: il movimento resta <strong>prevalentemente locale</strong>, riducendo la lettura di trend globale strutturale.</p></div>
-  </div>
-    </div>
-    <div class="col-science">
-      <div class="pillola-box">
-    <div class="section-label">💡 Pillola del giorno</div>
-    <div class="pillola-title">L'eredità di Norimberga — come il processo cambiò il diritto internazionale per sempre</div>
-    <p class="pillola-text">Prima di Norimberga, l'idea che un individuo potesse essere ritenuto personalmente responsabile davanti a un tribunale internazionale per crimini commessi in nome di uno Stato era quasi inesistente nel diritto. I conflitti tra nazioni erano regolati da trattati, non da corti penali. Norimberga spezzò questa logica: per la prima volta, non erano gli Stati a essere giudicati, ma le persone che li avevano guidati.
-
-Uno dei principi più dirompenti emersi dal processo fu la cosiddetta dottrina della responsabilità del superiore: non bastava dire di aver eseguito ordini. La difesa dell'obbedienza gerarchica, usata sistematicamente dagli imputati, fu esplicitamente respinta dal tribunale. Questo principio — che un ordine illegale non giustifica chi lo esegue — è oggi alla base di ogni codice militare moderno e del diritto penale internazionale.
-
-Il processo portò anche alla codifica di una nuova categoria giuridica: i crimini contro l'umanità. Prima di Norimberga, ciò che uno Stato faceva ai propri cittadini era considerato affare interno, non soggetto a giurisdizione esterna. Dopo il 1945, questa barriera fu abbattuta: esistono crimini talmente gravi da essere perseguibili indipendentemente da chi ne sia vittima e da dove vengano commessi.
-
-L'eredità più concreta di tutto questo è il tribunale penale internazionale (ICC), istituito nel 2002 con sede all'Aia. Non sarebbe esistito senza il precedente di Norimberga. Il processo non fu solo la risposta a un crimine storico: fu il momento in cui l'umanità decise, almeno sulla carta, che certi atti non avrebbero mai più potuto restare impuniti.</p>
-    <div class="pillola-alt-label">Vuoi cambiarla? Scegli un tema per domani:</div>
-    <div class="pillola-alt-buttons">
-      <button class="pillola-alt-btn" onclick="sceglipillola('Chi era Rosalind Franklin', this)">Chi era Rosalind Franklin</button><button class="pillola-alt-btn" onclick="sceglipillola('Perché sbadigliamo per contagio', this)">Perché sbadigliamo per contagio</button><button class="pillola-alt-btn" onclick="sceglipillola('Il processo a Galileo Galilei', this)">Il processo a Galileo Galilei</button>
-    </div>
-    <p id="pillola-status" class="qa-status"></p>
-  </div>
       <div class="spotify-box">
     <div class="section-label">🎵 Scoperta musicale</div>
     <div class="spotify-title">WET</div>
@@ -136,6 +93,58 @@ L'eredità più concreta di tutto questo è il tribunale penale internazionale (
       <button class="spotify-change-btn" onclick="cambiaSpotify(this)">↻ Cambia</button>
     </div>
     <p id="spotify-status" class="qa-status">Nuova scoperta al prossimo aggiornamento</p>
+  </div>
+      <div class="section-label">📊 ETF Briefing del giorno</div>
+      <div class="briefing"><h2>⚡ Energia in fiamme, chip in corsa: il mercato premia il tangibile (e il silicio)</h2>
+
+<p>I dati di oggi disegnano due cluster di forza molto distinti. Il primo è l'energia fisica: gli indici sulle materie prime energetiche dominano la classifica YTD, con il Bloomberg Heating Oil (gasolio da riscaldamento) e il BNP Paribas Rolling Futures W0 su prodotti petroliferi che segnano rispettivamente +128% e +125% da inizio anno. La particolarità è che questi guadagni non sono un fuoco di paglia recente: anche il dato a 1 mese è fortissimo (+28-36%), il che suggerisce un'accelerazione ancora in corso, non un semplice rimbalzo da rimpiangere. Il secondo cluster è quello dei semiconduttori e della Corea del Sud, mercato fortemente esposto ai chip: indici come il Nasdaq Global Semiconductor (tecnologia globale dei microchip) e l'MSCI Korea 20/35 mostrano YTD tra +70% e +79%, ma con performance mensili negative tra -12% e -22% — segnale che il rally è stato poderoso ma si è chiaramente raffreddato nell'ultimo periodo.</p>
+
+<p>Sul fronte dei peggiori, le criptovalute alternative dominano la classifica dei ribassi, con Polkadot, Cardano e Tezos in calo del 50-55% YTD. Un dato però merita attenzione specifica: il FTSE MIB Banks 15% Capped segna un -97,54% YTD e un -97,54% anche a 3 mesi. Una perdita del genere su un indice bancario italiano plain vanilla è strutturalmente impossibile — le banche italiane nel 2026 non sono andate a zero. Con ogni probabilità si tratta di un ETP a leva inversa sul settore bancario italiano, il che significa che il comparto sottostante ha invece performato molto positivamente: il dato mostrato è lo specchio rovesciato (e amplificato) di un rally bancario, non di un crollo reale.</p>
+
+<p><strong>Spunto per il lungo termine:</strong> la divaricazione tra materie prime energetiche in accelerazione e chip in pausa mensile ricorda che i mercati raramente premiano gli stessi temi in contemporanea — chi ha già cavalcato i semiconduttori potrebbe chiedersi se l'energia rappresenti oggi il momentum più fresco, pur consapevole della sua storica volatilità strutturale.</p></div>
+      <div class="mini-qa-box">
+    
+    <textarea id="qa-input-etf" class="mini-qa-textarea" placeholder="Fai una domanda su questa sezione..."></textarea>
+    <button id="qa-submit-etf" class="mini-qa-button" onclick="inviaDomandaSezione('etf')">Chiedi</button>
+    <p id="qa-status-etf" class="qa-status"></p>
+  </div>
+      <div class="gainers-box">
+    <div class="section-label">🚀 Top Gainers USA di oggi</div>
+    <div class="gainers-body"><p>La seduta odierna mostra una forte concentrazione di rialzi nel settore biotech/healthcare su entrambi i mercati, con segnali divergenti sulla solidità dei movimenti.</p>
+
+<p><strong>USA:</strong> Il tema dominante è il biotech e la salute (SELLAS, ORKA, DNTH, TRVI, SION, BHVN, MBX, IOVA, PTGX), con variazioni a 52 settimane spesso molto positive, suggerendo forza reale e non semplici rimbalzi. Spicca <strong>TRV (Travelers)</strong> nel settore assicurativo con +9,2% e solidi +40% annui. <strong>LCID (Lucid/EV)</strong> rimane in territorio profondamente negativo a 52 settimane (-74%): rialzo da trattare con cautela.</p>
+
+<p><strong>Europa/UK:</strong> Il quadro è più frammentato: energia (ORCA, JOG), materiali/litio (CTL), industria (Georg Fischer), private equity (EQT). <strong>Nokian Tyres</strong> guida con +17,7% e +97% annuo, segnale di forza reale. Diversi titoli mostrano variazioni annue negative: possibili rimbalzi tecnici. Nessun tema biotech rilevante in Europa, confermando quella come dinamica prevalentemente americana.</p></div>
+    <div class="mini-qa-box">
+    
+    <textarea id="qa-input-gainers" class="mini-qa-textarea" placeholder="Fai una domanda su questa sezione..."></textarea>
+    <button id="qa-submit-gainers" class="mini-qa-button" onclick="inviaDomandaSezione('gainers')">Chiedi</button>
+    <p id="qa-status-gainers" class="qa-status"></p>
+  </div>
+  </div>
+    </div>
+    <div class="col-science">
+      <div class="pillola-box">
+    <div class="section-label">💡 Pillola del giorno</div>
+    <div class="pillola-title">Il processo di Eichmann — quando Israele giudicò il mondo</div>
+    <p class="pillola-text">Quindici anni dopo Norimberga, il mondo si trovò di fronte a un processo per certi versi ancora più dirompente. Adolf Eichmann, uno dei principali organizzatori logistici della Shoah, era riuscito a fuggire in Argentina dopo la guerra. Nel 1960 il Mossad lo rapì a Buenos Aires e lo portò in Israele, dove fu processato a Gerusalemme nel 1961. Era la prima volta che uno Stato sovrano portava a giudizio un criminale di guerra catturato illegalmente in un altro paese.
+
+Il processo sollevò questioni giuridiche e politiche enormi. L'Argentina protestò formalmente per la violazione della propria sovranità. In molti sostennero che Eichmann avrebbe dovuto essere giudicato da un tribunale internazionale, non da uno Stato che era parte lesa. Israele rispose che nessun altro aveva voluto o potuto farlo, e che il popolo ebraico aveva tutto il diritto di giudicare chi aveva pianificato il proprio sterminio.
+
+Fu durante quel processo che Hannah Arendt coniò la sua celebre espressione: la banalità del male. Eichmann non appariva come un mostro fanatico, ma come un burocrate grigio, metodico, ossessionato dall'efficienza. Non odiava necessariamente le sue vittime: eseguiva ordini, compilava liste, organizzava treni. Secondo Arendt, questa era la vera natura del male moderno — non il sadismo, ma l'assenza di pensiero morale.
+
+Eichmann fu condannato a morte e impiccato nel 1962, unica esecuzione capitale nella storia dello Stato di Israele. Il processo contribuì a portare la memoria della Shoah al centro del dibattito pubblico mondiale, in un'epoca in cui molti preferivano ancora voltare pagina.</p>
+    <div class="pillola-alt-label">Vuoi cambiarla? Scegli un tema per domani:</div>
+    <div class="pillola-alt-buttons">
+      <button class="pillola-alt-btn" onclick="sceglipillola('Come funziona il sistema linfatico', this)">Come funziona il sistema linfatico</button><button class="pillola-alt-btn" onclick="sceglipillola('Chi era Harriet Tubman', this)">Chi era Harriet Tubman</button><button class="pillola-alt-btn" onclick="sceglipillola('Perché i buchi neri evaporano', this)">Perché i buchi neri evaporano</button>
+    </div>
+    <p id="pillola-status" class="qa-status"></p>
+    <div class="mini-qa-box">
+    
+    <textarea id="qa-input-pillola" class="mini-qa-textarea" placeholder="Fai una domanda su questa sezione..."></textarea>
+    <button id="qa-submit-pillola" class="mini-qa-button" onclick="inviaDomandaSezione('pillola')">Chiedi</button>
+    <p id="qa-status-pillola" class="qa-status"></p>
+  </div>
   </div>
     </div>
   </div>
@@ -238,10 +247,10 @@ function showSection(id, btn) {
   btn.classList.add('active');
 }
 
-async function inviaDomanda() {
-  const input = document.getElementById('qa-input');
-  const btn = document.getElementById('qa-submit');
-  const status = document.getElementById('qa-status');
+async function inviaDomandaSezione(sezione) {
+  const input = document.getElementById('qa-input-' + sezione);
+  const btn = document.getElementById('qa-submit-' + sezione);
+  const status = document.getElementById('qa-status-' + sezione);
   const domanda = input.value.trim();
   if (!domanda) return;
   btn.disabled = true;
@@ -250,9 +259,9 @@ async function inviaDomanda() {
     await fetch('https://fedex98567.app.n8n.cloud/webhook/domanda', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ domanda })
+      body: JSON.stringify({ domanda, sezione })
     });
-    status.textContent = 'Domanda inviata. Risposta al prossimo aggiornamento.';
+    status.textContent = 'Inviata. Risposta al prossimo aggiornamento.';
     input.value = '';
   } catch (e) {
     status.textContent = 'Errore nell\'invio, riprova.';
