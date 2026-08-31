@@ -9,28 +9,9 @@
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #faf8f4; color: #1a1a1a; min-height: 100vh; }
     header { padding: 1.5rem 2rem; border-bottom: 1px solid #e8e2d9; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
     header h1 { font-size: 1.2rem; font-weight: 500; color: #1a1a1a; }
-    header .right { display: flex; gap: 1rem; align-items: center; }
     header .data { font-size: 0.8rem; color: #999; }
-    .nav { display: flex; gap: 0.5rem; }
-    .nav-btn { cursor: pointer; font-size: 0.8rem; padding: 5px 14px; border-radius: 20px; background: transparent; color: #999; border: 0.5px solid #e8e2d9; transition: all 0.2s; }
-    .nav-btn.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; }
     .section { padding: 2rem; max-width: 1400px; margin: 0 auto; }
-    .layout { display: flex; gap: 2rem; align-items: flex-start; }
-    .col-etf { flex: 1; min-width: 0; }
-    .col-science { flex: 1; min-width: 0; position: sticky; top: 2rem; }
     .section-label { font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #999; margin-bottom: 1rem; }
-    .briefing { font-size: 0.9rem; line-height: 1.8; color: #444; }
-    .briefing h2 { font-size: 1.2rem; color: #1a1a1a; margin: 1.5rem 0 0.75rem; }
-    .briefing h3 { font-size: 1rem; color: #333; margin: 1rem 0 0.5rem; }
-    .briefing p { margin-bottom: 0.75rem; }
-    .briefing ul { padding-left: 1.2rem; margin-bottom: 0.75rem; }
-    .briefing li { margin-bottom: 0.4rem; }
-    .briefing strong { color: #1a1a1a; }
-    .briefing hr { border: none; border-top: 1px solid #e8e2d9; margin: 1.5rem 0; }
-    .gainers-box { background: #fff; border: 0.5px solid #e8e2d9; border-radius: 12px; padding: 1.25rem; margin-top: 1.5rem; }
-    .gainers-body { font-size: 0.85rem; line-height: 1.7; color: #444; }
-    .gainers-body strong { color: #1a1a1a; }
-    .pillola-box { background: #f0ece4; border-radius: 12px; padding: 1.5rem; }
     .pillola-title { font-size: 1.1rem; font-weight: 600; color: #2d6a4f; margin-bottom: 0.75rem; }
     .pillola-text { font-size: 0.9rem; line-height: 1.8; color: #444; margin-bottom: 1.25rem; }
     .pillola-alt-label { font-size: 0.75rem; color: #999; margin-bottom: 0.6rem; }
@@ -51,108 +32,22 @@
     .qa-button:disabled { background: #ccc; cursor: default; }
     .qa-status { font-size: 0.75rem; color: #999; margin-top: 0.5rem; }
     .mini-qa-box { margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed #e8e2d9; }
-    .mini-qa-answer { font-size: 0.8rem; line-height: 1.6; color: #555; background: #faf8f4; border-radius: 8px; padding: 0.6rem 0.75rem; margin-bottom: 0.6rem; }
+    .mini-qa-answer { font-size: 0.8rem; line-height: 1.6; color: #555; background: #fff9f0; border-left: 3px solid #d4a574; border-radius: 6px; padding: 0.75rem 0.9rem; margin-bottom: 0.75rem; }
+    .mini-qa-question { font-size: 0.75rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.5rem; }
+    .mini-qa-answer-text { font-size: 0.8rem; line-height: 1.65; color: #555; }
     .mini-qa-textarea { width: 100%; min-height: 40px; padding: 0.5rem; border: 0.5px solid #e8e2d9; border-radius: 8px; font-family: inherit; font-size: 0.8rem; resize: vertical; margin-bottom: 0.5rem; }
     .mini-qa-button { cursor: pointer; font-size: 0.75rem; padding: 5px 12px; border-radius: 16px; background: #1a1a1a; color: #fff; border: none; }
     .mini-qa-button:disabled { background: #ccc; cursor: default; }
-    .spotify-box { background: #fff; border: 0.5px solid #e8e2d9; border-radius: 12px; padding: 1.25rem; margin-bottom: 1.5rem; }
-    .spotify-title { font-size: 0.95rem; font-weight: 600; color: #1a1a1a; margin-bottom: 2px; }
-    .spotify-artist { font-size: 0.8rem; color: #999; margin-bottom: 12px; }
-    .spotify-buttons { display: flex; gap: 8px; }
-    .spotify-play-btn { flex: 1; text-align: center; background: #1DB954; color: #fff; font-size: 0.8rem; font-weight: 500; padding: 8px 12px; border-radius: 20px; text-decoration: none; }
-    .spotify-change-btn { cursor: pointer; background: #faf8f4; color: #555; font-size: 0.8rem; padding: 8px 14px; border-radius: 20px; border: 0.5px solid #e8e2d9; }
-    .spotify-change-btn:disabled { opacity: 0.5; cursor: default; }
     .footer { padding: 1rem 2rem; border-top: 1px solid #e8e2d9; font-size: 0.7rem; color: #bbb; text-align: center; }
-    @media (max-width: 768px) {
-      .layout { flex-direction: column; }
-      .col-science { position: static; }
-    }
   </style>
 </head>
 <body>
 <header>
   <h1>Federico — AI Dashboard</h1>
-  <div class="right">
-    <span class="data">sabato 1 agosto 2026</span>
-    <div class="nav">
-      <div class="nav-btn active" onclick="showSection('briefing', this)">Briefing</div>
-      <div class="nav-btn" onclick="showSection('interessi', this)">Interessi</div>
-    </div>
-  </div>
+  <span class="data">lunedì 31 agosto 2026</span>
 </header>
 
-<div id="section-briefing" class="section">
-  <div class="layout">
-    <div class="col-etf">
-      <div class="spotify-box">
-    <div class="section-label">🎵 Scoperta musicale</div>
-    <div class="spotify-title">WET</div>
-    <div class="spotify-artist">Wax Motif</div>
-    <div class="spotify-buttons">
-      <a href="https://open.spotify.com/track/7MysdJNLp89Xl3zoSd5bC5" target="_blank" class="spotify-play-btn">▶ Ascolta</a>
-      <button class="spotify-change-btn" onclick="cambiaSpotify(this)">↻ Cambia</button>
-    </div>
-    <p id="spotify-status" class="qa-status">Nuova scoperta al prossimo aggiornamento</p>
-  </div>
-      <div class="section-label">📊 ETF Briefing del giorno</div>
-      <div class="briefing"><h2>🔥 Chip, Corea e greggio: luglio brucia su tutti i fronti</h2>
-
-<p>Il dato che salta all'occhio guardando la tabella è la doppia leadership di <strong>semiconduttori e Corea del Sud</strong>: indici come il <em>MSCI ACWI IMI Semiconductors ESG Screened</em> (che replica i produttori globali di chip con filtro ESG) e il <em>FTSE Korea 30/18 Capped</em> (esposizione concentrata alle blue chip coreane, Samsung e SK Hynix in testa) segnano entrambi oltre il 70% YTD, con performance a 1 anno che superano il 120%. Tuttavia il dato a 1 mese racconta una storia diversa: quasi tutti questi indici cedono tra il 18% e il 22% nell'ultimo mese, segnale che luglio ha portato una correzione brusca su un comparto che resta comunque in forte territorio positivo da inizio anno. Accelerazione violenta seguita da altrettanto violento raffreddamento: classica dinamica da settore ad alta concentrazione e alta volatilità.</p>
-
-<p>Sul fronte delle materie prime energetiche il quadro è speculare ma opposto: il <em>Bloomberg Heating Oil</em> e i futures sul WTI segnanno +83–142% YTD con un mese di luglio ancora positivo (+22–35%), suggerendo un trend ancora in corso, non esaurito. Sul fondo della classifica spicca invece il <em>YieldMax MSTR Option Income Strategy</em> — uno strumento basato su opzioni su MicroStrategy, non un ETF plain vanilla — con -70% a 1 anno: un dato che implica quasi certamente una struttura complessa a leva o income sintetico, e che il comparto sottostante (Bitcoin/MicroStrategy) potrebbe aver avuto un andamento ben diverso da quello suggerito dal segno mostrato.</p>
-
-<p><strong>Spunto per il lungo termine:</strong> quando YTD e performance mensile divergono così nettamente — come sui semiconduttori — vale la pena chiedersi se si sta guardando un'opportunità di ingresso su un trend strutturale ancora intatto oppure il primo segnale di una rotazione settoriale. La risposta dipende dall'orizzonte, ma ignorare la domanda è il vero rischio.</p></div>
-      <div class="mini-qa-box">
-    <div class="mini-qa-answer">Il settore semiconduttori ha vissuto nell'ultimo mese una correzione significativa, in piena continuità con quanto già segnalato ieri nel briefing. Tutti i principali ETF del settore hanno registrato cali nel periodo: SOXX ha perso il 15,2% e SMH il 12,2% fino al 22 luglio. Il mercato sta vivendo un pullback di metà anno guidato da prese di profitto e preoccupazioni sulle valutazioni, dopo un primo semestre straordinario. Come già notato ieri, il dato YTD resta positivo e robusto: SMH quota circa 538 dollari con un rendimento da inizio anno del 49,58% al 30 luglio 2026.
-
-Sul fronte della composizione, i due ETF più rappresentativi sono SMH e SOXX. SMH replica un indice delle 25 maggiori società di semiconduttori quotate negli USA, con Nvidia come peso principale (oltre il 15%), seguita da TSMC, ASML, Broadcom e AMD. SOXX replica invece un paniere di circa 30 titoli con un peso maggiore verso i produttori di attrezzature come Applied Materials, Lam Research e KLA. Tra i nomi chiave presenti in entrambi figurano anche Micron, Intel e Qualcomm. Nvidia e AMD devono ancora riportare gli utili del secondo trimestre, previsti ad agosto, il che alimenta l'incertezza nel breve termine.</div>
-    <textarea id="qa-input-etf" class="mini-qa-textarea" placeholder="Fai una domanda su questa sezione..."></textarea>
-    <button id="qa-submit-etf" class="mini-qa-button" onclick="inviaDomandaSezione('etf')">Chiedi</button>
-    <p id="qa-status-etf" class="qa-status"></p>
-  </div>
-      <div class="gainers-box">
-    <div class="section-label">🚀 Top Gainers USA di oggi</div>
-    <div class="gainers-body"><p>La seduta odierna mostra segnali trasversali tra USA ed Europa, con technology e healthcare in primo piano su entrambi gli oceani, affiancati da micro-cap speculative europee.</p>
-
-<p><strong>USA:</strong> Il tema dominante è la tecnologia applicata (semiconduttori con AXTI +28% e AMBA +16%, cloud/AI con KC) con Amazon (+15%) a confermare forza strutturale. Spiccano anche medical devices (ITGR, DXCM, CDNA). I rialzi su AXTI e CDNA poggiano su basi solide (52 settimane fortemente positive), suggerendo forza reale più che rimbalzo.</p>
-
-<p><strong>Europa/UK:</strong> Predominano micro-cap speculative su AIM/Aquis (miniere, risorse, penny stock) con variazioni a 52 settimane estreme in entrambe le direzioni — molti appaiono rimbalzi tecnici su titoli in forte perdita annuale (WCAP -71%, HEAD -93%). Il dato Amazon replicato su listino UK (0R1O.L +14%) conferma il tema tech come <strong>segnale globale condiviso</strong>, unico elemento cross-mercato robusto della giornata.</p></div>
-    <div class="mini-qa-box">
-    <div class="mini-qa-answer">Il settore biotech sta attraversando uno dei suoi momenti più positivi degli ultimi anni. Il primo semestre del 2026 ha consegnato un messaggio chiaro: il biotech è in piena fioritura, con un rally azionario iniziato nel secondo trimestre del 2025 che ha continuato ad accelerare. I motivi principali sono diversi e si rafforzano a vicenda. Un'ondata di fusioni e acquisizioni e il rialzo dei prezzi azionari hanno riportato il biotech fuori da un lungo declino, anche se la volatilità regolamentare e la concorrenza cinese restano rischi concreti. Sul fronte dell'innovazione, GLP-1, degradatori di proteine e psichedelici sono tra le classi terapeutiche più attese per avanzamenti significativi. Anche il mercato dei capitali ha risposto bene: le aziende biopharma hanno raccolto 1,7 miliardi di dollari in IPO nel solo primo trimestre 2026, il miglior trimestre dal 2021. In sintesi, il biotech performa bene perché convergono M&A, innovazione scientifica (AI applicata alla ricerca, oncologia, obesità) e un sentiment degli investitori tornato costruttivo dopo anni di sottoperformance.</div>
-    <textarea id="qa-input-gainers" class="mini-qa-textarea" placeholder="Fai una domanda su questa sezione..."></textarea>
-    <button id="qa-submit-gainers" class="mini-qa-button" onclick="inviaDomandaSezione('gainers')">Chiedi</button>
-    <p id="qa-status-gainers" class="qa-status"></p>
-  </div>
-  </div>
-    </div>
-    <div class="col-science">
-      <div class="pillola-box">
-    <div class="section-label">💡 Pillola del giorno</div>
-    <div class="pillola-title">Norimberga — i collaboratori che giudicarono se stessi</div>
-    <p class="pillola-text">Uno degli aspetti meno discussi del processo di Norimberga riguarda una categoria particolare di imputati: quelli che, in qualche misura, avevano collaborato con le autorità alleate ben prima che il processo iniziasse. Non si trattava di pentiti nel senso moderno del termine, ma di uomini che avevano capito abbastanza presto da che parte stesse soffiando il vento e avevano cercato di posizionarsi di conseguenza.
-
-Albert Speer è il caso più emblematico. Ministro degli armamenti del Reich, uomo capace e ambiziosi, scelse una strategia difensiva precisa: presentarsi come il tecnico illuminato che non sapeva, come l'unico tra i grandi gerarchi ad aver tentato di sabotare Hitler negli ultimi mesi di guerra. Questa narrativa lo salvò dall'impiccagione. Fu condannato a vent'anni di prigione, scontati interamente, uscì e pubblicò memorie che lo resero una figura quasi simpatica agli occhi del pubblico occidentale. Decenni dopo, storici come Gitta Sereny dimostrarono che sapeva molto più di quanto ammise.
-
-Il caso di Speer apre una questione che il processo non risolse del tutto: fino a che punto una collaborazione parziale, una confessione selettiva, una narrazione abilmente costruita possano influenzare un giudizio che si vorrebbe basato solo sui fatti? I giudici di Norimberga si trovarono a valutare non solo azioni, ma intenzioni e versioni dei fatti costruite con intelligenza da persone altamente capaci.
-
-Norimberga stabilì precedenti giuridici fondamentali, ma lasciò aperta una crepa: la verità processuale e la verità storica non coincidono sempre. E a volte chi uscì dalla sala 600 con una pena minore non era necessariamente meno colpevole di chi vi rimase appeso.</p>
-    <div class="pillola-alt-label">Vuoi cambiarla? Scegli un tema per domani:</div>
-    <div class="pillola-alt-buttons">
-      <button class="pillola-alt-btn" onclick="sceglipillola('Chi era Ignaz Semmelweis', this)">Chi era Ignaz Semmelweis</button><button class="pillola-alt-btn" onclick="sceglipillola('Perché il corpo va in ipotermia', this)">Perché il corpo va in ipotermia</button><button class="pillola-alt-btn" onclick="sceglipillola('Il processo a Socrate — condannato per pensare', this)">Il processo a Socrate — condannato per pensare</button>
-    </div>
-    <p id="pillola-status" class="qa-status"></p>
-    <div class="mini-qa-box">
-    <div class="mini-qa-answer">Hannah Arendt è stata citata ieri nella pillola proprio come punto d'arrivo della riflessione sui processi di Norimberga, e vale la pena approfondirla. È una delle figure di spicco della filosofia politica del Novecento, il cui lavoro interseca filosofia, teoria politica, etica e analisi storica. Nata nel 1906 in Germania in una famiglia ebrea, studiò filosofia a Marburgo, Friburgo e Heidelberg, entrando in contatto con Heidegger, Husserl e Jaspers. Le sue opere principali sono tre: Le origini del totalitarismo (1951), in cui analizzò l'ascesa dei regimi totalitari del Novecento — nazismo e stalinismo — sostenendo che rappresentavano una forma di dominio radicalmente nuova nella storia. Poi la Vita Activa, riflessione sulla condizione umana e sull'agire politico. Infine La banalità del male, in cui descrisse come l'assenza di pensiero critico e di moralità personale possa portare alla partecipazione a crimini di guerra, esemplificato nel caso di Adolf Eichmann. Il suo concetto più celebre è proprio quello della "banalità del male": il male può insinuarsi nelle persone comuni che eseguono ordini senza riflettere, come nel caso di Eichmann, un burocrate che partecipò allo sterminio nazista. È esattamente ciò che il dottor Gilbert stava osservando a Norimberga, prima ancora che Arendt coniasse l'espressione.</div>
-    <textarea id="qa-input-pillola" class="mini-qa-textarea" placeholder="Fai una domanda su questa sezione..."></textarea>
-    <button id="qa-submit-pillola" class="mini-qa-button" onclick="inviaDomandaSezione('pillola')">Chiedi</button>
-    <p id="qa-status-pillola" class="qa-status"></p>
-  </div>
-  </div>
-    </div>
-  </div>
-</div>
-
-<div id="section-interessi" class="section" style="display:none;">
+<div class="section">
   <div class="section-label">🔍 Interessi</div>
   <div class="qa-box">
     <div class="qa-label">📝 Spunti da approfondire</div>
@@ -160,6 +55,31 @@ Norimberga stabilì precedenti giuridici fondamentali, ma lasciò aperta una cre
     <textarea id="spunto-input" class="qa-textarea" placeholder="Es. Come funziona la tensione..."></textarea>
     <button id="spunto-submit" class="qa-button" onclick="inviaSpunto()">Salva spunto</button>
     <p id="spunto-status" class="qa-status"></p>
+  </div>
+  <div class="qa-box pillola-box">
+    <div class="qa-label">💡 Pillola del giorno</div>
+    <div class="pillola-title">Norimberga — il processo che quasi non ci fu</div>
+    <p class="pillola-text">Nell'estate del 1945, mentre la guerra in Europa era appena finita, non era affatto scontato che i leader nazisti sarebbero stati processati. Winston Churchill era convinto che la soluzione più rapida ed efficace fosse la fucilazione sommaria dei principali criminali, senza processo. Aveva una lista: una cinquantina di nomi, da eliminare entro poche ore dalla cattura. Era una posizione pragmatica, ma anche profondamente politica — un processo avrebbe dato agli imputati una tribuna, e Churchill non voleva rischiare.
+
+Franklin Roosevelt inizialmente non era contrario all'idea, e il piano Morgenthau — dal nome del suo segretario al Tesoro — prevedeva persino la trasformazione della Germania in uno stato agricolo deindustrializzato, con la classe dirigente eliminata fisicamente. Fu Henry Stimson, segretario alla Guerra, a opporsi con forza: sosteneva che giustiziare uomini senza processo avrebbe compromesso per sempre la credibilità morale degli Alleati e creato martiri invece che precedenti giuridici.
+
+Fu la posizione americana a prevalere, ma non senza resistenze. I sovietici accettarono il processo solo a condizione di avere un ruolo paritario nella conduzione e di escludere dalla lista degli imputati qualsiasi riferimento al patto Molotov-Ribbentrop, con cui nel 1939 avevano diviso la Polonia con Hitler. Quella condizione non fu mai scritta ufficialmente, ma fu rispettata: a Norimberga nessun accusatore fu mai accusato a sua volta.
+
+Il processo nacque quindi già con una contraddizione incorporata: voler affermare la supremazia del diritto, ma solo fino al punto in cui il diritto non toccasse i vincitori. Un'ambiguità che i critici sollevarono subito, e che la storia non ha mai del tutto risolto.</p>
+    <div class="pillola-alt-label">Vuoi cambiarla? Scegli un tema per domani:</div>
+    <div class="pillola-alt-buttons">
+      <button class="pillola-alt-btn" onclick="sceglipillola('Chi era Rosalind Franklin', this)">Chi era Rosalind Franklin</button><button class="pillola-alt-btn" onclick="sceglipillola('Perché sbadigliamo per contagio', this)">Perché sbadigliamo per contagio</button><button class="pillola-alt-btn" onclick="sceglipillola('Il processo a Socrate', this)">Il processo a Socrate</button>
+    </div>
+    <p id="pillola-status" class="qa-status"></p>
+    <div class="mini-qa-box">
+    <div class="mini-qa-answer">
+    <div class="mini-qa-question">❓ Chi era Hannah Arendt? Cosa ha scritto e cosa ha detto?</div>
+    <div class="mini-qa-answer-text">Hannah Arendt (1906–1975) era una filosofa e teorica politica tedesca di origine ebraica, costretta a fuggire dalla Germania nazista e poi naturalizzata statunitense. Le sue opere più importanti sono Le origini del totalitarismo (1951), in cui analizzò nazismo e stalinismo come forme inedite di dominio, e La banalità del male (1963), nata dalla cronaca del processo ad Adolf Eichmann: qui coniò il concetto per cui il male estremo non richiede mostri, ma basta la rinuncia al pensiero critico e alla responsabilità individuale — un burocrate mediocre che esegue ordini senza riflettere. Il collegamento con la pillola di ieri su Norimberga è diretto e potente: il caso Speer che hai letto ieri è quasi un'illustrazione pratica della tesi di Arendt — un uomo capace, non un mostro ideologico, che attraverso la banalizzazione della propria complicità costruì una narrazione difensiva credibile. Arendt ci avrebbe ricordato che proprio questa "normalità" è la cosa più inquietante: non il male satanico, ma quello amministrativo, eseguito senza pensare.</div>
+  </div>
+    <textarea id="qa-input-pillola" class="mini-qa-textarea" placeholder="Fai una domanda su questa sezione..."></textarea>
+    <button id="qa-submit-pillola" class="mini-qa-button" onclick="inviaDomandaSezione('pillola')">Chiedi</button>
+    <p id="qa-status-pillola" class="qa-status"></p>
+  </div>
   </div>
   <div class="tag-group">
     <div class="tag-label">Scienza</div>
@@ -242,13 +162,6 @@ Norimberga stabilì precedenti giuridici fondamentali, ma lasciò aperta una cre
 <div class="footer">Aggiornato automaticamente · fficorilliai.github.io</div>
 
 <script>
-function showSection(id, btn) {
-  document.querySelectorAll('.section').forEach(s => s.style.display = 'none');
-  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('section-' + id).style.display = 'block';
-  btn.classList.add('active');
-}
-
 async function inviaDomandaSezione(sezione) {
   const input = document.getElementById('qa-input-' + sezione);
   const btn = document.getElementById('qa-submit-' + sezione);
@@ -307,23 +220,6 @@ async function sceglipillola(argomento, btn) {
   } catch (e) {
     status.textContent = 'Errore, riprova.';
     document.querySelectorAll('.pillola-alt-btn').forEach(b => b.disabled = false);
-  }
-}
-
-async function cambiaSpotify(btn) {
-  btn.disabled = true;
-  const status = document.getElementById('spotify-status');
-  status.textContent = 'Richiesta inviata...';
-  try {
-    await fetch('https://fedex98567.app.n8n.cloud/webhook/spotify-cambio', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({})
-    });
-    status.textContent = 'Fatto! Nuova scoperta al prossimo aggiornamento.';
-  } catch (e) {
-    status.textContent = 'Errore, riprova.';
-    btn.disabled = false;
   }
 }
 </script>
