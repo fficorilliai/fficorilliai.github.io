@@ -31,13 +31,6 @@
     .qa-button { cursor: pointer; font-size: 0.8rem; padding: 6px 16px; border-radius: 20px; background: #1a1a1a; color: #fff; border: none; }
     .qa-button:disabled { background: #ccc; cursor: default; }
     .qa-status { font-size: 0.75rem; color: #999; margin-top: 0.5rem; }
-    .mini-qa-box { margin-top: 1rem; padding-top: 1rem; border-top: 1px dashed #e8e2d9; }
-    .mini-qa-answer { font-size: 0.8rem; line-height: 1.6; color: #555; background: #fff9f0; border-left: 3px solid #d4a574; border-radius: 6px; padding: 0.75rem 0.9rem; margin-bottom: 0.75rem; }
-    .mini-qa-question { font-size: 0.75rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.5rem; }
-    .mini-qa-answer-text { font-size: 0.8rem; line-height: 1.65; color: #555; }
-    .mini-qa-textarea { width: 100%; min-height: 40px; padding: 0.5rem; border: 0.5px solid #e8e2d9; border-radius: 8px; font-family: inherit; font-size: 0.8rem; resize: vertical; margin-bottom: 0.5rem; }
-    .mini-qa-button { cursor: pointer; font-size: 0.75rem; padding: 5px 12px; border-radius: 16px; background: #1a1a1a; color: #fff; border: none; }
-    .mini-qa-button:disabled { background: #ccc; cursor: default; }
     .footer { padding: 1rem 2rem; border-top: 1px solid #e8e2d9; font-size: 0.7rem; color: #bbb; text-align: center; }
   </style>
 </head>
@@ -58,28 +51,19 @@
   </div>
   <div class="qa-box pillola-box">
     <div class="qa-label">💡 Pillola del giorno</div>
-    <div class="pillola-title">La morte di Socrate — il calice che nessuno fermò</div>
-    <p class="pillola-text">Dopo la condanna, Socrate aveva ancora del tempo. Le leggi ateniesi prevedevano che l'esecuzione non potesse avvenire mentre la nave sacra era in viaggio verso Delo, per onorare Apollo. Quel viaggio durò circa trenta giorni, e Socrate li trascorse in prigione, circondato da amici e discepoli che continuarono a discutere con lui di anima, di morte e di virtù, come se nulla fosse cambiato.
+    <div class="pillola-title">Il processo a Socrate — colpevole di pensare</div>
+    <p class="pillola-text">Nel 399 a.C., Atene era una città ferita. Aveva appena perso la guerra del Peloponneso contro Sparta, attraversato la breve e brutale stagione dei Trenta Tiranni, e cercava di ritrovare un equilibrio democratico. In questo clima, tre cittadini — Meleto, Anito e Licone — trascinarono in giudizio un vecchio di settant'anni, con un'accusa doppia: non riconoscere gli dèi della città e corrompere i giovani. L'accusato era Socrate.
 
-In quei giorni, Critone — uno degli amici più fedeli — organizzò una via di fuga concreta. Le guardie erano corruttibili, i soldi c'erano, e Socrate avrebbe potuto sparire in Tessaglia senza grandi difficoltà. Rifiutò. Il suo argomento era radicale: fuggire avrebbe significato violare il patto tacito con le leggi della città che lo aveva cresciuto, educato e protetto per settant'anni. Non era disposto a farlo solo per salvarsi la vita. Accettare la condanna faceva parte della stessa coerenza con cui aveva vissuto.
+La città non processava un criminale nel senso ordinario del termine. Processava un metodo. Socrate da decenni girava per l'agorà a fare domande scomode, smontare certezze, dimostrare che chi si credeva sapiente in realtà non lo era. Questo sistema — l'elenchos, la confutazione sistematica — aveva umiliato persone potenti e influenti, e aveva affascinato giovani che avrebbero poi scelto strade pericolose: Alcibiade era stato suo discepolo, e così Crizia, uno dei Trenta Tiranni. L'accusa ufficiale era religiosa e morale, ma dietro c'era qualcosa di più difficile da mettere per iscritto: il sospetto che pensare troppo liberamente fosse di per sé destabilizzante.
 
-Il giorno dell'esecuzione, descritto nel Fedone di Platone, è uno dei testi più inquietanti e commoventi dell'antichità. Socrate si congedò dalla famiglia, continuò a discutere con i discepoli fino all'ultimo, e bevve la cicuta con una calma che lasciò senza parole i presenti. Mentre gli altri piangevano, lui li rimproverò bonariamente: aveva passato anni a sostenere che la morte non fosse un male, e non aveva intenzione di smentirsi nel momento più visibile.
+La giuria era composta da 501 cittadini ateniesi scelti per sorteggio. Socrate si difese in modo che quasi sembrava provocatorio: sostenne di fare un servizio alla città, paragonò se stesso a un tafano necessario per tenere sveglio il cavallo pigro della democrazia. Non implorò, non pianse, non portò i figli in lacrime davanti ai giudici, come era consuetudine. Fu condannato con 280 voti contro 221.
 
-Quello che rimane è un paradosso potente: l'uomo che più di ogni altro aveva insegnato a ragionare su tutto scelse di non ragionare sulla propria salvezza. O forse, secondo lui, ci aveva ragionato meglio di chiunque altro.</p>
+Il margine era stretto. Bastava che circa trenta giurati avessero cambiato idea, e Socrate sarebbe tornato a casa. Invece no. E quello scarto sottile dice qualcosa di interessante: Atene non era unanime nel volerlo morto. Era solo abbastanza spaventata da condannarlo.</p>
     <div class="pillola-alt-label">Vuoi cambiarla? Scegli un tema per domani:</div>
     <div class="pillola-alt-buttons">
-      <button class="pillola-alt-btn" onclick="sceglipillola('Come funziona il sistema linfatico', this)">Come funziona il sistema linfatico</button><button class="pillola-alt-btn" onclick="sceglipillola('Chi era Hypatia di Alessandria', this)">Chi era Hypatia di Alessandria</button><button class="pillola-alt-btn" onclick="sceglipillola('Cos&#39;è la deriva genetica', this)">Cos'è la deriva genetica</button>
+      <button class="pillola-alt-btn" onclick="sceglipillola('Perché il cielo è blu', this)">Perché il cielo è blu</button><button class="pillola-alt-btn" onclick="sceglipillola('Chi era Ignaz Semmelweis', this)">Chi era Ignaz Semmelweis</button><button class="pillola-alt-btn" onclick="sceglipillola('Il processo a Galileo Galilei', this)">Il processo a Galileo Galilei</button>
     </div>
     <p id="pillola-status" class="qa-status"></p>
-    <div class="mini-qa-box">
-    <div class="mini-qa-answer">
-    <div class="mini-qa-question">❓ Chi era Hannah Arendt? Cosa ha scritto e cosa ha detto?</div>
-    <div class="mini-qa-answer-text">Hannah Arendt (1906–1975) è stata una delle più grandi pensatrici politiche del Novecento: filosofa tedesca di origini ebraiche, allieva di Heidegger e Jaspers, fu costretta a fuggire dalla persecuzione nazista e si stabilì infine negli Stati Uniti. Le sue opere principali sono Le origini del totalitarismo (1951), in cui analizza come nazismo e stalinismo abbiano rappresentato una forma di dominio radicalmente nuova nella storia, e La banalità del male (1963), nata dal suo reportage sul processo al criminale di guerra Adolf Eichmann: qui coniò la celebre espressione secondo cui il male non è necessariamente opera di mostri, ma può emergere dall'assenza di pensiero critico, dalla pura obbedienza burocratica. In Vita activa (1958) distingue invece tra lavoro, operare e azione, sostenendo che è solo nell'azione politica condivisa — nello spazio pubblico — che l'essere umano si realizza davvero. Il filo che lega tutto il suo pensiero ha un sapore molto socratico, come nella pillola di ieri: per Arendt, smettere di pensare con la propria testa è la radice più profonda del male e della tirannia.</div>
-  </div>
-    <textarea id="qa-input-pillola" class="mini-qa-textarea" placeholder="Fai una domanda su questa sezione..."></textarea>
-    <button id="qa-submit-pillola" class="mini-qa-button" onclick="inviaDomandaSezione('pillola')">Chiedi</button>
-    <p id="qa-status-pillola" class="qa-status"></p>
-  </div>
   </div>
   <div class="tag-group">
     <div class="tag-label">Scienza</div>
@@ -162,28 +146,6 @@ Quello che rimane è un paradosso potente: l'uomo che più di ogni altro aveva i
 <div class="footer">Aggiornato automaticamente · fficorilliai.github.io</div>
 
 <script>
-async function inviaDomandaSezione(sezione) {
-  const input = document.getElementById('qa-input-' + sezione);
-  const btn = document.getElementById('qa-submit-' + sezione);
-  const status = document.getElementById('qa-status-' + sezione);
-  const domanda = input.value.trim();
-  if (!domanda) return;
-  btn.disabled = true;
-  status.textContent = 'Invio in corso...';
-  try {
-    await fetch('https://fedex98567.app.n8n.cloud/webhook/domanda', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ domanda, sezione })
-    });
-    status.textContent = 'Inviata. Risposta al prossimo aggiornamento.';
-    input.value = '';
-  } catch (e) {
-    status.textContent = 'Errore nell\'invio, riprova.';
-  }
-  btn.disabled = false;
-}
-
 async function inviaSpunto() {
   const input = document.getElementById('spunto-input');
   const btn = document.getElementById('spunto-submit');
