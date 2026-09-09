@@ -31,6 +31,16 @@
     .qa-button { cursor: pointer; font-size: 0.8rem; padding: 6px 16px; border-radius: 20px; background: #1a1a1a; color: #fff; border: none; }
     .qa-button:disabled { background: #ccc; cursor: default; }
     .qa-status { font-size: 0.75rem; color: #999; margin-top: 0.5rem; }
+    .quiz-box { border: 2px solid #a3c9a8; }
+    .quiz-verdetto-box { background: #f7f5ef; border-radius: 8px; padding: 0.9rem 1rem; margin-bottom: 1rem; }
+    .quiz-label-small { font-size: 0.7rem; color: #999; margin-bottom: 0.4rem; }
+    .quiz-tema-ieri { font-size: 0.85rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.75rem; }
+    .quiz-risposta-ieri { font-size: 0.85rem; color: #555; font-style: italic; margin-bottom: 0.75rem; }
+    .quiz-badge { display: inline-block; font-size: 0.7rem; font-weight: 600; padding: 3px 10px; border-radius: 20px; margin-bottom: 0.6rem; }
+    .quiz-badge-ok { background: #dcefe0; color: #2d6a4f; }
+    .quiz-badge-review { background: #fce8d6; color: #a35d1f; }
+    .quiz-spiegazione { font-size: 0.85rem; color: #555; line-height: 1.6; }
+    .quiz-domanda-oggi { font-size: 0.9rem; font-weight: 600; color: #1a1a1a; margin-bottom: 0.75rem; }
     .footer { padding: 1rem 2rem; border-top: 1px solid #e8e2d9; font-size: 0.7rem; color: #bbb; text-align: center; }
   </style>
 </head>
@@ -51,19 +61,27 @@
   </div>
   <div class="qa-box pillola-box">
     <div class="qa-label">💡 Pillola del giorno</div>
-    <div class="pillola-title">Il caffè dopo pranzo — quando lo bevi fa davvero differenza?</div>
-    <p class="pillola-text">Molti di noi lo fanno quasi per riflesso: finito il pranzo, subito un caffè. Ma c'è chi sostiene di aspettare un'oretta, convinto che faccia più effetto. Non è solo superstizione: ci sono basi fisiologiche interessanti dietro questa intuizione, anche se la scienza non ha ancora una risposta definitiva e netta.
+    <div class="pillola-title">L'uovo amniotico — l'invenzione dell'evoluzione che conquistò la terraferma</div>
+    <p class="pillola-text">Per centinaia di milioni di anni, i vertebrati erano prigionieri dell'acqua. Non perché non sapessero camminare, ma perché le loro uova avevano bisogno di stare bagnate per sopravvivere, proprio come quelle delle rane oggi. Poi, circa 312 milioni di anni fa, comparve qualcosa di rivoluzionario: un uovo che portava il suo oceano con sé.
 
-Il punto centrale riguarda il cortisolo, l'ormone dello stress e della vigilanza. Dopo pranzo, i livelli di cortisolo tendono a calare, ma rimangono comunque influenzati dal ritmo circadiano della giornata. Alcuni ricercatori, tra cui il neuroscienziato Andrew Huberman che ha divulgato molto su questo tema, suggeriscono che bere caffeina quando il cortisolo è già alto riduce l'effetto percepito dello stimolante, perché il corpo è già "sveglio" per conto suo. Aspettare che i livelli scendano renderebbe la caffeina più efficace.
+L'uovo amniotico è una struttura straordinaria. Al suo interno ci sono quattro membrane specializzate: l'amnio, che avvolge l'embrione in un sacco pieno di liquido e ricrea in miniatura l'ambiente acquatico; il corion, che scambia gas con l'esterno; l'allantoide, che raccoglie i rifiuti metabolici come una specie di serbatoio; e il sacco vitellino, che fornisce nutrimento. Il tutto è racchiuso in un guscio che può essere duro come quello di un uovo di gallina, o coriaceo come quello di un serpente, ma in ogni caso protegge l'embrione dal disseccamento.
 
-C'è però un altro fattore spesso trascurato: il cibo nello stomaco. Un pasto abbondante rallenta l'assorbimento della caffeina nell'intestino, il che significa che il picco stimolante arriva più tardi e in modo più graduale. Se bevi il caffè a stomaco pieno subito dopo pranzo, l'effetto lo senti più lentamente rispetto a berlo a stomaco quasi vuoto un'ora dopo.
+Questo sistema cambiò tutto. Con l'uovo amniotico, i rettili — e poi i dinosauri, gli uccelli e i mammiferi — poterono colonizzare ambienti aridi e lontanissimi dall'acqua. Non avevano più bisogno di tornare a deporre in fiumi o stagni. Il mondo intero diventò improvvisamente accessibile.
 
-In pratica: aspettare circa 60-90 minuti dopo pranzo potrebbe davvero rendere il caffè più efficace, sia per ragioni ormonali che digestive. Non è una certezza assoluta — i dati controllati su questo specifico scenario sono ancora limitati — ma la biologia ci dà qualche buon motivo per non correre subito al bancone del bar.</p>
+La cosa più affascinante è che i mammiferi, incluso noi, discendiamo da animali che deponevano uova amniotiche. Abbiamo conservato le quattro membrane anche nell'utero: l'amnio è ancora lì, riempito di liquido amniotico, a proteggere ogni bambino che nasce. Quando si "rompono le acque", in realtà si rompe una membrana vecchia di oltre 300 milioni di anni.</p>
     <div class="pillola-alt-label">Vuoi cambiarla? Scegli un tema per domani:</div>
     <div class="pillola-alt-buttons">
-      <button class="pillola-alt-btn" onclick="sceglipillola('Chi era Ada Lovelace', this)">Chi era Ada Lovelace</button><button class="pillola-alt-btn" onclick="sceglipillola('Perché sbadigliare è contagioso', this)">Perché sbadigliare è contagioso</button><button class="pillola-alt-btn" onclick="sceglipillola('Il processo a Giovanna d&#39;Arco', this)">Il processo a Giovanna d'Arco</button>
+      <button class="pillola-alt-btn" onclick="sceglipillola('Chi era Fritz Haber — il chimico che sfamò e avvelenò il mondo', this)">Chi era Fritz Haber — il chimico che sfamò e avvelenò il mondo</button><button class="pillola-alt-btn" onclick="sceglipillola('Perché sbadigliare è contagioso', this)">Perché sbadigliare è contagioso</button><button class="pillola-alt-btn" onclick="sceglipillola('Il processo a Giovanna d&#39;Arco — chi la condannò davvero', this)">Il processo a Giovanna d'Arco — chi la condannò davvero</button>
     </div>
     <p id="pillola-status" class="qa-status"></p>
+  </div>
+  <div class="qa-box quiz-box">
+    <div class="qa-label">🧠 Quiz sui tuoi interessi</div>
+    
+    <div class="quiz-domanda-oggi">Oggi: raccontami cos'è Perché viene il singhiozzo</div>
+    <textarea id="quiz-input" class="qa-textarea" placeholder="Scrivi qui la tua risposta..."></textarea>
+    <button id="quiz-submit" class="qa-button" onclick="inviaQuiz()">Invia risposta</button>
+    <p id="quiz-status" class="qa-status"></p>
   </div>
   <div class="tag-group">
     <div class="tag-label">Scienza</div>
@@ -161,6 +179,28 @@ async function inviaSpunto() {
       body: JSON.stringify({ spunto })
     });
     status.textContent = 'Salvato! Sara\' raccontato in una prossima pillola.';
+    input.value = '';
+  } catch (e) {
+    status.textContent = 'Errore, riprova.';
+  }
+  btn.disabled = false;
+}
+
+async function inviaQuiz() {
+  const input = document.getElementById('quiz-input');
+  const btn = document.getElementById('quiz-submit');
+  const status = document.getElementById('quiz-status');
+  const risposta = input.value.trim();
+  if (!risposta) return;
+  btn.disabled = true;
+  status.textContent = 'Invio in corso...';
+  try {
+    await fetch('https://fedex98567.app.n8n.cloud/webhook/quiz-risposta', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ risposta })
+    });
+    status.textContent = 'Inviata! Valutazione al prossimo aggiornamento.';
     input.value = '';
   } catch (e) {
     status.textContent = 'Errore, riprova.';
