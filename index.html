@@ -47,7 +47,7 @@
 <body>
 <header>
   <h1>Federico — AI Dashboard</h1>
-  <span class="data">venerdì 11 settembre 2026</span>
+  <span class="data">sabato 12 settembre 2026</span>
 </header>
 
 <div class="section">
@@ -61,30 +61,23 @@
   </div>
   <div class="qa-box pillola-box">
     <div class="qa-label">💡 Pillola del giorno</div>
-    <div class="pillola-title">Mount St. Helens — il giorno in cui una montagna esplose di lato</div>
-    <p class="pillola-text">L'18 maggio 1980, alle 8:32 del mattino, il fianco nord del Monte St. Helens nello Stato di Washington collassò all'improvviso, scatenando la più grande frana della storia registrata e una delle eruzioni vulcaniche più devastanti del Novecento. Non fu un'esplosione verticale come spesso si immagina: fu laterale, orizzontale, una scarica di gas, roccia frantumata e cenere che si propagò verso nord a quasi 500 chilometri orari. In pochi secondi, 57 persone morirono, tra cui il vulcanologo David Johnston, che stava monitorando il vulcano a distanza di sicurezza — o almeno così si credeva.
+    <div class="pillola-title">L'elica non fa volare l'aereo — il motore sì, ma non come pensi</div>
+    <p class="pillola-text">Un aereo ad elica funziona grazie alla collaborazione di due sistemi distinti che molti confondono tra loro. L'elica non serve a sollevare l'aereo in aria: il suo compito è spingerlo in avanti. Lo fa esattamente come una vite che avanza nel legno — ruotando, morde l'aria e la spinge indietro, generando una forza opposta che proietta l'aereo nella direzione del volo. Questa forza si chiama spinta, o in inglese thrust.
 
-La montagna perse circa 400 metri di altezza in meno di un minuto. L'onda di calore spazzò via 600 chilometri quadrati di foresta, abbattendo alberi come fiammiferi. Le ceneri salirono fino a 24 chilometri di quota e si depositarono su undici stati americani. Il fiume Toutle fu sepolto da fango e detriti per chilometri, alterando il paesaggio in modo permanente.
+Ma allora chi fa volare l'aereo? Le ali. Quando l'aereo avanza grazie all'elica, l'aria scorre sopra e sotto la superficie delle ali, che hanno una forma asimmetrica chiamata profilo alare. L'aria che passa sopra percorre una strada più lunga e accelera, creando una zona di bassa pressione. Quella sotto rimane più lenta e quindi più ad alta pressione. Questa differenza di pressione genera la portanza, cioè la forza verticale che solleva l'aereo. È il principio di Bernoulli applicato al volo.
 
-Ciò che rese il Monte St. Helens così importante non fu solo la distruzione, ma la scienza che ne seguì. Per settimane prima dell'eruzione, il fianco nord si era gonfiato visibilmente, accumulando magma come un ascesso. I vulcanologi avevano visto il pericolo, ma la forma dell'eruzione — laterale invece che verticale — li aveva colti di sorpresa. Fu una lezione brutale su quanto i vulcani possano essere imprevedibili anche quando li osservi da vicino.
+E il motore? Il motore è il cuore del sistema, ma non spinge direttamente l'aereo: fa girare l'elica. Negli aerei a pistoni funziona come il motore di un'automobile, con cilindri e combustione interna. In quelli a turboelica, invece, è una turbina a gas che aziona l'elica attraverso un riduttore. Più giri fa l'elica, più aria sposta, più spinta produce.
 
-Oggi il Monte St. Helens è un laboratorio naturale straordinario. In pochi decenni, la vita è tornata nella zona di esclusione, in modi che la scienza non aveva previsto. Un promemoria che la natura, anche dopo una catastrofe, non aspetta il permesso per ricominciare.</p>
+Quindi la risposta breve è questa: il motore fa girare l'elica, l'elica spinge l'aereo in avanti, e le ali — grazie alla velocità acquisita — lo sollevano in aria. Tre attori diversi, un unico risultato.</p>
     <div class="pillola-alt-label">Vuoi cambiarla? Scegli un tema per domani:</div>
     <div class="pillola-alt-buttons">
-      <button class="pillola-alt-btn" onclick="sceglipillola('Chi era Rosalind Franklin', this)">Chi era Rosalind Franklin</button><button class="pillola-alt-btn" onclick="sceglipillola('Perché i vulcani sottomarini esistono', this)">Perché i vulcani sottomarini esistono</button><button class="pillola-alt-btn" onclick="sceglipillola('Il processo a Oscar Wilde', this)">Il processo a Oscar Wilde</button>
+      <button class="pillola-alt-btn" onclick="sceglipillola('Chi era Henrietta Lacks', this)">Chi era Henrietta Lacks</button><button class="pillola-alt-btn" onclick="sceglipillola('Perché i sogni si dimenticano subito', this)">Perché i sogni si dimenticano subito</button><button class="pillola-alt-btn" onclick="sceglipillola('Il processo a Galileo Galilei — quando la scienza incontrò l&#39;Inquisizione', this)">Il processo a Galileo Galilei — quando la scienza incontrò l'Inquisizione</button>
     </div>
     <p id="pillola-status" class="qa-status"></p>
   </div>
   <div class="qa-box quiz-box">
     <div class="qa-label">🧠 Quiz sui tuoi interessi</div>
-    <div class="quiz-verdetto-box">
-    <div class="quiz-label-small">Ieri ti avevo chiesto</div>
-    <div class="quiz-tema-ieri">Raccontami tutto quello che sai su: La tettonica delle placche</div>
-    <div class="quiz-label-small">La tua risposta</div>
-    <div class="quiz-risposta-ieri">La tettonica sulla placche è una teoria che spiega come la terra sia divisa in placche che si spostano continuamente e il loro toccarsi genera terremoti</div>
-    <span class="quiz-badge quiz-badge-review">Da rivedere</span>
-    <div class="quiz-spiegazione">L'utente ha colto correttamente l'idea di base che la Terra sia divisa in placche che si muovono, ma manca il punto centrale della sintesi: il ruolo del calore interno alla Terra come motore dei movimenti e il contributo di Alfred Wegener. Inoltre non vengono menzionati i tre tipi di margine tra placche (convergente, divergente e trascorrente), che costituiscono la parte più specifica e rilevante degli appunti, mentre i terremoti sono un dettaglio aggiuntivo non presente nella sintesi di riferimento.</div>
-  </div>
+    
     <div class="quiz-domanda-oggi">Oggi: raccontami tutto quello che sai su: Entropia e la freccia del tempo</div>
     <textarea id="quiz-input" class="qa-textarea" placeholder="Scrivi qui la tua risposta..."></textarea>
     <button id="quiz-submit" class="qa-button" onclick="inviaQuiz()">Invia risposta</button>
