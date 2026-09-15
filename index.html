@@ -47,7 +47,7 @@
 <body>
 <header>
   <h1>Federico — AI Dashboard</h1>
-  <span class="data">lunedì 14 settembre 2026</span>
+  <span class="data">martedì 15 settembre 2026</span>
 </header>
 
 <div class="section">
@@ -61,24 +61,31 @@
   </div>
   <div class="qa-box pillola-box">
     <div class="qa-label">💡 Pillola del giorno</div>
-    <div class="pillola-title">L'acqua che tiene in piedi i muscoli</div>
-    <p class="pillola-text">I muscoli sono fatti d'acqua molto più di quanto si immagini. Circa il 75-80% del tessuto muscolare è composto di acqua, e questo non è un dettaglio marginale: è la condizione strutturale che permette alle fibre muscolari di funzionare. Senza un'idratazione adeguata, il muscolo non è semplicemente "assetato" — è letteralmente meno capace di contrarsi, meno elastico, più vulnerabile alle lesioni.
+    <div class="pillola-title">La banana prima di allenarsi — cosa succede davvero nel tuo corpo</div>
+    <p class="pillola-text">Mangiare una banana prima di allenarsi non è solo un'abitudine da atleta: è una scelta che ha basi fisiologiche precise. La banana contiene zuccheri a diversa velocità di assorbimento — fruttosio, glucosio e saccarosio — che forniscono energia sia nell'immediato che nei minuti successivi. Questo la rende un carburante naturale particolarmente adatto ai 30-60 minuti che precedono l'attività fisica.
 
-Il meccanismo è sottile ma diretto. Le fibre muscolari si contraggono grazie a scambi ionici rapidi, principalmente sodio e potassio, che attraversano le membrane cellulari. Questi scambi dipendono dall'equilibrio dei fluidi: quando sei disidratato anche solo del 2%, la conduzione elettrica rallenta, la forza sviluppata cala in modo misurabile, e la sensazione di fatica arriva prima. Non è un effetto psicologico — è chimica applicata al movimento.
+Uno degli aspetti meno noti riguarda il potassio. Durante l'esercizio fisico il corpo perde elettroliti attraverso il sudore, e il potassio è tra i più importanti: regola la contrazione muscolare e il segnale nervoso. Iniziare l'allenamento con una buona riserva di potassio — che la banana fornisce in abbondanza — può ridurre il rischio di crampi e migliorare la risposta muscolare, soprattutto negli esercizi prolungati.
 
-L'acqua serve anche da sistema di smaltimento. Durante l'esercizio fisico i muscoli producono calore e metaboliti di scarto come l'acido lattico. L'acqua trasporta via questi prodotti verso il fegato e i reni, e dissipa il calore attraverso il sudore. Un muscolo male idratato accumula calore e scorie più rapidamente, accelerando la comparsa dei crampi e del dolore post-allenamento.
+C'è poi la questione della digestione. La banana è uno dei pochi frutti che non pesa sullo stomaco prima dello sforzo: ha poca fibra insolente, è morbida, facile da digerire, e non provoca il rimbalzo di acidità che altri alimenti possono causare sotto sforzo. La vitamina B6 contenuta al suo interno contribuisce inoltre alla sintesi di serotonina e al metabolismo energetico, cioè alla capacità dell'organismo di usare i carboidrati in modo efficiente.
 
-C'è poi un effetto meno noto ma affascinante: il glicogeno muscolare, che è la riserva di energia che usi durante l'attività intensa, viene stoccato legato all'acqua. Ogni grammo di glicogeno trattiene circa tre grammi di acqua. Quando una persona si allena e "perde peso" nei primi giorni, sta esaurendo glicogeno — e con lui tutta l'acqua che ci stava aggrappata sopra.</p>
+Un dettaglio curioso: le banane leggermente acerbe, quelle ancora un po' verdi, hanno un indice glicemico più basso rispetto a quelle mature. Questo significa un rilascio di energia più lento e costante, utile per sessioni lunghe. Quelle molto mature invece danno energia più rapida — ideali se si ha pochissimo tempo prima di iniziare.</p>
     <div class="pillola-alt-label">Vuoi cambiarla? Scegli un tema per domani:</div>
     <div class="pillola-alt-buttons">
-      <button class="pillola-alt-btn" onclick="sceglipillola('Perché i vulcani fanno eruttare lava diversa', this)">Perché i vulcani fanno eruttare lava diversa</button><button class="pillola-alt-btn" onclick="sceglipillola('Chi era Ada Lovelace — prima programmatrice', this)">Chi era Ada Lovelace — prima programmatrice</button><button class="pillola-alt-btn" onclick="sceglipillola('Il processo a Oscar Wilde', this)">Il processo a Oscar Wilde</button>
+      <button class="pillola-alt-btn" onclick="sceglipillola('Il paradosso del gemello — relatività e tempo', this)">Il paradosso del gemello — relatività e tempo</button><button class="pillola-alt-btn" onclick="sceglipillola('Chi era Henrietta Lacks — cellule immortali', this)">Chi era Henrietta Lacks — cellule immortali</button><button class="pillola-alt-btn" onclick="sceglipillola('Il processo a Giovanna d&#39;Arco — la condanna politica', this)">Il processo a Giovanna d'Arco — la condanna politica</button>
     </div>
     <p id="pillola-status" class="qa-status"></p>
   </div>
   <div class="qa-box quiz-box">
     <div class="qa-label">🧠 Quiz sui tuoi interessi</div>
-    
-    <div class="quiz-domanda-oggi">Oggi: raccontami tutto quello che sai su: Entropia e la freccia del tempo</div>
+    <div class="quiz-verdetto-box">
+    <div class="quiz-label-small">Ieri ti avevo chiesto</div>
+    <div class="quiz-tema-ieri">Raccontami tutto quello che sai su: Entropia e la freccia del tempo</div>
+    <div class="quiz-label-small">La tua risposta</div>
+    <div class="quiz-risposta-ieri">L'entropia è il numero di variabili microscopiche compatibili con lo stato macroscopico del sistema. La seconda legge della termodinamica indica che l'entropia tende ad aumentare, perchè gli stati più disordinati sono più probabili di uno ordinato. Questa è la freccia del tempo, l'universo evolve sempre verso stadi più disordinati</div>
+    <span class="quiz-badge quiz-badge-ok">Sufficiente</span>
+    <div class="quiz-spiegazione">L'utente ha colto i concetti chiave: l'entropia come misura delle configurazioni microscopiche compatibili con il macrostato, il secondo principio della termodinamica e il collegamento con la freccia del tempo. Una piccola imprecisione: ha scritto "variabili microscopiche" invece di "configurazioni" o "microstati", ma il senso è sostanzialmente corretto. Manca il dettaglio che questo aumento unidirezionale permette di distinguere il "prima" dal "dopo", ma il concetto centrale è stato compreso.</div>
+  </div>
+    <div class="quiz-domanda-oggi">Oggi: raccontami tutto quello che sai su: Perché viene il singhiozzo</div>
     <textarea id="quiz-input" class="qa-textarea" placeholder="Scrivi qui la tua risposta..."></textarea>
     <button id="quiz-submit" class="qa-button" onclick="inviaQuiz()">Invia risposta</button>
     <p id="quiz-status" class="qa-status"></p>
@@ -86,71 +93,74 @@ C'è poi un effetto meno noto ma affascinante: il glicogeno muscolare, che è la
   <div class="tag-group">
     <div class="tag-label">Scienza</div>
     <div class="cases-grid"><div class="case-box">
-    <div class="case-title">Come si datano i minerali con gli zirconi</div>
-    <div class="case-body">Gli zirconi sono minerali che, al momento della loro formazione, intrappolano piccole quantità di uranio ma quasi nessun piombo. Poiché il decadimento radioattivo dell'uranio in piombo avviene a velocità nota e costante, misurando il rapporto tra i due elementi nel cristallo è possibile risalire con precisione all'età del minerale.</div>
+    <div class="case-title">Datazione dei minerali con gli zirconi</div>
+    <div class="case-body">Gli zirconi sono minerali che al momento della formazione intrappolano uranio ma quasi nessun piombo. Poiché il decadimento radioattivo dell'uranio in piombo avviene a velocità nota e costante, misurando il rapporto tra i due elementi nel cristallo è possibile risalire con precisione all'età del minerale.</div>
   </div><div class="case-box">
-    <div class="case-title">Chi era Thomas Midgley Jr.</div>
-    <div class="case-body">Ingegnere chimico responsabile di due invenzioni ad alto impatto ambientale. Nel 1923 scoprì che aggiungere piombo alla benzina migliorava le prestazioni dei motori, nonostante la tossicità del piombo fosse già nota; finanziò test per rassicurare l'opinione pubblica. Le benzine senza piombo arrivarono solo decenni dopo. Inventò anche i CFC, poi collegati al buco nell'ozono. Morì intrappolato in un meccanismo a corde e carrucole che aveva costruito lui stesso.</div>
+    <div class="case-title">Thomas Midgley Jr. e le sue invenzioni dannose</div>
+    <div class="case-body">Ingegnere chimico responsabile di due invenzioni ad alto impatto ambientale: la benzina al piombo (1923), introdotta nonostante la tossicità nota del piombo e sostenuta da test finanziati per rassicurare l'opinione pubblica, e i CFC usati come refrigeranti, poi collegati al buco nell'ozono. Morì intrappolato in un meccanismo a corde e carrucole che aveva costruito lui stesso.</div>
   </div><div class="case-box">
-    <div class="case-title">Chi era Clair Patterson</div>
-    <div class="case-body">Geologo che calcolò l'età della Terra e, nel farlo, scoprì l'estensione della contaminazione da piombo nell'ambiente. Trovando livelli anomali di piombo nelle rocce terrestri, capì che erano contaminate; usò quindi meteoriti non contaminati per datare la Terra con il metodo uranio-piombo. Individuò nelle benzine al piombo la causa principale della contaminazione, scontrandosi con le lobby petrolifere che finanziarono studi contrari. Le sue prove, ricavate anche dai ghiacci polari, prevalsero alla fine.</div>
+    <div class="case-title">Clair Patterson e la contaminazione da piombo</div>
+    <div class="case-body">Geologo che calcolò l'età della Terra e, nel farlo, scoprì l'estensione della contaminazione ambientale da piombo. Trovando livelli anomali nelle rocce terrestri, usò meteoriti non contaminati per datare la Terra col metodo uranio-piombo. Identificò le benzine al piombo come causa principale della contaminazione, scontrandosi con le lobby petrolifere che finanziarono studi contrari. Le sue prove, rafforzate dall'analisi dei ghiacci polari, prevalsero.</div>
   </div><div class="case-box">
     <div class="case-title">La tettonica delle placche</div>
-    <div class="case-body">Teoria elaborata da Alfred Wegener secondo cui il calore proveniente dall'interno della Terra genera moti che muovono le placche tettoniche della crosta terrestre. Esistono tre tipi di margine tra placche: convergente (le placche si scontrano, generando fenomeni come la subduzione), divergente (le placche si allontanano) e trascorrente (le placche scorrono lateralmente l'una rispetto all'altra).</div>
+    <div class="case-body">Teoria elaborata da Alfred Wegener secondo cui il calore interno della Terra genera moti che muovono le placche tettoniche della crosta. Esistono tre tipi di margine: convergente (le placche si scontrano, con fenomeni come la subduzione), divergente (si allontanano) e trascorrente (scorrono lateralmente l'una rispetto all'altra).</div>
   </div><div class="case-box">
     <div class="case-title">Entanglement quantistico</div>
-    <div class="case-body">Fenomeno per cui due particelle diventano collegate in un unico sistema: misurare lo stato di una determina istantaneamente lo stato dell'altra, anche a grande distanza. Non può essere usato per trasmettere informazioni più velocemente della luce, perché il risultato della misura su ciascuna particella resta casuale e la correlazione è verificabile solo confrontando i risultati a posteriori. Un output deterministico permetterebbe messaggi istantanei, violando la relatività.</div>
+    <div class="case-body">Fenomeno per cui due particelle collegate formano un unico sistema: misurare lo stato di una determina istantaneamente lo stato dell'altra, anche a grande distanza. Non può essere usato per trasmettere informazioni più velocemente della luce perché il risultato di ogni misura resta casuale; la correlazione è verificabile solo confrontando i risultati a posteriori. Un output deterministico permetterebbe messaggi istantanei, violando la relatività.</div>
   </div><div class="case-box">
     <div class="case-title">Entropia e la freccia del tempo</div>
-    <div class="case-body">L'entropia misura il numero di configurazioni microscopiche compatibili con lo stato macroscopico di un sistema. Il secondo principio della termodinamica afferma che l'entropia di un sistema isolato tende ad aumentare, perché gli stati più disordinati sono statisticamente molto più numerosi di quelli ordinati. Questo aumento costante dà una direzione al tempo: l'universo evolve verso stati sempre più probabili, cioè più disordinati.</div>
+    <div class="case-body">L'entropia misura il numero di configurazioni microscopiche compatibili con lo stato macroscopico di un sistema. Il secondo principio della termodinamica afferma che l'entropia di un sistema isolato tende ad aumentare, perché gli stati disordinati corrispondono a un numero di microstati enormemente maggiore di quelli ordinati. Questo aumento unidirezionale dà una direzione al tempo, permettendo di distinguere il "prima" dal "dopo".</div>
   </div><div class="case-box">
-    <div class="case-title">Il paradosso di Jevons - più efficienza può aumentare i consumi</div>
-    <div class="case-body">Quando una tecnologia diventa più efficiente nell'uso di una risorsa, ci si aspetterebbe una riduzione dei consumi. In pratica accade spesso il contrario: l'efficienza rende la risorsa più economica, aumentandone la domanda complessiva. Esempi tipici sono i motori più efficienti che rendono l'auto più conveniente da usare, o i LED che, costando meno in bolletta, portano a un uso più diffuso dell'illuminazione.</div>
+    <div class="case-title">Il paradosso di Jevons</div>
+    <div class="case-body">Quando una tecnologia diventa più efficiente nell'uso di una risorsa, il consumo complessivo di quella risorsa può aumentare invece di diminuire, perché l'efficienza la rende più economica e ne stimola una domanda maggiore. Esempi tipici: motori più efficienti che incentivano l'uso dell'auto, o LED che, costando meno in bolletta, portano a un'illuminazione più diffusa.</div>
   </div><div class="case-box">
-    <div class="case-title">Fattore di capacità di un impianto fotovoltaico e cos'è l'inverter</div>
-    <div class="case-body">Il fattore di capacità è il rapporto tra l'energia realmente prodotta in un anno e quella che l'impianto avrebbe prodotto funzionando sempre a piena potenza. Un impianto fotovoltaico produce corrente continua, che deve essere convertita in corrente alternata tramite un dispositivo chiamato inverter, necessario per l'uso nella rete elettrica e negli elettrodomestici.</div>
+    <div class="case-title">Fattore di capacità del fotovoltaico e inverter</div>
+    <div class="case-body">Il fattore di capacità di un impianto fotovoltaico è il rapporto tra l'energia realmente prodotta in un anno e quella producibile a piena potenza continua. L'impianto genera corrente continua, che viene convertita in corrente alternata — utilizzabile dalla rete e dagli elettrodomestici — tramite un dispositivo chiamato inverter.</div>
   </div><div class="case-box">
     <div class="case-title">Caratteristiche del pianeta Mercurio</div>
-    <div class="case-body">Mercurio è il pianeta più vicino al Sole e il più piccolo del sistema solare. È roccioso, distante circa 1/3 dell'unità astronomica dal Sole, con una massa di circa 1/3 di quella terrestre. L'assenza di un'atmosfera significativa causa forti escursioni termiche, e il campo magnetico è molto debole, circa l'1% di quello terrestre.</div>
+    <div class="case-body">Mercurio è il pianeta più vicino al Sole e il più piccolo del sistema solare. È roccioso, distante circa 1/3 dell'unità astronomica dal Sole, con massa pari a circa 1/3 di quella terrestre. L'assenza di un'atmosfera significativa causa forti escursioni termiche; il campo magnetico è molto debole, circa l'1% di quello terrestre.</div>
+  </div><div class="case-box">
+    <div class="case-title">Approfondimento su entropia e freccia del tempo</div>
+    <div class="case-body">L'entropia misura il numero di microstati (configurazioni esatte di ogni componente) compatibili con il macrostato osservato (descrizione grossolana del sistema). Il secondo principio della termodinamica afferma che l'entropia di un sistema isolato non diminuisce mai, aumentando fino al valore massimo — il macrostato di equilibrio — dopo il quale si stabilizza con fluttuazioni trascurabili. Questo non deriva da una forza fisica, ma dalla pura combinatoria: i macrostati disordinati corrispondono a un numero di microstati enormemente maggiore, quindi un sistema che evolve casualmente vi finisce quasi certamente. Tale aumento unidirezionale dà una direzione al tempo, a differenza delle leggi fisiche fondamentali che sono simmetriche rispetto ad esso. Se l'universo raggiungesse la massima entropia ("heat death"), la distinzione tra passato e futuro perderebbe significato.</div>
   </div><div class="case-box">
     <div class="case-title">Il Lusotitan</div>
-    <div class="case-body">Dinosauro i cui resti furono scoperti agli inizi degli anni 2000 in Portogallo (l'antica Lusitania romana), da cui deriva il nome. Appartiene alla famiglia dei brachiosauri, dinosauri dal collo lungo e fino a 25 metri di lunghezza. Inizialmente chiamato Brachiosaurus Atalaiensis, fu poi rinominato per riconoscergli una tassonomia autonoma. Resti di dinosauri simili furono trovati anche in Nord America, fatto non sorprendente poiché ai tempi del Lusotitan la Pangea si stava separando ma Europa, Nord America e Africa erano ancora collegati.</div>
+    <div class="case-body">Dinosauro della famiglia dei brachiosauri (fino a 25 metri, dal collo lungo) i cui resti furono scoperti agli inizi degli anni 2000 in Portogallo — da cui il nome, che richiama il nome romano Lusitania. Inizialmente chiamato Brachiosaurus Atalaiensis, fu poi rinominato per riconoscergli una tassonomia autonoma. Resti simili furono trovati anche in Nord America, fatto spiegabile dal fatto che ai tempi dei dinosauri Europa, Nord America e Africa erano ancora collegati, con la Pangea in fase di separazione ma non ancora completamente divisa.</div>
   </div></div>
   </div><div class="tag-group">
     <div class="tag-label">Salute</div>
     <div class="cases-grid"><div class="case-box">
-    <div class="case-title">Perché camomilla e melatonina aiutano il sonno in modo diverso</div>
-    <div class="case-body">Agiscono con meccanismi distinti. La camomilla contiene composti che si legano ai recettori GABA nel cervello, riducendo l'attività neuronale e favorendo il rilassamento. La melatonina è un ormone prodotto naturalmente dal corpo che si lega ai recettori MT1 e MT2 nell'ipotalamo, sincronizzando il ritmo circadiano e segnalando all'organismo che è il momento di dormire.</div>
+    <div class="case-title">Camomilla e melatonina: meccanismi diversi per il sonno</div>
+    <div class="case-body">I due rimedi agiscono in modo distinto. La camomilla contiene composti che si legano ai recettori GABA nel cervello, riducendo l'attività neuronale e favorendo il rilassamento. La melatonina è un ormone che si lega ai recettori MT1 e MT2 nell'ipotalamo, sincronizzando il ritmo circadiano e segnalando all'organismo che è ora di dormire.</div>
   </div><div class="case-box">
-    <div class="case-title">Picco glicemico e ruolo delle proteine dopo l'allenamento</div>
-    <div class="case-body">I carboidrati semplici vengono trasformati rapidamente in zuccheri nel sangue, causando un picco glicemico a cui il corpo risponde con insulina; verdure e fibre rallentano questo processo. Dopo l'allenamento, le proteine servono a riparare il muscolo danneggiato fornendo gli amminoacidi necessari e a rallentare l'assorbimento dei carboidrati assunti nello stesso pasto.</div>
+    <div class="case-title">Picco glicemico e proteine dopo l'allenamento</div>
+    <div class="case-body">I carboidrati semplici vengono rapidamente trasformati in zuccheri nel sangue, causando un picco glicemico a cui il corpo risponde con insulina; verdure e fibre rallentano questo processo. Dopo l'allenamento, le proteine servono a riparare il muscolo danneggiato fornendo amminoacidi e a rallentare l'assorbimento dei carboidrati assunti nello stesso pasto.</div>
   </div><div class="case-box">
-    <div class="case-title">Perché il gonfiore fa percepire una temperatura diversa</div>
-    <div class="case-body">Un tessuto gonfio disperde calore verso l'aria esterna più facilmente rispetto a un tessuto non gonfio, perché cambia lo scambio termico tra i due strati. Il gonfiore non isola termicamente, ma modifica la velocità di dispersione del calore, facendo percepire una temperatura diversa da quella reale dell'aria.</div>
+    <div class="case-title">Gonfiore e percezione della temperatura</div>
+    <div class="case-body">Un tessuto gonfio modifica lo scambio termico tra i suoi strati e l'aria esterna, disperdendo calore più facilmente rispetto a un tessuto non gonfio. Il gonfiore non isola termicamente, ma altera la velocità di dispersione del calore, facendo percepire una temperatura diversa da quella reale dell'aria.</div>
   </div><div class="case-box">
     <div class="case-title">Perché viene il singhiozzo</div>
-    <div class="case-body">Il singhiozzo è un riflesso involontario del diaframma, innescato dalla stimolazione del nervo vago o del nervo frenico (ad esempio da stomaco pieno, bevande gassate o pasti troppo veloci). La stimolazione raggiunge il tronco encefalico, che attiva una contrazione improvvisa del diaframma seguita dalla rapida chiusura della glottide, producendo il caratteristico suono. Non è ancora del tutto chiaro perché il tronco encefalico generi questo riflesso.</div>
+    <div class="case-body">Il singhiozzo è un riflesso involontario innescato dalla stimolazione del nervo vago o del nervo frenico (ad esempio da stomaco pieno, bevande gassate o alimentazione troppo rapida). Il segnale arriva al tronco encefalico, che provoca una contrazione improvvisa del diaframma seguita dalla rapida chiusura della glottide, producendo il caratteristico suono. Non è ancora del tutto chiaro perché il tronco encefalico generi questo riflesso.</div>
   </div><div class="case-box">
-    <div class="case-title">Perché l'allenamento fa sentire più vivi</div>
+    <div class="case-title">Perché l'allenamento dà sensazione di vitalità</div>
     <div class="case-body">Durante l'allenamento i muscoli consumano ATP per contrarsi e il sistema nervoso simpatico si attiva rilasciando adrenalina e noradrenalina. Questi ormoni aumentano energia e focus, ed è uno dei motivi per cui l'attività fisica produce una sensazione di maggiore vitalità e lucidità.</div>
   </div></div>
   </div><div class="tag-group">
     <div class="tag-label">Storia</div>
     <div class="cases-grid"><div class="case-box">
-    <div class="case-title">Chi era Giovanna d'Arco</div>
-    <div class="case-body">Giovane francese priva di esperienza militare che guidò le truppe francesi ottenendo importanti vittorie e liberando città occupate dagli inglesi durante la Guerra dei Cent'anni, sostenendo di essere guidata da voci divine. Fu infine catturata e, per screditarla, processata e condannata per stregoneria ed eresia, anche a causa delle sue affermazioni di parlare direttamente con Dio.</div>
+    <div class="case-title">Giovanna d'Arco</div>
+    <div class="case-body">Giovane francese senza esperienza militare che guidò le truppe francesi nella Guerra dei Cent'anni, ottenendo importanti vittorie e liberando città occupate dagli inglesi, sostenendo di essere guidata da voci divine. Fu catturata e processata per stregoneria ed eresia — anche a causa delle sue affermazioni di parlare direttamente con Dio — con l'obiettivo di screditarla.</div>
   </div><div class="case-box">
-    <div class="case-title">Breve storia della Repubblica di Ragusa (Dubrovnik)</div>
-    <div class="case-body">Nel Medioevo, sulla costa adriatica tra Venezia e l'Impero Ottomano, si sviluppò la Repubblica di Ragusa (l'odierna Dubrovnik, in Croazia). Ragusa scelse spesso di allearsi o pagare tributo agli Ottomani piuttosto che a Venezia, per mantenere maggiore indipendenza da quest'ultima, pur restando esposta alle pressioni di entrambe le potenze. L'area ha visto nel tempo l'intreccio di influenze tra Croazia, Bosnia e Montenegro.</div>
+    <div class="case-title">La Repubblica di Ragusa (Dubrovnik)</div>
+    <div class="case-body">Nel Medioevo, sulla costa adriatica tra Venezia e l'Impero Ottomano, si sviluppò la Repubblica di Ragusa (l'odierna Dubrovnik, in Croazia). Per mantenere maggiore indipendenza da Venezia, Ragusa scelse spesso di allearsi o pagare tributo agli Ottomani, restando comunque esposta alle pressioni di entrambe le potenze. L'area ha visto nel tempo l'intreccio di influenze tra Croazia, Bosnia e Montenegro.</div>
   </div><div class="case-box">
     <div class="case-title">Il caso Clinton-Lewinsky</div>
-    <div class="case-body">Monica Lewinsky ebbe una relazione con il presidente USA Bill Clinton durante il suo mandato, mentre era sposato con Hillary Clinton. Nel tentativo di evitare che la relazione emergesse pubblicamente furono coinvolte varie persone, tra cui una collega di Monica che ne rese pubbliche le confidenze. Clinton subì un processo di impeachment non per il tradimento in sé, ma per aver mentito sotto giuramento; rimase in carica fino al termine del mandato e non divorziò da Hillary.</div>
+    <div class="case-body">Monica Lewinsky ebbe una relazione con il presidente USA Bill Clinton durante il suo mandato, mentre era sposato con Hillary Clinton. Nel tentativo di tenere segreta la relazione furono coinvolte varie persone, tra cui una collega di Monica che ne raccolse le confidenze e le rese pubbliche. Clinton subì un processo di impeachment non per il tradimento in sé ma per aver mentito sotto giuramento; rimase in carica fino al termine del mandato e non divorziò da Hillary.</div>
   </div></div>
   </div><div class="tag-group">
     <div class="tag-label">Investimenti</div>
     <div class="cases-grid"><div class="case-box">
-    <div class="case-title">Vendita impulsiva e rientro a caldo - caso Bending Spoons</div>
-    <div class="case-body">Il 1 luglio 2026 Federico ha investito 2.246 USD in BSP con target di uscita prefissato al +15%. Lo stop è scattato al minimo locale del giorno e il titolo è poi risalito fino a 44 USD; la sera stessa Federico ha ricomprato sopra il prezzo di vendita per paura di perdere il rialzo. Cosa ha funzionato: fissare e rispettare il target di uscita in anticipo elimina l'emotività. Dove ha sbagliato: il rientro è avvenuto per FOMO, senza un livello di rientro definito in anticipo. Regola del breakeven: se si rientra con meno azioni di quelle vendute, il vero breakeven è cash disponibile diviso azioni mancanti per tornare alla posizione originale, non il prezzo di vendita. Lezioni principali: fissare in anticipo sia il prezzo di uscita sia quello di rientro; non rientrare mai sopra il prezzo di vendita per FOMO; calcolare subito il breakeven specifico con capitale parziale; un'uscita sfortunata non invalida la regola, solo il rientro impulsivo è stato l'errore.</div>
+    <div class="case-title">Vendita impulsiva e rientro a caldo — caso Bending Spoons</div>
+    <div class="case-body">Il 1 luglio 2026 Federico ha investito 2.246 USD in BSP con target di uscita prefissato al +15%. Lo stop è scattato al minimo locale del giorno (35,77 USD), ma il titolo è poi risalito fino a 44 USD. La sera stessa, per FOMO, ha ricomprato sopra il prezzo di vendita senza un livello di rientro definito in anticipo. Cosa ha funzionato: fissare e rispettare il target di uscita in anticipo elimina l'emotività. Errore commesso: il rientro impulsivo inseguendo il prezzo. Regola del breakeven individuata: con meno azioni della posizione originale, il vero breakeven è cash disponibile diviso azioni mancanti per tornare alla posizione originale, non il prezzo di vendita. Lezioni principali: definire in anticipo sia il prezzo di uscita sia quello di rientro; non rientrare mai sopra il prezzo di vendita per FOMO; calcolare subito il breakeven specifico con capitale parziale; un'uscita sfortunata non invalida la regola — solo il rientro impulsivo è stato l'errore.</div>
   </div></div>
   </div><div class="tag-group">
     <div class="tag-label">Criminal</div>
