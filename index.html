@@ -47,7 +47,7 @@
 <body>
 <header>
   <h1>Federico — AI Dashboard</h1>
-  <span class="data">giovedì 8 ottobre 2026</span>
+  <span class="data">venerdì 9 ottobre 2026</span>
 </header>
 
 <div class="section">
@@ -61,28 +61,21 @@
   </div>
   <div class="qa-box pillola-box">
     <div class="qa-label">💡 Pillola del giorno</div>
-    <div class="pillola-title">Fritz Haber — il chimico che sfamò e avvelenò il mondo</div>
-    <p class="pillola-text">All'inizio del Novecento, l'umanità si trovava di fronte a un problema silenzioso ma devastante: i suoli agricoli si stavano esaurendo, e la crescita della popolazione mondiale rendeva sempre più urgente trovare un modo per fissare l'azoto atmosferico in una forma utilizzabile come fertilizzante. Fritz Haber, chimico tedesco di origini ebraiche, risolse questo problema nel 1909 sviluppando un processo per sintetizzare ammoniaca dall'azoto dell'aria e dall'idrogeno. Industrializzato poi da Carl Bosch, il processo Haber-Bosch è ancora oggi alla base della produzione mondiale di fertilizzanti artificiali. Si stima che senza di esso la Terra non potrebbe sostenere più della metà della sua attuale popolazione.
+    <div class="pillola-title">Chi era Mefistofele — il diavolo più elegante della letteratura</div>
+    <p class="pillola-text">Mefistofele è il diavolo del Faust, l'opera monumentale scritta da Johann Wolfgang von Goethe tra il 1772 e il 1832. Non è il diavolo nel senso più classico e cupo del termine — non è un mostro con le corna e le fiamme. È qualcosa di più sottile e per questo più inquietante: è un essere cinico, raffinato, ironico, che guarda il mondo umano con disprezzo divertito. Sa tutto, crede in niente, e trova l'essere umano fondamentalmente ridicolo nella sua ambizione di capire l'universo.
 
-Eppure la stessa mente che sfamò miliardi di persone fu anche quella che portò la guerra chimica nel mondo moderno. Durante la Prima Guerra Mondiale, Haber supervisionò personalmente il primo attacco su larga scala con cloro gassoso nella storia, a Ypres nel 1915. Credeva sinceramente che le armi chimiche potessero abbreviare la guerra e ridurre le vittime complessive. Sua moglie Clara, anche lei chimica, si oppose con forza a questo lavoro. La notte dopo il successo del primo attacco, si tolse la vita con la pistola da servizio del marito.
+Nel Faust, Mefistofele stringe un patto con il protagonista: gli darà ogni conoscenza, ogni piacere, ogni potere — in cambio della sua anima. Ma il diavolo goethiano non è brutale: è brillante, sarcastico, fa battute sottili, discute di filosofia, ride delle illusioni umane. È il nichilismo incarnato in forma elegante. Ecco perché la parola "mefistofelico" è entrata nell'uso comune per descrivere qualcuno dall'intelligenza acuta, dallo sguardo freddo e da un certo piacere nel vedere attraverso le cose — incluse le persone.
 
-Haber ricevette il Nobel per la Chimica nel 1918, nonostante le proteste internazionali per il suo ruolo nella guerra chimica. La sua storia è un caso quasi unico nella scienza moderna: lo stesso uomo è responsabile di aver salvato e tolto vite umane su scala di massa, con la stessa competenza, la stessa dedizione, e la stessa mancanza di dubbi. Morì nel 1934, esiliato dalla Germania nazista che aveva servito, perché ebreo. Il regime che aveva contribuito a rafforzare con le sue armi lo cacciò prima ancora di poterlo usare ulteriormente.</p>
+Quando il libro che stai leggendo descrive Federico come "una specie di Mefistofele con gli occhiali e l'aria da studioso", ti sta dicendo qualcosa di preciso: Federico è probabilmente uno che osserva tutto con distacco superiore, che sa smontare ogni entusiasmo con una frase, che è più interessato a dimostrare quanto gli altri si sbaglino che a credere in qualcosa. Un intelligente, forse. Ma un intelligente freddo. Uno che sorride — e quel sorriso non ti scalda affatto.</p>
     <div class="pillola-alt-label">Vuoi cambiarla? Scegli un tema per domani:</div>
     <div class="pillola-alt-buttons">
-      <button class="pillola-alt-btn" data-tema="Ada Lovelace — la prima programmatrice della storia" onclick="sceglipillola(this.dataset.tema, this)">Ada Lovelace — la prima programmatrice della storia</button><button class="pillola-alt-btn" data-tema="Perché il corpo trema dal freddo" onclick="sceglipillola(this.dataset.tema, this)">Perché il corpo trema dal freddo</button><button class="pillola-alt-btn" data-tema="Il processo a Oscar Wilde" onclick="sceglipillola(this.dataset.tema, this)">Il processo a Oscar Wilde</button>
+      <button class="pillola-alt-btn" data-tema="Il principio di indeterminazione di Heisenberg" onclick="sceglipillola(this.dataset.tema, this)">Il principio di indeterminazione di Heisenberg</button><button class="pillola-alt-btn" data-tema="La sindrome di Stendhal — bellezza che travolge" onclick="sceglipillola(this.dataset.tema, this)">La sindrome di Stendhal — bellezza che travolge</button><button class="pillola-alt-btn" data-tema="Chi era Mata Hari — spia o capro espiatorio" onclick="sceglipillola(this.dataset.tema, this)">Chi era Mata Hari — spia o capro espiatorio</button>
     </div>
     <p id="pillola-status" class="qa-status"></p>
   </div>
   <div class="qa-box quiz-box">
     <div class="qa-label">🧠 Quiz sui tuoi interessi</div>
-    <div class="quiz-verdetto-box">
-    <div class="quiz-label-small">Ieri ti avevo chiesto</div>
-    <div class="quiz-tema-ieri">Raccontami tutto quello che sai su: La tettonica delle placche</div>
-    <div class="quiz-label-small">La tua risposta</div>
-    <div class="quiz-risposta-ieri">La tettonica delle placche prevede che la terra sia divisa in diverse placche, ovvero masse giganti di terra separate tra di loro. La teoria è alla base della spiegazione sui terremoti, in quanto le placche sono in continuo movimento e quando si scontrano (e come si scontrano) genera dei terremoti.</div>
-    <span class="quiz-badge quiz-badge-review">Da rivedere</span>
-    <div class="quiz-spiegazione">L'utente ha colto correttamente l'idea generale delle placche tettoniche come masse in movimento, ma manca il punto centrale della sintesi: il ruolo del calore interno della Terra come motore dei moti tettonici e la distinzione tra i tre tipi di margine (convergente, divergente e trascorrente). La risposta si concentra quasi esclusivamente sui terremoti, che non sono menzionati nella sintesi di riferimento, e non cita Alfred Wegener né il meccanismo della subduzione.</div>
-  </div>
+    
     <div class="quiz-domanda-oggi">Oggi: raccontami tutto quello che sai su: Perché viene il singhiozzo</div>
     <textarea id="quiz-input" class="qa-textarea" placeholder="Scrivi qui la tua risposta..."></textarea>
     <button id="quiz-submit" class="qa-button" onclick="inviaQuiz()">Invia risposta</button>
