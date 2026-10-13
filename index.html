@@ -47,7 +47,7 @@
 <body>
 <header>
   <h1>Federico — AI Dashboard</h1>
-  <span class="data">lunedì 12 ottobre 2026</span>
+  <span class="data">martedì 13 ottobre 2026</span>
 </header>
 
 <div class="section">
@@ -69,14 +69,21 @@ La storia vera di Billy è meno romantica di quella raccontata nei film. Crebbe 
 Quel che è affascinante è come la leggenda si sia costruita quasi in tempo reale. Già prima della sua morte circolavano storie su di lui, alcune vere, molte inventate. Il numero delle sue vittime venne gonfiato a dismisura: si diceva avesse ucciso 21 uomini, uno per ogni anno di vita. Il numero reale è probabilmente tra 8 e 9. Ma la verità, nel West americano, ha sempre faticato a competere con una buona storia.</p>
     <div class="pillola-alt-label">Vuoi cambiarla? Scegli un tema per domani:</div>
     <div class="pillola-alt-buttons">
-      <button class="pillola-alt-btn" data-tema="Il morbo di Marchiafava-Bignami — vino e cervello" onclick="sceglipillola(this.dataset.tema, this)">Il morbo di Marchiafava-Bignami — vino e cervello</button><button class="pillola-alt-btn" data-tema="Chi era Tycho Brahe — il naso d&#39;oro dell&#39;astronomia" onclick="sceglipillola(this.dataset.tema, this)">Chi era Tycho Brahe — il naso d&#39;oro dell&#39;astronomia</button><button class="pillola-alt-btn" data-tema="Il processo a Galileo Galilei — il caso di Gesualdo da Venosa" onclick="sceglipillola(this.dataset.tema, this)">Il processo a Galileo Galilei — il caso di Gesualdo da Venosa</button>
+      <button class="pillola-alt-btn" data-tema="Chi era Hedy Lamarr — attrice e inventrice" onclick="sceglipillola(this.dataset.tema, this)">Chi era Hedy Lamarr — attrice e inventrice</button><button class="pillola-alt-btn" data-tema="La sindrome dell&#39;impostore — mente o realtà?" onclick="sceglipillola(this.dataset.tema, this)">La sindrome dell&#39;impostore — mente o realtà?</button><button class="pillola-alt-btn" data-tema="Il processo a Galileo Galilei — quando la scienza incontrò l&#39;Inquisizione" onclick="sceglipillola(this.dataset.tema, this)">Il processo a Galileo Galilei — quando la scienza incontrò l&#39;Inquisizione</button>
     </div>
     <p id="pillola-status" class="qa-status"></p>
   </div>
   <div class="qa-box quiz-box">
     <div class="qa-label">🧠 Quiz sui tuoi interessi</div>
-    
-    <div class="quiz-domanda-oggi">Oggi: raccontami tutto quello che sai su: Perché viene il singhiozzo</div>
+    <div class="quiz-verdetto-box">
+    <div class="quiz-label-small">Ieri ti avevo chiesto</div>
+    <div class="quiz-tema-ieri">Raccontami tutto quello che sai su: Perché viene il singhiozzo</div>
+    <div class="quiz-label-small">La tua risposta</div>
+    <div class="quiz-risposta-ieri">Il singhiozzo è un riflesso involontario del nervo vago (che dipende da stomaco troppo pieno, ingerire troppo velocemente). Quando si attiva il nervo vago manda un impulso al cervello che va emettere il suono classico. Non sappiamo il vero motivo</div>
+    <span class="quiz-badge quiz-badge-review">Da rivedere</span>
+    <div class="quiz-spiegazione">L'utente ha colto correttamente che si tratta di un riflesso involontario legato al nervo vago e che le cause includono stomaco pieno e alimentazione rapida, e che il motivo non è del tutto chiaro. Tuttavia manca la menzione del nervo frenico e, soprattutto, il meccanismo centrale è descritto in modo impreciso: l'utente dice genericamente che il segnale "va a emettere il suono", omettendo i due elementi chiave della sintesi, ovvero che il segnale arriva al tronco encefalico, che provoca una contrazione improvvisa del diaframma seguita dalla rapida chiusura della glottide, che insieme producono il caratteristico suono.</div>
+  </div>
+    <div class="quiz-domanda-oggi">Oggi: raccontami tutto quello che sai su: Vendita impulsiva e rientro a caldo – caso Bending Spoons</div>
     <textarea id="quiz-input" class="qa-textarea" placeholder="Scrivi qui la tua risposta..."></textarea>
     <button id="quiz-submit" class="qa-button" onclick="inviaQuiz()">Invia risposta</button>
     <p id="quiz-status" class="qa-status"></p>
