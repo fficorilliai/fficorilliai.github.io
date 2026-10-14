@@ -47,7 +47,7 @@
 <body>
 <header>
   <h1>Federico — AI Dashboard</h1>
-  <span class="data">martedì 13 ottobre 2026</span>
+  <span class="data">mercoledì 14 ottobre 2026</span>
 </header>
 
 <div class="section">
@@ -61,15 +61,15 @@
   </div>
   <div class="qa-box pillola-box">
     <div class="qa-label">💡 Pillola del giorno</div>
-    <div class="pillola-title">Billy the Kid — il ragazzo che diventò una leggenda prima di compiere 22 anni</div>
-    <p class="pillola-text">Si chiamava probabilmente William Henry McCarty Jr., forse William Bonney, forse nessuno dei due. Billy the Kid nacque intorno al 1859, quasi certamente a New York, e morì nel luglio del 1881 in New Mexico, ucciso dallo sceriffo Pat Garrett. Aveva circa 21 anni. In mezzo, una vita così breve e così violenta da diventare uno dei miti più duri del West americano.
+    <div class="pillola-title">Hedy Lamarr — attrice e inventrice</div>
+    <p class="pillola-text">Hedy Lamarr è ricordata come una delle donne più belle di Hollywood negli anni Quaranta, ma quello che la rende davvero straordinaria è quello che faceva lontano dai riflettori. Nata Hedwig Eva Maria Kiesler a Vienna nel 1914, esordì nel cinema austriaco e divenne famosa in Europa prima ancora di arrivare negli Stati Uniti. Fuggì da un primo marito ricco e autoritario — un produttore di armi che la teneva sostanzialmente prigioniera — e si reinventò a Hollywood sotto il nome con cui la storia l'avrebbe ricordata.
 
-La storia vera di Billy è meno romantica di quella raccontata nei film. Crebbe povero, orfano di padre, con una madre che morì di tubercolosi quando lui era adolescente. Rubò per sopravvivere, fu arrestato, fuggì di prigione più volte. Il suo primo omicidio documentato avvenne nel 1877, durante una rissa. Da lì iniziò una spirale rapida: furti di bestiame, scontri armati, e un coinvolgimento profondo nella Lincoln County War, una guerra tra bande che mescolava interessi economici, corruzione e sangue in quantità industriale. Billy combatté dalla parte di un ranch contro i monopolisti locali, e in quel contesto uccise diversi uomini, tra cui due sceriffi.
+Quello che quasi nessuno sa è che Lamarr aveva una mente scientifica acuta, in parte affinata proprio stando accanto al marito durante le sue cene con militari e ingegneri. Durante la Seconda Guerra Mondiale, assieme al compositore George Antheil, sviluppò un sistema di comunicazione a salto di frequenza, pensato per rendere i siluri teleguidati difficili da intercettare o disturbare. L'idea era elegante: trasmettitore e ricevitore cambiavano frequenza in modo sincronizzato e imprevedibile, seguendo uno schema condiviso in anticipo — come due pianisti che suonano la stessa partitura senza comunicare. Il brevetto fu depositato nel 1942 con il nome reale di lei, Hedy Kiesler Markey.
 
-Quel che è affascinante è come la leggenda si sia costruita quasi in tempo reale. Già prima della sua morte circolavano storie su di lui, alcune vere, molte inventate. Il numero delle sue vittime venne gonfiato a dismisura: si diceva avesse ucciso 21 uomini, uno per ogni anno di vita. Il numero reale è probabilmente tra 8 e 9. Ma la verità, nel West americano, ha sempre faticato a competere con una buona storia.</p>
+Il problema è che il brevetto scadde prima che la tecnologia fosse adottata su larga scala, e Lamarr non vide mai un centesimo da quella invenzione. Decenni dopo, il principio del salto di frequenza è diventato la base tecnologica del WiFi, del Bluetooth e delle reti cellulari moderne. Nel 1997 ricevette finalmente un riconoscimento ufficiale dalla Electronic Frontier Foundation. Disse, con la sua solita ironia: "Ci ha messo abbastanza." Era già ottantaduenne.</p>
     <div class="pillola-alt-label">Vuoi cambiarla? Scegli un tema per domani:</div>
     <div class="pillola-alt-buttons">
-      <button class="pillola-alt-btn" data-tema="Chi era Hedy Lamarr — attrice e inventrice" onclick="sceglipillola(this.dataset.tema, this)">Chi era Hedy Lamarr — attrice e inventrice</button><button class="pillola-alt-btn" data-tema="La sindrome dell&#39;impostore — mente o realtà?" onclick="sceglipillola(this.dataset.tema, this)">La sindrome dell&#39;impostore — mente o realtà?</button><button class="pillola-alt-btn" data-tema="Il processo a Galileo Galilei — quando la scienza incontrò l&#39;Inquisizione" onclick="sceglipillola(this.dataset.tema, this)">Il processo a Galileo Galilei — quando la scienza incontrò l&#39;Inquisizione</button>
+      <button class="pillola-alt-btn" data-tema="Il principio di Archimede — galleggiare e affondare" onclick="sceglipillola(this.dataset.tema, this)">Il principio di Archimede — galleggiare e affondare</button><button class="pillola-alt-btn" data-tema="Chi era Mata Hari — spia o capro espiatorio" onclick="sceglipillola(this.dataset.tema, this)">Chi era Mata Hari — spia o capro espiatorio</button><button class="pillola-alt-btn" data-tema="Perché i muscoli fanno male il giorno dopo" onclick="sceglipillola(this.dataset.tema, this)">Perché i muscoli fanno male il giorno dopo</button>
     </div>
     <p id="pillola-status" class="qa-status"></p>
   </div>
@@ -77,13 +77,15 @@ Quel che è affascinante è come la leggenda si sia costruita quasi in tempo rea
     <div class="qa-label">🧠 Quiz sui tuoi interessi</div>
     <div class="quiz-verdetto-box">
     <div class="quiz-label-small">Ieri ti avevo chiesto</div>
-    <div class="quiz-tema-ieri">Raccontami tutto quello che sai su: Perché viene il singhiozzo</div>
+    <div class="quiz-tema-ieri">Raccontami tutto quello che sai su: Vendita impulsiva e rientro a caldo – caso Bending Spoons</div>
     <div class="quiz-label-small">La tua risposta</div>
-    <div class="quiz-risposta-ieri">Il singhiozzo è un riflesso involontario del nervo vago (che dipende da stomaco troppo pieno, ingerire troppo velocemente). Quando si attiva il nervo vago manda un impulso al cervello che va emettere il suono classico. Non sappiamo il vero motivo</div>
-    <span class="quiz-badge quiz-badge-review">Da rivedere</span>
-    <div class="quiz-spiegazione">L'utente ha colto correttamente che si tratta di un riflesso involontario legato al nervo vago e che le cause includono stomaco pieno e alimentazione rapida, e che il motivo non è del tutto chiaro. Tuttavia manca la menzione del nervo frenico e, soprattutto, il meccanismo centrale è descritto in modo impreciso: l'utente dice genericamente che il segnale "va a emettere il suono", omettendo i due elementi chiave della sintesi, ovvero che il segnale arriva al tronco encefalico, che provoca una contrazione improvvisa del diaframma seguita dalla rapida chiusura della glottide, che insieme producono il caratteristico suono.</div>
+    <div class="quiz-risposta-ieri">Avevo investito durante il giorno di IPO di Bending Spoons. Mi ero prefissato un target di rendimento da ottenere che, una volta raggiunto, avrebbe fatto scattare la vendita delle azioni. La sfortuna ha voluto che nell'istante in cui il prezzo ha toccato il mio target, l'azione è rimbalzata (ma io ormai avevo già venduto). Preso dal panico sono rientrato con il 50% di quanto avevo investito inizialmente, trovandomi ad aver riacquisito un azione che avevo 2 ore prima pagato il 25% in meno.
+
+Cosa ha funzionato: fissare e rispettare il target di uscita in anticipo elimina l'emotività. Errore commesso: il rientro impulsivo inseguendo il prezzo. Lezioni principali: definire in anticipo sia il prezzo di uscita sia quello di rientro; non rientrare mai sopra il prezzo di vendita per FOMO; calcolare subito il breakeven specifico con capitale parziale; un'uscita sfortunata non invalida la regola — solo il rientro impulsivo è stato l'errore.</div>
+    <span class="quiz-badge quiz-badge-ok">Sufficiente</span>
+    <div class="quiz-spiegazione">L'utente ha colto correttamente i punti chiave: il target di uscita prefissato e rispettato, l'errore del rientro impulsivo a caldo sopra il prezzo di vendita per FOMO, e le lezioni principali che ne derivano. Manca la regola specifica del breakeven con capitale parziale (cash disponibile diviso azioni mancanti per tornare alla posizione originale), che negli appunti è un punto distinto e rilevante. I dettagli numerici differiscono (es. "+15% come target", "35,77 USD come minimo locale", "44 USD come rimbalzo"), ma questo non inficia la comprensione concettuale dell'episodio.</div>
   </div>
-    <div class="quiz-domanda-oggi">Oggi: raccontami tutto quello che sai su: Vendita impulsiva e rientro a caldo – caso Bending Spoons</div>
+    <div class="quiz-domanda-oggi">Oggi: raccontami tutto quello che sai su: La tettonica delle placche</div>
     <textarea id="quiz-input" class="qa-textarea" placeholder="Scrivi qui la tua risposta..."></textarea>
     <button id="quiz-submit" class="qa-button" onclick="inviaQuiz()">Invia risposta</button>
     <p id="quiz-status" class="qa-status"></p>
